@@ -1,37 +1,20 @@
--- MariaDB dump 10.19  Distrib 10.6.21-MariaDB, for FreeBSD13.4 (i386)
---
--- Host: localhost    Database: account
--- ------------------------------------------------------
--- Server version	10.6.21-MariaDB
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Table structure for table `account`
---
-
+-- ----------------------------
+-- Table structure for account
+-- ----------------------------
 DROP TABLE IF EXISTS `account`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8mb4 */;
-CREATE TABLE `account` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `login` varchar(30) NOT NULL DEFAULT '',
-  `password` varchar(45) NOT NULL DEFAULT '',
-  `social_id` varchar(13) NOT NULL DEFAULT '',
-  `email` varchar(64) NOT NULL DEFAULT '',
+CREATE TABLE `account`  (
+  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `login` varchar(30) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '',
+  `password` varchar(255) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '',
+  `social_id` varchar(13) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '',
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '',
   `create_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `is_testor` tinyint(1) NOT NULL DEFAULT 0,
-  `status` varchar(8) NOT NULL DEFAULT 'OK',
-  `newsletter` tinyint(1) DEFAULT 0,
+  `status` varchar(8) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT 'OK',
+  `newsletter` tinyint(1) NULL DEFAULT 0,
   `empire` tinyint(4) NOT NULL DEFAULT 0,
   `name_checked` tinyint(1) NOT NULL DEFAULT 0,
   `availDt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -46,141 +29,93 @@ CREATE TABLE `account` (
   `money_drop_rate_expire` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `total_cash` int(11) NOT NULL DEFAULT 0,
   `total_mileage` int(11) NOT NULL DEFAULT 0,
-  `channel_company` varchar(30) NOT NULL DEFAULT '',
-  `ip` varchar(255) DEFAULT NULL,
+  `channel_company` varchar(30) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL DEFAULT '',
+  `ip` varchar(45) CHARACTER SET ascii COLLATE ascii_general_ci NULL DEFAULT NULL,
   `last_play` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `login` (`login`) USING BTREE,
-  KEY `social_id` (`social_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=ascii COLLATE=ascii_general_ci ROW_FORMAT=DYNAMIC;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  PRIMARY KEY (`id`) USING BTREE,
+  UNIQUE INDEX `login`(`login` ASC) USING BTREE,
+  INDEX `social_id`(`social_id` ASC) USING BTREE,
+  UNIQUE INDEX `account_email`(`email` ASC) USING BTREE,
+  UNIQUE INDEX `account_id`(`id` ASC) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = ascii COLLATE = ascii_general_ci ROW_FORMAT = Dynamic;
 
---
--- Dumping data for table `account`
---
+-- ----------------------------
+-- Records of account
+-- ----------------------------
+INSERT INTO `account` VALUES (1, 'admin', '$argon2id$v=19$m=12288,t=3,p=1$OUo2azMvdGRyeDZ2NkZGNg$xoXMX5OKjQfs2Pc03s8cKlNwht7GebOTCJY4B1d85Co', '1234567', 'admin@example.com', '0000-00-00 00:00:00', 0, 'OK', 0, 0, 0, '0000-00-00 00:00:00', 0, 1650, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, '', NULL, '2021-11-21 20:10:46');
+INSERT INTO `account` VALUES (2, 'test', '$argon2id$v=19$m=12288,t=3,p=1$OUo2azMvdGRyeDZ2NkZGNg$xoXMX5OKjQfs2Pc03s8cKlNwht7GebOTCJY4B1d85Co', '1234567', 'test@example.com', '0000-00-00 00:00:00', 0, 'OK', 0, 0, 0, '0000-00-00 00:00:00', 0, 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0, 0, '', NULL, '2021-08-06 11:42:12');
 
-LOCK TABLES `account` WRITE;
-/*!40000 ALTER TABLE `account` DISABLE KEYS */;
-INSERT INTO `account` VALUES (1,'admin','*CC67043C7BCFF5EEA5566BD9B1F3C74FD9A5CF5D','1234567','','0000-00-00 00:00:00',0,'OK',0,0,0,'0000-00-00 00:00:00',0,1650,'0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',0,0,'',NULL,'2021-11-21 20:10:46'),(2,'test','*CC67043C7BCFF5EEA5566BD9B1F3C74FD9A5CF5D','1234567','','0000-00-00 00:00:00',0,'OK',0,0,0,'0000-00-00 00:00:00',0,0,'0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00','0000-00-00 00:00:00',0,0,'',NULL,'2021-08-06 11:42:12');
-/*!40000 ALTER TABLE `account` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `gametime`
---
-
+-- ----------------------------
+-- Table structure for gametime
+-- ----------------------------
 DROP TABLE IF EXISTS `gametime`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8mb4 */;
-CREATE TABLE `gametime` (
-  `UserID` varchar(50) NOT NULL DEFAULT '',
+CREATE TABLE `gametime`  (
+  `UserID` varchar(50) CHARACTER SET euckr COLLATE euckr_korean_ci NOT NULL DEFAULT '',
   `paymenttype` tinyint(2) NOT NULL DEFAULT 1,
-  `LimitTime` int(11) DEFAULT 0,
-  `LimitDt` datetime DEFAULT '1990-01-01 00:00:00',
-  `Scores` int(11) DEFAULT 0,
-  PRIMARY KEY (`UserID`)
-) ENGINE=InnoDB DEFAULT CHARSET=euckr COLLATE=euckr_korean_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  `LimitTime` int(11) NULL DEFAULT 0,
+  `LimitDt` datetime NULL DEFAULT '1990-01-01 00:00:00',
+  `Scores` int(11) NULL DEFAULT 0,
+  PRIMARY KEY (`UserID`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = euckr COLLATE = euckr_korean_ci ROW_FORMAT = Dynamic;
 
---
--- Dumping data for table `gametime`
---
+-- ----------------------------
+-- Records of gametime
+-- ----------------------------
 
-LOCK TABLES `gametime` WRITE;
-/*!40000 ALTER TABLE `gametime` DISABLE KEYS */;
-/*!40000 ALTER TABLE `gametime` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `gametimeip`
---
-
+-- ----------------------------
+-- Table structure for gametimeip
+-- ----------------------------
 DROP TABLE IF EXISTS `gametimeip`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8mb4 */;
-CREATE TABLE `gametimeip` (
+CREATE TABLE `gametimeip`  (
   `ipid` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(128) DEFAULT NULL,
-  `ip` varchar(11) NOT NULL DEFAULT '000.000.000',
+  `name` varchar(128) CHARACTER SET euckr COLLATE euckr_korean_ci NULL DEFAULT NULL,
+  `ip` varchar(11) CHARACTER SET euckr COLLATE euckr_korean_ci NOT NULL DEFAULT '000.000.000',
   `startIP` int(11) NOT NULL DEFAULT 0,
   `endIP` int(11) NOT NULL DEFAULT 255,
   `paymenttype` tinyint(2) NOT NULL DEFAULT 1,
   `LimitTime` int(11) NOT NULL DEFAULT 0,
   `LimitDt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `readme` varchar(128) DEFAULT NULL,
-  PRIMARY KEY (`ipid`),
-  UNIQUE KEY `ip_uniq` (`ip`,`startIP`,`endIP`),
-  KEY `ip_idx` (`ip`)
-) ENGINE=InnoDB DEFAULT CHARSET=euckr COLLATE=euckr_korean_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  `readme` varchar(128) CHARACTER SET euckr COLLATE euckr_korean_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`ipid`) USING BTREE,
+  UNIQUE INDEX `ip_uniq`(`ip` ASC, `startIP` ASC, `endIP` ASC) USING BTREE,
+  INDEX `ip_idx`(`ip` ASC) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = euckr COLLATE = euckr_korean_ci ROW_FORMAT = Dynamic;
 
---
--- Dumping data for table `gametimeip`
---
+-- ----------------------------
+-- Records of gametimeip
+-- ----------------------------
 
-LOCK TABLES `gametimeip` WRITE;
-/*!40000 ALTER TABLE `gametimeip` DISABLE KEYS */;
-/*!40000 ALTER TABLE `gametimeip` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `gametimelog`
---
-
+-- ----------------------------
+-- Table structure for gametimelog
+-- ----------------------------
 DROP TABLE IF EXISTS `gametimelog`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8mb4 */;
-CREATE TABLE `gametimelog` (
-  `login` varchar(16) DEFAULT NULL,
-  `type` enum('IP_FREE','FREE','IP_TIME','IP_DAY','TIME','DAY') DEFAULT NULL,
+CREATE TABLE `gametimelog`  (
+  `login` varchar(16) CHARACTER SET gb2312 COLLATE gb2312_chinese_ci NULL DEFAULT NULL,
+  `type` enum('IP_FREE','FREE','IP_TIME','IP_DAY','TIME','DAY') CHARACTER SET gb2312 COLLATE gb2312_chinese_ci NULL DEFAULT NULL,
   `logon_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `logout_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `use_time` int(11) DEFAULT NULL,
-  `ip` varchar(15) NOT NULL DEFAULT '000.000.000.000',
-  `server` varchar(32) NOT NULL DEFAULT '',
-  KEY `login_key` (`login`)
-) ENGINE=InnoDB DEFAULT CHARSET=gb2312 COLLATE=gb2312_chinese_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  `use_time` int(11) NULL DEFAULT NULL,
+  `ip` varchar(15) CHARACTER SET gb2312 COLLATE gb2312_chinese_ci NOT NULL DEFAULT '000.000.000.000',
+  `server` varchar(32) CHARACTER SET gb2312 COLLATE gb2312_chinese_ci NOT NULL DEFAULT '',
+  INDEX `login_key`(`login` ASC) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = gb2312 COLLATE = gb2312_chinese_ci ROW_FORMAT = Dynamic;
 
---
--- Dumping data for table `gametimelog`
---
+-- ----------------------------
+-- Records of gametimelog
+-- ----------------------------
 
-LOCK TABLES `gametimelog` WRITE;
-/*!40000 ALTER TABLE `gametimelog` DISABLE KEYS */;
-/*!40000 ALTER TABLE `gametimelog` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `string`
---
-
+-- ----------------------------
+-- Table structure for string
+-- ----------------------------
 DROP TABLE IF EXISTS `string`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8mb4 */;
-CREATE TABLE `string` (
-  `name` varchar(64) NOT NULL DEFAULT '',
-  `text` text DEFAULT NULL,
-  PRIMARY KEY (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
+CREATE TABLE `string`  (
+  `name` varchar(64) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '',
+  `text` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`name`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
---
--- Dumping data for table `string`
---
+-- ----------------------------
+-- Records of string
+-- ----------------------------
 
-LOCK TABLES `string` WRITE;
-/*!40000 ALTER TABLE `string` DISABLE KEYS */;
-/*!40000 ALTER TABLE `string` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2025-03-31 23:50:09
+SET FOREIGN_KEY_CHECKS = 1;
