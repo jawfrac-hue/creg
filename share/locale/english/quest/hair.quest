@@ -317,7 +317,7 @@ quest hair begin
 			wait()
 
 			if hair.My_hair_item(vnum, 1) == nil and hair.My_hair_item(vnum - 1000, 1) then
-				say("VNUM : " .. vnum .. gameforge.hair._013_say)
+				say(string.format(gameforge.hair._190_say, vnum, gameforge.hair._013_say))
 				return
 			end
 
@@ -386,13 +386,13 @@ quest hair begin
 			local limitTime = pc.getqf("limit_time")
 
 			if pc.getqf("original_vnum") != 0 then
-					notice("hier wäre schluss später vielleicht!")
+					notice(gameforge.hair._120_notice)
 			end
 
-	 	 notice(string.format("vnum: %d", vnum))
-      notice( string.format("pc.get_wear: %d ", pc.get_wear(20)))
-      notice(string.format("qf origianl_vnum: %d ", pc.getqf("original_vnum")))
-      notice(string.format("pc.get_part: %d ",  pc.get_part(3)))
+	 	 notice(string.format(gameforge.hair._150_notice, vnum))
+      notice(string.format(gameforge.hair._160_notice, pc.get_wear(20)))
+      notice(string.format(gameforge.hair._170_notice, pc.getqf("original_vnum")))
+      notice(string.format(gameforge.hair._180_notice,  pc.get_part(3)))
 
 
 			say_title(mob_name(20355))
@@ -472,14 +472,14 @@ quest hair begin
 				end
 
 				if true == is_test_server() then
-					say("This message only appears on Test Mode.")
-					say("	Effect : " .. applyOn .. ", Value : " .. optionValue)
-					say("	Model : " .. pc.get_part(3))
-					say("	Left time (in second) : " .. (limitTime - get_time()))
-					say("	VNUM : " .. vnum)
+					say(gameforge.hair._130_say)
+					say(string.format(gameforge.hair._200_say, applyOn, optionValue))
+					say(string.format(gameforge.hair._210_say, pc.get_part(3)))
+					say(string.format(gameforge.hair._220_say, limitTime - get_time()))
+					say(string.format(gameforge.hair._230_say, vnum))
 					say("")
 					say("")
-					local s = select("Next")
+					local s = select(gameforge.hair._140_select)
 				end
 			end
 
@@ -495,10 +495,10 @@ quest hair begin
         return
       end
 
- notice(string.format("vnum: %d", vnum))
-      notice( string.format("pc.get_wear: %d ", pc.get_wear(20)))
-      notice(string.format("qf origianl_vnum: %d ", pc.getqf("original_vnum")))
-      notice(string.format("pc.get_part: %d ",  pc.get_part(3)))
+ notice(string.format(gameforge.hair._150_notice, vnum))
+      notice(string.format(gameforge.hair._160_notice, pc.get_wear(20)))
+      notice(string.format(gameforge.hair._170_notice, pc.getqf("original_vnum")))
+      notice(string.format(gameforge.hair._180_notice,  pc.get_part(3)))
 
 
 			local ret = pc.give_item2_select(vnum)
@@ -510,7 +510,7 @@ quest hair begin
 			pc.setqf( "limit_time", 0 )
 			pc.setqf( "original_vnum", vnum )
 			say_title(mob_name(20355))
-			say(gameforge.hair._80_say)
+			say(gameforge.hair._080_say)
 			say_show_item(vnum)
 			say(" " ..  item_name(vnum) .. gameforge.hair._090_say)
 			say("")

@@ -352,7 +352,7 @@ quest new_quest_lv52 begin
 									q.done()
 									set_state(backhome)
 								else
-									notice("There is something wrong with the questflag!") -- to be deleted after testing
+									notice(gameforge.new_quest_lv52._192_notice) -- to be deleted after testing
 								end
 							else
 		--						notice("Pech gehabt, nix passiert!") -- to be deleted after testing
@@ -480,7 +480,7 @@ quest new_quest_lv52 begin
 				pc.give_item2(reward)
 				pc.setqf("lv52reward", 0)
 			else
-				notice("Questflag got manipulated! You shouldn't be here!!!") -- if the player cheated
+				notice(gameforge.new_quest_lv52._202_notice) -- if the player cheated
 			end
 			q.done()
 			clear_letter()

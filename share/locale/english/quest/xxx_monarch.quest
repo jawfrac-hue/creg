@@ -1,20 +1,20 @@
 quest Kaiser begin
 	state start begin
 
-		when electionman1.chat."GM: Kaiser Wahl Einstellung" 	or electionman2.chat."GM: Kaiser Wahl Einstellung" 	or electionman3.chat."GM: Kaiser Wahl Einstellung" with pc.is_gm()  begin
+		when electionman1.chat.gameforge.xxx_monarch._320_npcChat 	or electionman2.chat.gameforge.xxx_monarch._320_npcChat 	or electionman3.chat.gameforge.xxx_monarch._320_npcChat with pc.is_gm()  begin
 	
 			if game.get_event_flag("Kaiser") == 1 then 
-				say("Du kannst hier die Kaiserwahl beenden.")
-				say("Möchtest Du die Kaiserwahl jetzt beenden?")
-				local s = select("Beenden.","Nicht beenden.")
+				say(gameforge.xxx_monarch._010_say)
+				say(gameforge.xxx_monarch._020_say)
+				local s = select(gameforge.xxx_monarch._030_select, gameforge.xxx_monarch._040_select)
 
 				if s == 1 then
 					game.set_event_flag("Kaiser",0)
 				end
 			else
-				say("Du kannst hier die Kaiser Wahl anfangen.")
-				say("Möchtest du die Kaiser Wahl jetzt anfangen?")
-				local s = select("Anfangen","Nicht anfangen.")
+				say(gameforge.xxx_monarch._050_say)
+				say(gameforge.xxx_monarch._060_say)
+				local s = select(gameforge.xxx_monarch._070_select, gameforge.xxx_monarch._080_select)
 
 				if s == 1 then
 					game.set_event_flag("Kaiser",1)
@@ -24,20 +24,20 @@ quest Kaiser begin
 			
 		end
 		
-		when electionman1.chat."GM: Kaiserwahl Einstellung" or  electionman2.chat."GM: Kaiserwahl Einstellung" 	or electionman3.chat."GM: Kaiserwahl Einstellung" with pc.is_gm()  begin
+		when electionman1.chat.gameforge.xxx_monarch._330_npcChat or  electionman2.chat.gameforge.xxx_monarch._330_npcChat 	or electionman3.chat.gameforge.xxx_monarch._330_npcChat with pc.is_gm()  begin
 	
 			if game.get_event_flag("Kaiserwahl") == 1 then 
-				say("Du kannst hier die Kaiserwahl beenden.")
-				say("Möchtest Du die Kaiserwahl jetzt beenden?")
-				local s = select("Beenden.","Nicht beenden.")
+				say(gameforge.xxx_monarch._010_say)
+				say(gameforge.xxx_monarch._020_say)
+				local s = select(gameforge.xxx_monarch._030_select, gameforge.xxx_monarch._040_select)
 
 				if s == 1 then
 					game.set_event_flag("Kaiserwahl",0)
 				end
 			else
-				say("Du kannst hier die Kaiserwahl anfangen.")
-				say("Möchtest Du die Kaiserwahl anfangen?")				
-				local s = select("Anfangen","Nicht Anfangen.")
+				say(gameforge.xxx_monarch._090_say)
+				say(gameforge.xxx_monarch._100_say)
+				local s = select(gameforge.xxx_monarch._070_select, gameforge.xxx_monarch._110_select)
 
 				if s == 1 then
 					game.set_event_flag("Kaiserwahl",1)
@@ -48,14 +48,14 @@ quest Kaiser begin
 		end
 	
 
-		when electionman1.chat."Wähle einen Kaiser" or electionman2.chat."Wähle einen Kaiser" or electionman3.chat."Wähle einen Kaiser"  begin
+		when electionman1.chat.gameforge.xxx_monarch._340_npcChat or electionman2.chat.gameforge.xxx_monarch._340_npcChat or electionman3.chat.gameforge.xxx_monarch._340_npcChat  begin
 		
 
 			if  game.get_event_flag("Kaiserwahl") != 1 then
 				
 				
-				say("Die Wahl hat noch nicht begonnen.")
-				say("Bitte versuche es nochmal wenn sie gestartet ist.")
+				say(gameforge.xxx_monarch._120_say)
+				say(gameforge.xxx_monarch._130_say)
 				return 	
 			end
 			local g = oh.candidacy_list() 
@@ -68,14 +68,14 @@ quest Kaiser begin
 
 			if table.getn(g) == 0 then
 				-- no currently war
-				say("Es gibt noch keine Kanditaten")
+				say(gameforge.xxx_monarch._140_say)
 			else
 				gname_table[table.getn(g)+1] = locale.cancel
-				say("Du kannst hier für einen Kaiser stimmen.")
-				say("Während der Kaiserwahlen beruhigen sich die Nationen ein wenig")
-				say("Bitte, Wähle vorsichtig")
-				say("Du hast nur eine Stimme.")
-				say("Bitte Wähle einen Kanditaten")
+				say(gameforge.xxx_monarch._150_say)
+				say(gameforge.xxx_monarch._160_say)
+				say(gameforge.xxx_monarch._170_say)
+				say(gameforge.xxx_monarch._180_say)
+				say(gameforge.xxx_monarch._190_say)
 				wait()
 				local s = select_table(gname_table)
 
@@ -84,44 +84,44 @@ quest Kaiser begin
 				else
 					ret = oh.election( s -1 )
 					
-					say(oh.candidacy_name(s-1).."Du hast gewählt")
+					say(oh.candidacy_name(s-1)..gameforge.xxx_monarch._390_say)
 				end
 			end	
 		end
-		when electionman1.chat."Zeigt die Kaiser Kanditaten" 	or electionman2.chat."Zeigt die Kaiser Kanditaten" 	or electionman3.chat."Zeigt die Kaiser Kanditaten"  begin
+		when electionman1.chat.gameforge.xxx_monarch._350_npcChat 	or electionman2.chat.gameforge.xxx_monarch._350_npcChat 	or electionman3.chat.gameforge.xxx_monarch._350_npcChat  begin
 	    
 			if  game.get_event_flag("Kaiser") != 1 then
-				say("Folgende Qualifikationen sind für einen") 
-				say("Kaiser nötig.")
+				say(gameforge.xxx_monarch._200_say)
+				say(gameforge.xxx_monarch._210_say)
 				say("")
-				say_reward("1. Eine Wahl Gebühr von 1 Million Yang")
-				say_reward("2. Du musst Gilden Leader oder Vize-Gilden leader sein")
-				say_reward("3. Level 50 muss erreicht sein")
+				say_reward(gameforge.xxx_monarch._360_sayReward)
+				say_reward(gameforge.xxx_monarch._370_sayReward)
+				say_reward(gameforge.xxx_monarch._380_sayReward)
 				
 				say("")
-				say("Aber die Wahl Periode hat noch nicht angefangen.")
-				say("Komm wieder wenn sie gestartet ist.")
+				say(gameforge.xxx_monarch._220_say)
+				say(gameforge.xxx_monarch._230_say)
 				return 	
 			end
-			say("Du bist im Begriff, dich für die Wahl einzutragen.")
-			say("Als ein Kanditat musst du folgende Vorrausetzngen erfüllen")
+			say(gameforge.xxx_monarch._240_say)
+			say(gameforge.xxx_monarch._250_say)
 			say("")
-			say_reward("1. Eine Wahl Gebühr von 1 Million Yang")
-			say_reward("2. Du musst Gilden Leader oder Vize-Gilden leader sein")
-			say_reward("3. Level 50 muss erreicht sein")
+			say_reward(gameforge.xxx_monarch._360_sayReward)
+			say_reward(gameforge.xxx_monarch._370_sayReward)
+			say_reward(gameforge.xxx_monarch._380_sayReward)
 
 			say("")
-			say("Möchtest du dich zur Wahl stellen?")
+			say(gameforge.xxx_monarch._260_say)
 
-		    local s = select("Ja, ich stelle mich zur Wahl.","Nein Danke.")
+		    local s = select(gameforge.xxx_monarch._270_select, gameforge.xxx_monarch._280_select)
 
 			local NEED_MONEY = 100000000
 
 			if s == 1 then
 				if oh.candidacycount() >= 8 then
-					say("Es tut uns leid.")
-					say("Wir haben genug Kanditaten.")
-					say("Versuche es bei der nächsten Wahl.")
+					say(gameforge.xxx_monarch._290_say)
+					say(gameforge.xxx_monarch._300_say)
+					say(gameforge.xxx_monarch._310_say)
 					return 
 				end
 				if pc.get_gold() >= NEED_MONEY and pc.get_level() >= 50 and oh.isguildmaster() == 1 then 

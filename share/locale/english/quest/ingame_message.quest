@@ -78,7 +78,7 @@ quest ingame_message begin
 				if gift_check < 1 and gift_vnum != 0 then
 					wait()
 					-- Ein Geschenk der Götter
-					say_title(gameforge.important_message._050_sayTitle)
+					say_title(gameforge.ingame_message._050_sayTitle)
 					say(gameforge.ingame_message._060_say)
 					local gift = select(gameforge.ingame_message._070_select, gameforge.ingame_message._080_select)
 					if gift == 1 then
@@ -104,7 +104,7 @@ quest ingame_message begin
 				elseif message_type == 2 then
 					send_letter(gameforge.ingame_message._030_sayTitle)
 				else 
-					send_letter("GM News")
+					send_letter(gameforge.ingame_message._090_sendLetter)
 				end -- endif 
 			end -- endif duration
 		end -- endif

@@ -107,7 +107,7 @@ quest oxevent_manager begin
             if stat == 0 then
             
                 say(gameforge.entry_event_map._150_say)
-                local choice = select ("1> min "..oxevent_manager.enter_level(1,1).." max "..oxevent_manager.enter_level(1,2),"2> min "..oxevent_manager.enter_level(2,1).." max "..oxevent_manager.enter_level(2,2), "3> min "..oxevent_manager.enter_level(3,1).." max "..oxevent_manager.enter_level(3,2), "4> min "..oxevent_manager.enter_level(4,1).." max "..oxevent_manager.enter_level(4,2),  "5> min "..oxevent_manager.enter_level(5,1).." max "..oxevent_manager.enter_level(5,2), gameforge.locale.cancel)
+                local choice = select (string.format(gameforge.entry_event_map._260_select, oxevent_manager.enter_level(1,1), oxevent_manager.enter_level(1,2)), string.format(gameforge.entry_event_map._270_select, oxevent_manager.enter_level(2,1), oxevent_manager.enter_level(2,2)), string.format(gameforge.entry_event_map._280_select, oxevent_manager.enter_level(3,1), oxevent_manager.enter_level(3,2)), string.format(gameforge.entry_event_map._290_select, oxevent_manager.enter_level(4,1), oxevent_manager.enter_level(4,2)), string.format(gameforge.entry_event_map._300_select, oxevent_manager.enter_level(5,1), oxevent_manager.enter_level(5,2)), gameforge.locale.cancel)
                 if choice == 6 then
                     return
                 end
@@ -122,7 +122,7 @@ quest oxevent_manager begin
 
                 say(gameforge.oxevent._80_say)
                 say(gameforge.entry_event_map._180_say)
-                say(gameforge.entry_event_map._190_say .. " " .. oxevent_manager.enter_level(choice,1).. " - " ..oxevent_manager.enter_level(choice,2))
+                say(string.format(gameforge.entry_event_map._320_say, oxevent_manager.enter_level(choice,1), oxevent_manager.enter_level(choice,2)))
                 say(gameforge.entry_event_map._200_say .. " " .. amount_choice)
 
                 local s =  select(gameforge.oxevent._90_select, gameforge.locale.cancel)

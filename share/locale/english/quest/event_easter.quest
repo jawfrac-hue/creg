@@ -269,7 +269,7 @@ quest event_easter begin
 			-- We have show a notice when logging is enabled (1)
 			local logging = game.get_event_flag("easter_logging")
 			if logging == 1 then
-				notice(string.format("metin spawn in map %d, level: %d", mapNumber, level))
+				notice(string.format(gameforge.event_easter._110_notice, mapNumber, level))
 			end
 		end
 		

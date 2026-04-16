@@ -42,7 +42,7 @@ quest new_christmas_2012_sock begin
 			end
 		end
 		
-		when santa.chat."reset flags / reindeer, socks" with is_test_server() begin
+		when santa.chat.gameforge.new_christmas_sock._110_npcChat with is_test_server() begin
 			pc.setqf ("last_reindeer_give_time", 0)
 			pc.setqf("last_sock_cooldown_time", 0) 
 		end
@@ -65,7 +65,7 @@ quest new_christmas_2012_sock begin
 					say_title(locale.reward)
 					
 					pc.give_item2(GIFTBOX)
-					say_reward (string.format("%s : 1%s",item_name(GIFTBOX), locale.count_postfix))
+					say_reward (string.format(gameforge.locale.item_one_count, item_name(GIFTBOX), locale.count_postfix))
 					
 					if is_test_server() then 
 						pc.setqf("last_sock_cooldown_time", get_time() + 20) 

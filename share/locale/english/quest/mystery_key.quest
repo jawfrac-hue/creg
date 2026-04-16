@@ -53,7 +53,7 @@ quest mystery_key begin
 		when 50132.use begin
 			local key_vnum = mystery_key.get_key_for_chest(item.vnum)
 			local master_key_vnum = mystery_key.get_master_key()
-			say_title(item_name(item.vnum) .. ": ")
+			say_title(string.format(gameforge.locale.name_colon_space, item_name(item.vnum)))
 			if pc.count_item(key_vnum) >= 1 then
 				mystery_key.open_chest(item.vnum, key_vnum)
 			elseif pc.count_item(master_key_vnum) >= 1 then

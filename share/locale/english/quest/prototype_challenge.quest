@@ -113,7 +113,7 @@ end
 		end
 					
 			  
-		when 20095.Chat."Herausforderung" begin
+		when 20095.Chat.gameforge.prototype_challenge._050_sayTitle begin
 		  
 		 if get_time() - pc.getqf("cooldown_timestamp") >= pc.getqf("cooldown") then
 			-- The following stuff would need loca keys, Mind the correlation of values ("select" seems to only take strings...)
@@ -193,12 +193,12 @@ end
 						local NewRewardsTable = {}
 						-- getting the reward and payment values for the current type/amount/time settings
 						NewRewardsTable = prototoype_challenge.challenge_calculate_rewards(TargetChallenge, AmountChallenge, TimeChallenge)					
-						say_title("Herausforderung starten")                                                                              
-						say("Herausforderung mit folgenden Parametern starten?")                                                          
-						say(string.format("Jage %s x %s in %s Minuten",AmountList[AmountSelector],mob_name(TargetList[TargetSelector]),TimeList[TimeSelector]/60))
-						say(string.format("Schwierigkeit: %s  Einsatz: %s Yang", NewRewardsTable[1], NewRewardsTable[2]))  
-						say(string.format("Belohnung: %s Yang %s XP", NewRewardsTable[3], NewRewardsTable[4]))  
-						local x = select("Ja", "Nein")                                                                          
+						say_title(gameforge.prototype_challenge._010_sayTitle)
+						say(gameforge.prototype_challenge._020_say)
+						say(string.format(gameforge.prototype_challenge._110_say,AmountList[AmountSelector],mob_name(TargetList[TargetSelector]),TimeList[TimeSelector]/60))
+						say(string.format(gameforge.prototype_challenge._120_say, NewRewardsTable[1], NewRewardsTable[2]))
+						say(string.format(gameforge.prototype_challenge._130_say, NewRewardsTable[3], NewRewardsTable[4]))
+						local x = select(gameforge.prototype_challenge._030_select, gameforge.prototype_challenge._040_select)
 						if x == 1 then 
 							if pc.get_gold() >= NewRewardsTable[2] then                                                                                                                                            
 								pc.setqf("challenge_timestamp", get_time())
@@ -214,8 +214,8 @@ end
 								set_state(start_quest)
 								Selected = 5 -- this is needed or metin stays inside the menu loop, even with the set_state
 							else
-								say_title("Herausforderung")
-								say("Du hast nicht genug Yang um deinen Wetteinsatz zu bezahlen.")
+								say_title(gameforge.prototype_challenge._050_sayTitle)
+								say(gameforge.prototype_challenge._060_say)
 								-- drops back to main menu here
 							end                                                      
 						else                                                                                                    
@@ -223,8 +223,8 @@ end
 							set_state(bounceback)                                                               
 						end
 					else
-					say_title("Herausforderung")
-					say("Du hast noch nicht alle Parameter ausgewählt.")
+					say_title(gameforge.prototype_challenge._050_sayTitle)
+					say(gameforge.prototype_challenge._070_say)
 					-- drops back to main menu here
 					end
 				end
@@ -234,16 +234,16 @@ end
 			local sec = pc.getqf("cooldown") - (get_time() - pc.getqf("cooldown_timestamp"))
 			local h = math.floor(sec/3600)
 			local m = math.ceil(((sec/3600)-h)*60)
-			say_title("Herausforderung")
-			say("Schon wieder eine Wette? Willst du mich an den Bettelstab bringen? Du musst dich etwas gedulden.")
+			say_title(gameforge.prototype_challenge._050_sayTitle)
+			say(gameforge.prototype_challenge._080_say)
 			say("")
 			if sec >= 7200 then
-				say(string.format("Warte noch %s Stunden.", h))
+				say(string.format(gameforge.prototype_challenge._140_say, h))
 			else
 				if sec >= 3660 then
-					say(string.format("Warte noch eine Stunde und %s Minuten.", m))
+					say(string.format(gameforge.prototype_challenge._150_say, m))
 				else
-					say(string.format("Warte noch %s Minuten.", m))
+					say(string.format(gameforge.prototype_challenge._160_say, m))
 				end
 			end
 		end
@@ -266,9 +266,9 @@ state start_quest begin
 --			notice("Debug: Start_Quest entered")
 			q.start()
 			local timeLeft = pc.getqf("FinalTime") - (get_time() - pc.getqf("challenge_timestamp")) -- getting a proper time integer
-			send_letter("Herausforderung")
-			q.set_title("Herausforderung")
-			q.set_clock("Zeit:", timeLeft)	
+			send_letter(gameforge.prototype_challenge._090_sendLetter)
+			q.set_title(gameforge.prototype_challenge._050_sayTitle)
+			q.set_clock(gameforge.prototype_challenge._200_qSetClock, timeLeft)	
 			if get_time() - pc.getqf("challenge_timestamp") >= pc.getqf("FinalTime") then
 				q.done()
 				set_state(challenge_failed)
@@ -276,19 +276,19 @@ state start_quest begin
 		end
 		
 		when button or info begin
-			say_title("Herausforderung")
+			say_title(gameforge.prototype_challenge._050_sayTitle)
 			local timeLeft = pc.getqf("FinalTime") - (get_time() - pc.getqf("challenge_timestamp")) -- getting current value
 			local m = math.floor(timeLeft/60) -- conversion to minutes, use math.ceil if you prefer more optimism :)
-			say(string.format("Jage %s x %s in %s Minuten",pc.getqf("FinalAmount"),mob_name(pc.getqf("FinalTarget")),pc.getqf("FinalTime")/60))
-			say_reward(string.format("Ziele zu jagen: %s", pc.getqf("FinalAmount")-pc.getqf("kill_count_1")))
+			say(string.format(gameforge.prototype_challenge._110_say,pc.getqf("FinalAmount"),mob_name(pc.getqf("FinalTarget")),pc.getqf("FinalTime")/60))
+			say_reward(string.format(gameforge.prototype_challenge._210_sayReward, pc.getqf("FinalAmount")-pc.getqf("kill_count_1")))
 			if m > 0 then
-				say_reward(string.format("Verbleibende Zeit in Minuten: %s", m))
+				say_reward(string.format(gameforge.prototype_challenge._220_sayReward, m))
 			else
 			-- doing a bit of a dance here, as a seconds display will only update on window open, looks faulty versus q.set_clock
 				if m == 0 then
-					say_reward("Dir bleibt weniger als eine Minute!") 
+					say_reward(gameforge.prototype_challenge._230_sayReward) 
 				else
-					say_reward("Zeit abgelaufen!")
+					say_reward(gameforge.prototype_challenge._240_sayReward)
 				end				
 			end
 		end
@@ -333,7 +333,7 @@ state start_quest begin
 	-- maybe fork inot this after each kill when time over
 	state challenge_failed begin -- state is not really needed, but we might want to initialize something here, sometime ...
 		when enter or login begin
-			notice(string.format("Eine Herausforderung ist fehlgeschlagen! Dein Einsatz von %s Yang ist verloren!", pc.getqf("Payment"))) 
+			notice(string.format(gameforge.prototype_challenge._170_notice, pc.getqf("Payment")))
 			set_state(menu)
 		end
 		
@@ -342,8 +342,8 @@ state start_quest begin
 	state challenge_success begin
 		when enter or login begin
 			pc.setqf("cooldown_timestamp", get_time())
-			notice("Herausforderung erfolgreich abgeschlossen!")      
-			notice(string.format("Du erhälst %s Yang und %s XP", pc.getqf("RewardYang"),pc.getqf("RewardXP")))
+			notice(gameforge.prototype_challenge._100_notice)
+			notice(string.format(gameforge.prototype_challenge._180_notice, pc.getqf("RewardYang"),pc.getqf("RewardXP")))
 			pc.change_money(pc.getqf("RewardYang"))
 			pc.give_exp2(pc.getqf("RewardXP"))
 			set_state(menu)

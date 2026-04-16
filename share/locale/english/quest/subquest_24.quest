@@ -101,7 +101,7 @@ quest subquest_24 begin
 		when letter begin
 		    local rest_time=pc.getqf("limit_time")-get_time()
 			 timer("time_over", rest_time) 
-			 q.set_clock("Time left", rest_time)
+			 q.set_clock(gameforge.subquest_24._295_qSetClock, rest_time)
 		end
 		when time_over.timer begin
 		    say_title(gameforge.buy_fishrod._210_sayTitle)

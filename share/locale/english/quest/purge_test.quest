@@ -1,6 +1,6 @@
 quest purge_test begin
 	state start begin
-		when 30122.chat."purge test" begin
+		when 30122.chat.gameforge.purge_test._020_npcChat begin
 			local settings = {}
 			settings.room_area = {}
 			settings.room_area.first = {}
@@ -10,10 +10,10 @@ quest purge_test begin
 			settings.room_area.last.x = 844100
 			settings.room_area.last.y = 1071500
 			
-			say("purge now!")
+			say(gameforge.purge_test._010_say)
 			purge_area(settings.room_area.first.x, settings.room_area.first.y, settings.room_area.last.x, settings.room_area.last.y)
 		end
-		when 30122.chat."spawn dragon" begin
+		when 30122.chat.gameforge.purge_test._030_npcChat begin
 			local settings = {}
 			settings.dragon_vnum = 2430
 			settings.spawn = {}

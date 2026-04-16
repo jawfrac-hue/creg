@@ -28,13 +28,13 @@ quest collect_quest_lv85  begin
 		when __TARGET__.target.click or
 			20084.chat.gameforge.collect_quest_lv85._050_npcChat begin
 			target.delete("__TARGET__")
-			say(gameforge.collect_quest_lv85._055_say)
+			say_title(gameforge.collect_quest_lv85._055_say_title)
 			say(gameforge.collect_quest_lv85._060_say)
 			wait()
-			say(gameforge.collect_quest_lv85._064_say)
+			say_title(gameforge.collect_quest_lv85._064_say)
 			say(gameforge.collect_quest_lv85._065_say)
 			wait()
-			say(gameforge.collect_quest_lv85._069_say)
+			say_title(gameforge.collect_quest_lv85._069_say)
 			say(gameforge.collect_quest_lv85._070_say)
 			set_state(go_to_disciple)
 			pc.setqf("duration",0)  -- ?? ?? ?? ??

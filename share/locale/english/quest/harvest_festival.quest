@@ -248,22 +248,22 @@ quest harvest_festival begin
             
         end -- end of when
         
-        when 20086.chat."Harvest Event Commands" with pc.get_gm_level() == 5 begin
+        when 20086.chat.gameforge.harvest_festival._890_npcChat with pc.get_gm_level() == 5 begin
 
             if game.get_event_flag("harvest_festival") == 0 then
              
-                say("Current Status: ThanksGiving Event Results")
+                say(gameforge.harvest_festival._830_say)
                 say("")
 
-                local s = select("Start Event", "Cancel")
+                local s = select(gameforge.harvest_festival._840_select, gameforge.harvest_festival._850_select)
                 if 1==s then
                     game.set_event_flag("harvest_festival", 1) 
 					return
 				end
             else
-                say("Current Status: The event is currently active")
+                say(gameforge.harvest_festival._860_say)
                 say("")
-                local s = select("Stop the Event", "Cancel")
+                local s = select(gameforge.harvest_festival._870_select, gameforge.harvest_festival._850_select)
                 if 1==s then
                     game.set_event_flag("harvest_festival", 0) 
                 return
@@ -688,7 +688,7 @@ quest harvest_festival begin
         end -- end of when	
 
         when 2503.kill with pc.getf("harvest_festival","mob2_info") == 8  and party.is_party() begin
-						notice("Zombie tot")
+						notice(gameforge.harvest_festival._880_notice)
             harvest_festival.kill_action(2503,2)
         end -- end of when	
     end -- end of state	

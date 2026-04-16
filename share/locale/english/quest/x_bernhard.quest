@@ -1,7 +1,7 @@
 quest x_bernhard begin
 	state start begin
 	when login begin
-		notice("x_bernhard")
+		notice(gameforge.x_bernhard._010_notice)
 		set_state ( yahoo )
 	end
 	end
@@ -13,7 +13,7 @@ quest x_bernhard begin
 	end
 	state google begin
 	when 8001.kill with game.get_event_flag("mystery_box_drop") == 1 begin	
-		send_letter("bbbbbb")
+		send_letter(gameforge.x_bernhard._020_sendLetter)
 	end
 end
 end

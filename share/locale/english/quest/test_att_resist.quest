@@ -5,9 +5,9 @@ define TEST_NPC 20001 -- alchemist
 
 quest test_att_resist begin
 	state start begin
-		when TEST_NPC.chat."ATT_TEST : ITEM - BASIC" with is_test_server() begin
-			say("Test items for basic")
-			say("Check damage with these")
+		when TEST_NPC.chat.gameforge.test_att_resist._110_npcChat with is_test_server() begin
+			say(gameforge.test_att_resist._010_say)
+			say(gameforge.test_att_resist._020_say)
 			
 			local item_armor
 			local item_helmet
@@ -36,9 +36,9 @@ quest test_att_resist begin
 			pc.give_item2_select(item_helmet)
 			pc.give_item2_select(item_bracelet)
 		end
-		when TEST_NPC.chat."ATT_TEST : ITEM - FIRE" with is_test_server() begin
-			say("Test items for Fire resist")
-			say("Use items and Type /state to check resist stat")
+		when TEST_NPC.chat.gameforge.test_att_resist._120_npcChat with is_test_server() begin
+			say(gameforge.test_att_resist._030_say)
+			say(gameforge.test_att_resist._040_say)
 			
 			local item_armor
 			local item_helmet
@@ -70,9 +70,9 @@ quest test_att_resist begin
 			pc.give_item2_select(item_bracelet)
 			item.set_value(0, 35, 15)
 		end
-		when TEST_NPC.chat."ATT_TEST : ITEM - ELEC" with is_test_server() begin
-			say("Test items for ELEC resist")
-			say("Use items and Type /state to check resist stat")
+		when TEST_NPC.chat.gameforge.test_att_resist._130_npcChat with is_test_server() begin
+			say(gameforge.test_att_resist._050_say)
+			say(gameforge.test_att_resist._040_say)
 			
 			local item_armor
 			local item_helmet
@@ -105,9 +105,9 @@ quest test_att_resist begin
 			item.set_value(0, 36, 15)
 				
 		end
-		when TEST_NPC.chat."ATT_TEST : ITEM - WIND" with is_test_server() begin
-			say("Test items for WIND resist")
-			say("Use items and Type /state to check resist stat")
+		when TEST_NPC.chat.gameforge.test_att_resist._140_npcChat with is_test_server() begin
+			say(gameforge.test_att_resist._060_say)
+			say(gameforge.test_att_resist._040_say)
 			
 			local item_armor
 			local item_helmet
@@ -141,21 +141,21 @@ quest test_att_resist begin
 		end
 		
 		
-		when TEST_NPC.chat."ATT_TEST : MOB - FIRE" with is_test_server() begin
-			say("spawn FIRE monster")
-			say("check damage with basic and resist armors")
+		when TEST_NPC.chat.gameforge.test_att_resist._150_npcChat with is_test_server() begin
+			say(gameforge.test_att_resist._070_say)
+			say(gameforge.test_att_resist._080_say)
 			
 			mob.spawn(2201, pc.get_local_x(), pc.get_local_y(),0,1,1)
 		end
-		when TEST_NPC.chat."ATT_TEST : MOB - ELEC" with is_test_server() begin
-			say("spawn ELEC monster")
-			say("check damage with basic and resist armors")
+		when TEST_NPC.chat.gameforge.test_att_resist._160_npcChat with is_test_server() begin
+			say(gameforge.test_att_resist._090_say)
+			say(gameforge.test_att_resist._080_say)
 			
 			mob.spawn(2401, pc.get_local_x(), pc.get_local_y(),0,1,1)
 		end
-		when TEST_NPC.chat."ATT_TEST : MOB - WIND" with is_test_server() begin
-			say("spawn WIND monster")
-			say("check damage with basic and resist armors")
+		when TEST_NPC.chat.gameforge.test_att_resist._170_npcChat with is_test_server() begin
+			say(gameforge.test_att_resist._100_say)
+			say(gameforge.test_att_resist._080_say)
 			
 			mob.spawn(777, pc.get_local_x(), pc.get_local_y(),0,1,1)
 		end

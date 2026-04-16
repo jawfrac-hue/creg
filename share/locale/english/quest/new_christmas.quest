@@ -16,11 +16,11 @@ quest new_christmas_quest begin
 		end
 	end
 	state __COMPLETE__ begin
-		when 20126.chat."init christmas quest" with is_test_server()	begin
+		when 20126.chat.gameforge.new_christmas._140_npcChat with is_test_server()	begin
 			set_state ("start")
 			set_quest_state("new_christmas_nog_quest", "start")
 			set_quest_state("new_christmas_sock_quest", "start")
-			say ("init complete")
+			say(gameforge.new_christmas._130_say)
 		end
 	end
 end

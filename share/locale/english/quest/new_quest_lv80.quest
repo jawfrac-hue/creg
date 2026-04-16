@@ -81,7 +81,7 @@ quest new_quest_lv80 begin
 				say(string.format(gameforge.new_quest_lv80._130_say, item_name(new_quest_lv80_ice)))
 			else
 				say(gameforge.new_quest_lv80._140_say)
-				say_reward(string.format("%s x", new_quest_lv80_amountIce - pc.count_item(new_quest_lv80_ice)))
+				say_reward(string.format(gameforge.new_quest_lv80._390_sayReward, new_quest_lv80_amountIce - pc.count_item(new_quest_lv80_ice)))
 				say_item_vnum(new_quest_lv80_ice) -- icon of item: ice
 				say_reward(string.format(gameforge.new_quest_lv80._150_say_reward, mob_name(new_quest_lv80_mob2)))
 				wait()
@@ -90,7 +90,7 @@ quest new_quest_lv80 begin
 				say(string.format(gameforge.new_quest_lv80._160_say, item_name(new_quest_lv80_figure), item_name(new_quest_lv80_ember)))
 			else
 				say(gameforge.new_quest_lv80._170_say)
-				say_reward("1 x")
+				say_reward(gameforge.new_quest_lv80._400_sayReward)
 				say_item_vnum(new_quest_lv80_ember) -- icon of item: enchanted ember
 				say_reward(gameforge.new_quest_lv80._180_say_reward)
 				say_item_vnum(new_quest_lv80_figure) -- icon of item: scary wooden figure
@@ -506,30 +506,30 @@ quest new_quest_lv80 begin
 			say_title(gameforge.new_quest_lv80._599_set_title)
 			say(gameforge.new_quest_lv80._640_say)
 			if r <= 4 then
-				say_title(string.format("%sx", dragonamount))
+				say_title(string.format(gameforge.new_quest_lv80._680_sayTitle, dragonamount))
 				dragonreward = 71020
 			elseif r > 4 and r <= 8 then
 				dragonamount = dragonamount +3
-				say_title(string.format("%sx", dragonamount))
+				say_title(string.format(gameforge.new_quest_lv80._680_sayTitle, dragonamount))
 				dragonreward = 71004  -- dragon god medal
 			elseif r > 8 and r <= 12 then
-				say_title(string.format("%sx", dragonamount))
+				say_title(string.format(gameforge.new_quest_lv80._680_sayTitle, dragonamount))
 				dragonreward = 71027 -- Drachengott-Leben
 			elseif r > 12 and r <= 16 then
 				dragonamount = dragonamount +1
-				say_title(string.format("%sx", dragonamount))
+				say_title(string.format(gameforge.new_quest_lv80._680_sayTitle, dragonamount))
 				dragonreward = 71028 -- Drachengott-Angriff
 			elseif r > 16 and r <= 20 then
 				dragonamount = dragonamount +3
-				say_title(string.format("%sx", dragonamount))
+				say_title(string.format(gameforge.new_quest_lv80._680_sayTitle, dragonamount))
 				dragonreward = 71029 -- Drachengott-Intelligenz
 			elseif r > 20 and r <= 24 then
 				dragonamount = dragonamount +1
-				say_title(string.format("%sx", dragonamount))
+				say_title(string.format(gameforge.new_quest_lv80._680_sayTitle, dragonamount))
 				dragonreward = 71030  -- Drachengott-Verteidigung
 			else
 				dragonamount = 1
-				say_title(string.format("%sx", dragonamount))
+				say_title(string.format(gameforge.new_quest_lv80._680_sayTitle, dragonamount))
 				dragonreward = 71032 -- Schriftrolle des Drachen
 			end
 			say_item_vnum(dragonreward) -- icon of item: blessing of the dragon

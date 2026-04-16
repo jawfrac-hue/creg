@@ -123,7 +123,7 @@ quest subquest_5 begin
 					local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
 					if  2==a then
 						say_title(gameforge.subquest_05._30_sayTitle)
-						say(gameforge.gameforge.subquest_05._100_say)
+						say(gameforge.subquest_05._100_say)
 						return
 					end
 					say_title(gameforge.subquest_05._30_sayTitle)

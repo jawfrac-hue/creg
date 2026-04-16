@@ -1,6 +1,6 @@
 quest test begin
 	state start begin
-		when 20355.chat."bbbb" begin
+		when 20355.chat.gameforge.test._010_npcChat begin
 			setskin(NOWINDOW)
 			say_show_item(90013)
 		end

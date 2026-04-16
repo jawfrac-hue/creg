@@ -335,7 +335,7 @@ quest snow_dungeon begin
 				party.setf("dungeon_index", d.get_map_index())
 				d.setf("party_leader_pid", party.get_leader_pid())
 			else
-				say_title(mob_name(DUNGEON_MAN) .. ": ")
+				say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(DUNGEON_MAN)))
 				say(gameforge.snow_dungeon._090_say)
 			end
 		end
@@ -352,12 +352,12 @@ quest snow_dungeon begin
 			end
 		end
 
-		when ENTRY_MAN.chat."GM: Reset timers" with pc.is_gm() begin
+		when ENTRY_MAN.chat.gameforge.snow_dungeon._740_npcChat with pc.is_gm() begin
 			-- GM-only quick reset option
-			say_title(mob_name(ENTRY_MAN) .. ": ")
-			say("Reset timers for Nemere Watchtower?")
+			say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
+			say(gameforge.snow_dungeon._640_say)
 
-			local gm_sel = select("Reset", "Cancel")
+			local gm_sel = select(gameforge.snow_dungeon._650_select, gameforge.snow_dungeon._660_select)
 
 			if gm_sel == 1 then
 				if party.is_party() then
@@ -391,20 +391,20 @@ quest snow_dungeon begin
 					-- Clear party reference to existing dungeon
 					party.setf("dungeon_index", 0)
 
-					say_title(mob_name(ENTRY_MAN) .. ": ")
-					say("Per-character dungeon cooldown states have been reset.")
+					say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
+					say(gameforge.snow_dungeon._670_say)
 				else
 					-- Solo GM reset
 					pc.setf("snow_dungeon", "ticket_delete", 0)
 					pc.setf("snow_dungeon", "exit_time", 0)
 
-					say_title(mob_name(ENTRY_MAN) .. ": ")
-					say("Your dungeon cooldown states have been reset.")
+					say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
+					say(gameforge.snow_dungeon._680_say)
 				end
 			end
 		end
 
-		when ENTRY_MAN.chat."GM: Start at stage" with pc.is_gm() begin
+		when ENTRY_MAN.chat.gameforge.snow_dungeon._750_npcChat with pc.is_gm() begin
 			-- Check all party members have passage tickets
 			local pids = { party.get_member_pids() }
 
@@ -426,10 +426,10 @@ quest snow_dungeon begin
 			end
 
 			if has_low_level then
-				say_title(mob_name(ENTRY_MAN) .. ": ")
+				say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
 				say(string.format(gameforge.snow_dungeon._050_notice, 100))
 			elseif pc.is_riding() then
-				say_title(mob_name(ENTRY_MAN) .. ": ")
+				say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
 				say(gameforge.snow_dungeon._620_say)
 			else
 				-- Check for ninja and shaman in party (no nested other_pc_block)
@@ -453,30 +453,30 @@ quest snow_dungeon begin
 				end
 
 				if not has_ninja or not has_shaman then
-					say_title(mob_name(ENTRY_MAN) .. ": ")
+					say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
 					say(gameforge.snow_dungeon._170_say)
 				elseif not party.is_party() then
-					say_title(mob_name(ENTRY_MAN) .. ": ")
-					say("You must be in a party.")
+					say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
+					say(gameforge.snow_dungeon._690_say)
 				elseif not party.is_leader() then
-					say_title(mob_name(ENTRY_MAN) .. ": ")
-					say("Only the party leader can do this.")
+					say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
+					say(gameforge.snow_dungeon._700_say)
 				else			
-					say_title(mob_name(ENTRY_MAN) .. ": ")
-					say("Select stage to start:")
+					say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
+					say(gameforge.snow_dungeon._710_say)
 					
 					local sel = select(
-						"1. Clear room",
-						"2. Frost Keys",
-						"3. Clear room",
-						"4. Dual-wave (Blessing)",
-						"5. Arctic Cubes",
-						"6. Metin of Cold (Shaman)",
-						"7. Szel (Dragon's Aid)",
-						"8. Frostflower Key",
-						"9. Pillar (Ninja/Shaman)",
-						"10. Nemere",
-						"Cancel"
+						gameforge.snow_dungeon._760_select,
+						gameforge.snow_dungeon._770_select,
+						gameforge.snow_dungeon._780_select,
+						gameforge.snow_dungeon._790_select,
+						gameforge.snow_dungeon._800_select,
+						gameforge.snow_dungeon._810_select,
+						gameforge.snow_dungeon._820_select,
+						gameforge.snow_dungeon._830_select,
+						gameforge.snow_dungeon._840_select,
+						gameforge.snow_dungeon._850_select,
+						gameforge.locale.cancel
 					)
 					
 					if sel >= 1 and sel <= 10 then
@@ -503,18 +503,18 @@ quest snow_dungeon begin
 						end
 
 						if table.getn(members_riding) > 0 then
-							say_title(mob_name(ENTRY_MAN) .. ": ")
+							say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
 							say(gameforge.snow_dungeon._630_say)
 						elseif table.getn(members_without_ticket) > 0 and sel == 1 then
-							say_title(mob_name(ENTRY_MAN) .. ": ")
+							say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
 							say(gameforge.snow_dungeon._610_notice)
 							say("")
 
 							for i = 1, table.getn(members_without_ticket) do
-								say(string.format("  - %s", members_without_ticket[i]))
+								say(string.format(gameforge.snow_dungeon._720_say, members_without_ticket[i]))
 							end
 						elseif table.getn(members_cooling_down) > 0 then
-							say_title(mob_name(ENTRY_MAN) .. ": ")
+							say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
 							say(gameforge.snow_dungeon._600_say)
 						else
 							snow_dungeon.start_at_level(sel)
@@ -541,22 +541,22 @@ quest snow_dungeon begin
 					end
 
 					if pc.get_level() < 100 then
-						say_title(mob_name(ENTRY_MAN) .. ": ")
+						say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
 						say(gameforge.snow_dungeon._050_notice)
 					elseif pc.is_riding() then
-						say_title(mob_name(ENTRY_MAN) .. ": ")
+						say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
 						say(gameforge.snow_dungeon._620_say)
 					elseif get_global_time() - pc.getf("snow_dungeon", "exit_time") < 5 * 60 then
 						pc.warp(setting.WARP_pos[dungeon_level][1] * 100, setting.WARP_pos[dungeon_level][2] * 100, party.getf("dungeon_index"))
 					elseif get_global_time() - d.getf_from_map_index("dungeon_start_time", party.getf("dungeon_index")) < 5 * 60 then
 						if pc.count_item(PASS_TICKET) < 1 then
-							say_title(mob_name(ENTRY_MAN) .. ": ")
-							say(gameforge.snow_dungeon._040_notice)
+							say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
+							say(gameforge.snow_dungeon._040_say)
 						else
 							pc.warp(setting.WARP_pos[dungeon_level][1] * 100, setting.WARP_pos[dungeon_level][2] * 100, party.getf("dungeon_index"))
 						end
 					else
-						say_title(mob_name(ENTRY_MAN) .. ": ")
+						say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
 						say(gameforge.snow_dungeon._110_say)
 					end
 				else
@@ -582,10 +582,10 @@ quest snow_dungeon begin
 						end
 
 						if has_low_level then
-							say_title(mob_name(ENTRY_MAN) .. ": ")
+							say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
 							say(string.format(gameforge.snow_dungeon._050_notice, 100))
 						elseif pc.is_riding() then
-							say_title(mob_name(ENTRY_MAN) .. ": ")
+							say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
 							say(gameforge.snow_dungeon._620_say)
 						else
 							-- Check for ninja and shaman in party (no nested other_pc_block)
@@ -609,10 +609,10 @@ quest snow_dungeon begin
 							end
 
 							if not has_ninja or not has_shaman then
-								say_title(mob_name(ENTRY_MAN) .. ": ")
+								say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
 								say(gameforge.snow_dungeon._170_say)
 							else
-								say_title(mob_name(ENTRY_MAN) .. ": ")
+								say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
 								say(gameforge.snow_dungeon._130_say)
 
 								local warp = select(gameforge.snow_dungeon._140_select, gameforge.snow_dungeon._150_select)
@@ -641,18 +641,18 @@ quest snow_dungeon begin
 									end
 
 									if table.getn(members_riding) > 0 then
-										say_title(mob_name(ENTRY_MAN) .. ": ")
+										say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
 										say(gameforge.snow_dungeon._630_say)
 									elseif table.getn(members_without_ticket) > 0 then
-										say_title(mob_name(ENTRY_MAN) .. ": ")
+										say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
 										say(gameforge.snow_dungeon._610_notice)
 										say("")
 
 										for i = 1, table.getn(members_without_ticket) do
-											say(string.format("  - %s", members_without_ticket[i]))
+											say(string.format(gameforge.snow_dungeon._720_say, members_without_ticket[i]))
 										end
 									elseif table.getn(members_cooling_down) > 0 then
-										say_title(mob_name(ENTRY_MAN) .. ": ")
+										say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
 										say(gameforge.snow_dungeon._600_say)
 									else
 										party.setf("snow_dungeon_boss_kill_count", 0)
@@ -662,12 +662,12 @@ quest snow_dungeon begin
 							end
 						end
 					else
-						say_title(mob_name(ENTRY_MAN) .. ": ")
+						say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
 						say(gameforge.snow_dungeon._160_say)
 					end
 				end
 			else
-				say_title(mob_name(ENTRY_MAN) .. ": ")
+				say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(ENTRY_MAN)))
 				say(gameforge.snow_dungeon._170_say)
 			end
 		end
@@ -1158,7 +1158,7 @@ quest snow_dungeon begin
 				--else
 					--if pc.getf("main_quest_flame_lv103", "__status")==main_quest_flame_lv103.__COMPLETE__ then
 					--if pc.getf("main_quest_lv1", "__status")==main_quest_lv1.__COMPLETE__ then
-						say_title(mob_name(DUNGEON_MAN) .. ": ")
+						say_title(string.format(gameforge.snow_dungeon._730_sayTitle, mob_name(DUNGEON_MAN)))
 						say(gameforge.snow_dungeon._480_say)
 
 						local warp = select(gameforge.snow_dungeon._140_select, gameforge.snow_dungeon._150_select)

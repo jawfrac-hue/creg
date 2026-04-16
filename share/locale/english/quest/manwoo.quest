@@ -1,9 +1,9 @@
 quest manwoo begin
 	state start begin
-		when 9009.chat."GM: Start Fishing Event" with pc.get_gm_level() == 5 and game.get_event_flag("manwoo_start") == 0 begin
-			say_title("Manwoo Event")
-			say("Which fish should be accepted?") -- Setting which kind of fishes should the fisher man accept in the event
-			say("Between 27802 and 27818") -- We have fishes till 27823 but they aren't activated
+		when 9009.chat.gameforge.manwoo._550_npcChat with pc.get_gm_level() == 5 and game.get_event_flag("manwoo_start") == 0 begin
+			say_title(gameforge.manwoo._080_sayTitle)
+			say(gameforge.manwoo._090_say) -- Setting which kind of fishes should the fisher man accept in the event
+			say(gameforge.manwoo._100_say) -- We have fishes till 27823 but they aren't activated
 			
 			local fish = input()
 			if fish != "" then
@@ -12,11 +12,11 @@ quest manwoo begin
 			if fish >= 27802 and fish <= 27818 then -- Check if the input is a number and if it is fishable.
 				game.set_event_flag("manwoo_fish", fish) -- To check the fish as an eventflag
 			else
-				say("That number isn't accepted")
+				say(gameforge.manwoo._110_say)
 				return
 			end
-			say_title("Manwoo Event") -- Setting the amount of fishes that would be accepted
-			say("How many fishes should we accept?")
+			say_title(gameforge.manwoo._080_sayTitle) -- Setting the amount of fishes that would be accepted
+			say(gameforge.manwoo._120_say)
 			local amount = input()
 			if amount != "" then
 				amount = tonumber(amount)
@@ -24,14 +24,14 @@ quest manwoo begin
 			if amount > 0 then
 				game.set_event_flag("manwoo", amount)
 			else
-				say("That isn't a valid number")
+				say(gameforge.manwoo._130_say)
 			end
 			
-			say_title("Manwoo Event") -- Setting the reward for the event
-			say("How many different items should")
-			say("the player receive as a reward? Max = 4")
+			say_title(gameforge.manwoo._080_sayTitle) -- Setting the reward for the event
+			say(gameforge.manwoo._140_say)
+			say(gameforge.manwoo._150_say)
 			--
-			local reward_amount = select("1", "2", "3", "4", "cancel") -- how many different items a player can get, max = 4.
+			local reward_amount = select(gameforge.manwoo._160_select, gameforge.manwoo._170_select, gameforge.manwoo._180_select, gameforge.manwoo._190_select, gameforge.manwoo._200_select) -- how many different items a player can get, max = 4.
 			if s == 5 then
 				return
 			else
@@ -44,13 +44,13 @@ quest manwoo begin
 				local current_amount = 0
 				local again = 1
 				repeat -- repeat so that the array will be filled in
-					say_title("Manwoo Event")
-					say("Please input the item vnum that will be given (Reward "..current_amount..").")
+					say_title(gameforge.manwoo._080_sayTitle)
+					say(string.format(gameforge.manwoo._590_say, current_amount))
 					local reward_vnum = input()
-					say_title("Manwoo Event")
+					say_title(gameforge.manwoo._080_sayTitle)
 					if reward_vnum == "" or reward_vnum == 0 then
-						say("You did not put a vnum in there")
-						again = select("Again", "no more items", "cancel")
+						say(gameforge.manwoo._210_say)
+						again = select(gameforge.manwoo._220_select, gameforge.manwoo._230_select, gameforge.manwoo._200_select)
 						if again == 2 then
 							current_amount = reward_amount
 						elseif again == 3 then
@@ -58,12 +58,12 @@ quest manwoo begin
 						end
 					else	
 						if item_name(reward_vnum) == nil then
-							say("That vnum does not exist")
+							say(gameforge.manwoo._240_say)
 							wait()
 						else
 							say_item_vnum(reward_vnum)
 							say("")
-							local vnum_ok = select("ok", "type again", "cancel")
+							local vnum_ok = select(gameforge.manwoo._250_select, gameforge.manwoo._260_select, gameforge.manwoo._200_select)
 							if vnum_ok == 1 then
 								current_amount = current_amount + 1
 								game.set_event_flag("manwoo_reward_"..current_amount, reward_vnum)
@@ -77,9 +77,9 @@ quest manwoo begin
 			end
 			
 			
-			say_title("Manwoo Event")
-			say("For how many hours should the event be on?")
-			local s = select("8 hours", "16 hours", "24 hours", "unlimited", "input", "cancel")
+			say_title(gameforge.manwoo._080_sayTitle)
+			say(gameforge.manwoo._270_say)
+			local s = select(gameforge.manwoo._280_select, gameforge.manwoo._290_select, gameforge.manwoo._300_select, gameforge.manwoo._310_select, gameforge.manwoo._320_select, gameforge.manwoo._200_select)
 			local hours = 1 -- default value
 			if s == 1 then
 				hours = 8
@@ -101,9 +101,9 @@ quest manwoo begin
 			game.set_event_flag("manwoo_start", 1)
 			return
 		end
-		when 9009.chat."GM: Stop Fish event" with pc.get_gm_level() == 5 and game.get_event_flag("manwoo_start") > 0 begin
-			say_title("Manwoo Event")
-			local s=select("stop the event", "cancel")
+		when 9009.chat.gameforge.manwoo._560_npcChat with pc.get_gm_level() == 5 and game.get_event_flag("manwoo_start") > 0 begin
+			say_title(gameforge.manwoo._080_sayTitle)
+			local s=select(gameforge.manwoo._330_select, gameforge.manwoo._200_select)
 			if s == 1 then
 				game.set_event_flag("manwoo_start", 0)
 			else
@@ -111,26 +111,26 @@ quest manwoo begin
 			end
 		end
 		
-		when 9009.chat."Psst, want to help me out?" with game.get_event_flag("manwoo_start") > 0 and game.get_event_flag("manwoo_time") >= get_global_time() begin
+		when 9009.chat.gameforge.manwoo._570_npcChat with game.get_event_flag("manwoo_start") > 0 and game.get_event_flag("manwoo_time") >= get_global_time() begin
 			pc.setqf("reward", 1) 
 			pc.setqf("time", game.get_event_flag("manwoo_time"))
-			say_title("Fisherman's Event")
-			say("Hi, do you know Octavio in the village over there?")
-			say("He came to me one day with a very attractive business deal.")
-			say("As you know, he is one of the most famous cooks in these regions,")
-			say("and he strives to be the best there is in every cooking mastery.")
-			say("He has put his attention to sushi,")
-			say("and he claims he needs live fish to make the tastiest sushi.")
+			say_title(gameforge.manwoo._340_sayTitle)
+			say(gameforge.manwoo._350_say)
+			say(gameforge.manwoo._360_say)
+			say(gameforge.manwoo._370_say)
+			say(gameforge.manwoo._380_say)
+			say(gameforge.manwoo._390_say)
+			say(gameforge.manwoo._400_say)
 			wait()
-			say_title("Fisherman's Event")
-			say("Of course he doesn't have any time to catch them himself,")
-			say("so he asked me to do it for him, for some items he gets from his customers.")
-			say("But I'm a bit stretched at the moment with the amount he needs from me,")
-			say("I cannot possibly do it alone.")
-			say("If you help me with Octavio's order,")
-			say("I will give you a nice reward!")
-			say("Give me this fish: ")
-			say(game.get_event_flag("manwoo").."x: ")
+			say_title(gameforge.manwoo._340_sayTitle)
+			say(gameforge.manwoo._410_say)
+			say(gameforge.manwoo._420_say)
+			say(gameforge.manwoo._430_say)
+			say(gameforge.manwoo._440_say)
+			say(gameforge.manwoo._450_say)
+			say(gameforge.manwoo._460_say)
+			say(gameforge.manwoo._470_say)
+			say(string.format(gameforge.manwoo._600_say, game.get_event_flag("manwoo")))
 			say_item_vnum(game.get_event_flag("manwoo_fish"))
 			wait()
 			
@@ -144,19 +144,19 @@ quest manwoo begin
 		end
 
 		when login or enter begin
-			say("bla")
+			say(gameforge.manwoo._480_say)
 		end
 		
-		when 9009.chat."About the fish..." with game.get_event_flag("manwoo_start") > 0 and game.get_event_flag("manwoo_start") > 0 and game.get_event_flag("manwoo_time") >= get_global_time() begin
-			say_title("Fisherman's Event")
+		when 9009.chat.gameforge.manwoo._580_npcChat with game.get_event_flag("manwoo_start") > 0 and game.get_event_flag("manwoo_start") > 0 and game.get_event_flag("manwoo_time") >= get_global_time() begin
+			say_title(gameforge.manwoo._340_sayTitle)
 			if pc.count_item(game.get_event_flag("manwoo_fish")) < game.get_event_flag("manwoo") then
-				say("You don't have enough fish!")
+				say(gameforge.manwoo._490_say)
 			else
-				say("Hey! You actually managed to do it!")
-				say("Thank you!")
-				say("And now... for the reward")
+				say(gameforge.manwoo._500_say)
+				say(gameforge.manwoo._510_say)
+				say(gameforge.manwoo._520_say)
 				wait()
-				say_title("Fisherman's Event")
+				say_title(gameforge.manwoo._340_sayTitle)
 				local current_amount = pc.getqf("reward")
 				local reward_vnum = game.get_event_flag("manwoo_reward_"..current_amount)
 				if reward_vnum == 0 or reward_vnum == "" then
@@ -170,8 +170,8 @@ quest manwoo begin
 						pc.give_item2(reward_vnum)
 						pc.setqf("reward", current_amount +1)
 					else
-						say("You don't have enough space!")
-						say("Please, return when you have enough space!")
+						say(gameforge.manwoo._530_say)
+						say(gameforge.manwoo._540_say)
 					end
 				end
 			end

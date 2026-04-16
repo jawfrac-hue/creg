@@ -350,7 +350,7 @@ quest main_quest_lv97 begin
 				say_title(locale.reward)
 				say_reward(string.format (gameforge.main_quest_lv60._190_sayReward, REWARD2_EXP))
 				--say_reward(string.format (gameforge.main_quest_lv60._200_sayReward, REWARD2_GOLD))
-				say_reward(string.format ("%s: %d %s", item_name(REWARD2_ITEM1),REWARD2_ITEM1_COUNT,locale.count_postfix))
+				say_reward(string.format (gameforge.locale.name_count, item_name(REWARD2_ITEM1), REWARD2_ITEM1_COUNT, locale.count_postfix))
 				say("")
 				
 				pc.give_exp2(REWARD2_EXP)

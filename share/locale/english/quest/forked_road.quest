@@ -149,19 +149,19 @@ quest forked_road begin
 			local s = select(gameforge.forked_road._120_select, gameforge.forked_road._130_select, gameforge.locale.cancel)
 
 			if s == 1 then
-				say("1> min "..forked_road.enter_level(1,1).." max "..forked_road.enter_level(1,2))
-				say("2> min "..forked_road.enter_level(2,1).." max "..forked_road.enter_level(2,2))
-				say("3> min "..forked_road.enter_level(3,1).." max "..forked_road.enter_level(3,2))
-				say("4> min "..forked_road.enter_level(4,1).." max "..forked_road.enter_level(4,2))
-				say("input number")
-				local choice = input_number("select  player's level  who will join ")
+				say(string.format(gameforge.entry_event_map._260_select, forked_road.enter_level(1,1), forked_road.enter_level(1,2)))
+				say(string.format(gameforge.entry_event_map._270_select, forked_road.enter_level(2,1), forked_road.enter_level(2,2)))
+				say(string.format(gameforge.entry_event_map._280_select, forked_road.enter_level(3,1), forked_road.enter_level(3,2)))
+				say(string.format(gameforge.entry_event_map._290_select, forked_road.enter_level(4,1), forked_road.enter_level(4,2)))
+				say(gameforge.forked_road._180_say)
+				local choice = input_number(gameforge.forked_road._210_say)
                 
                 if choice > 4 or choice == 0 then
-                    say("Invalid number only 1 - 4 are allowed")
+                    say(gameforge.forked_road._190_say)
                     return
                 end
                 
-                say(string.format(gameforge.forked_road._170_say, forked_road.enter_level(choice,1).." max level: "..forked_road.enter_level(choice,2)))
+                say(string.format(gameforge.forked_road._220_say, forked_road.enter_level(choice,1), forked_road.enter_level(choice,2)))
 				local t = select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
 
 				if 1 == t then
@@ -189,7 +189,7 @@ quest forked_road begin
 					game.set_event_flag("threeway_war_open_gate2", 1)
 					game.set_event_flag("threeway_war_open_gate3", 1)
 
-					say("Event Started !!")
+					say(gameforge.forked_road._200_say)
 					say("")
 
 					wait()

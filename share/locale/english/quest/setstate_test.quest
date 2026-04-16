@@ -3,19 +3,19 @@ quest setstate_test begin
 	end
 	state hunt begin
 		when login begin
-			notice("You killed: " .. pc.getqf("killed") .. " wild dogs")
+			notice(string.format(gameforge.setstate_test._010_notice, pc.getqf("killed")))
 		end
 		when login or enter begin
-			q.set_title("kill dogs")
-			q.set_counter("Killed dogs: ", pc.getqf("killed"))
+			q.set_title(gameforge.setstate_test._020_qSetTitle)
+			q.set_counter(gameforge.setstate_test._030_qSetCounter, pc.getqf("killed"))
 			q.start()
 		end
 		
 		when 101.kill begin
 			local killed = pc.getqf("killed")+1
-			notice("You killed: " .. killed)
+			notice(string.format(gameforge.setstate_test._040_notice, killed))
 			pc.setqf("killed", killed)
-			q.set_counter("Killed dogs: ", killed)
+			q.set_counter(gameforge.setstate_test._030_qSetCounter, killed)
 		end
 	end
 end

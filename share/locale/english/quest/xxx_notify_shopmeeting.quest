@@ -1,22 +1,22 @@
 quest notify_shopmeeting begin
 	state start begin
-		when 9005.chat."Empfange Deine Mission" with pc.level<=4 begin
-			say("Heute findet ein Händlertreffen statt.")
-			say("Wenn Du also Zeit hast,")
-			say ("warum fragst Du nicht die Besitzer des Gemischtwarenladens, des Waffengeschäfts und des Verteidigungsgeschäfts,")
-			say ("ob sie für mich zu dem Treffen gehen?")
-		    local b=select ("Annehmen", "Was gibst Du mir zur Belohnung?")
+		when 9005.chat.gameforge.xxx_notify_shopmeeting._090_npcChat with pc.level<=4 begin
+			say(gameforge.xxx_notify_shopmeeting._010_say)
+			say(gameforge.xxx_notify_shopmeeting._020_say)
+			say(gameforge.xxx_notify_shopmeeting._030_say)
+			say(gameforge.xxx_notify_shopmeeting._040_say)
+		    local b=select(gameforge.xxx_notify_shopmeeting._050_select, gameforge.xxx_notify_shopmeeting._060_select)
 			if 1==b then
 				setstate(accept)
 	elseif 2==b then
-		say	 ("(Ha, ha.) Du kennst das Geschäft!")
+		say(gameforge.xxx_notify_shopmeeting._070_say)
 				 ("Nun, das ist keine schwierige Aufgabe, wie wäre es mit 500 Yang?")
-				local b=select ("Annehmen", "Ablehnen")
+				local b=select(gameforge.xxx_notify_shopmeeting._050_select, gameforge.xxx_notify_shopmeeting._080_select)
 				if 1==b then
 					setstate(accept)
 				elseif 2==b then
 				else
-					say("UNBEKANNTE TASTE ["..b.."]")
+					say(string.format(gameforge.buy_fishrod._80_say, b))
 					end
 				else
 				 ("UNBEKANNTE TASTE ["..b.."]")

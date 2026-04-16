@@ -213,7 +213,7 @@ quest main_quest_flame_lv103 begin
 			say(gameforge.main_quest_flame_lv103._250_say) 
 			--남은 처치 수 안내문
 			say(gameforge.main_quest_lv98._680_counterName)
-			say(string.format(gameforge.main_quest_lv98._670_sayReward,"적룡성 마물", 1000 - pc.getqf("kill_count_1")))
+			say(string.format(gameforge.main_quest_lv98._670_sayReward, gameforge.main_quest_flame_lv103._255_sayReward, 1000 - pc.getqf("kill_count_1")))
 			say_reward(gameforge.main_quest_flame_lv103._260_sayReward)
 		end
 

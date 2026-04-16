@@ -159,7 +159,7 @@ end
 			if pc.count_item(30227)>0 then	
 				local v = find_npc_by_vnum(20084)
 				if v != 0 then
-					target.vid("__TARGET__", v, "???")
+					target.vid("__TARGET__", v, gameforge.collect_quest_lv90._010_target)
 				end
 			end
 
@@ -177,10 +177,10 @@ end
 			say(gameforge.collect_quest_lv90._230_say)
 			say_item_vnum(30227)
 			say(gameforge.collect_quest_lv90._240_say)
-			say(mob_name(1304)..", "..mob_name(1093)..",")
-			say(mob_name(1901)..".")
-			say(""..mob_name(3090)..", "..mob_name(3290)..", "..mob_name(3590)..",")
-			say(""..mob_name(6091)..", "..mob_name(6191)..".")
+			say(string.format(gameforge.locale.list_two_comma, mob_name(1304), mob_name(1093)))
+			say(string.format(gameforge.locale.list_one_period, mob_name(1901)))
+			say(string.format(gameforge.locale.list_three_comma, mob_name(3090), mob_name(3290), mob_name(3590)))
+			say(string.format(gameforge.locale.list_two_period, mob_name(6091), mob_name(6191)))
 		end
 		when 1093.kill or 1304.kill or 1901.kill or 3090.kill or 3290.kill or 3590.kill or 6091.kill or 6191.kill  begin
 			local s = number(1, 100)

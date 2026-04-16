@@ -8,19 +8,19 @@ quest pre_event_heavens_cave begin
 	
 	state pre_event_heavens_cave begin
 		when enter with pc.is_gm() begin -- tbd
-			send_letter("Pre-Event Helper Script") -- tbd
+			send_letter(gameforge.pre_event_heavens_cave._340_sendLetter) -- tbd
 		end	-- tbd
 		
 		when button or info begin -- tbd
-			say_reward("Warning!") -- tbd
-			say("This dialog is not part of the Heavens Cave Pre-Event!!!") -- tbd
-			say("It's purpose is to help in the testing of the event. Only run the script ONCE PER SERVER because it automaticly starts the event which should only be done 1 time!") -- tbd
-			say("You may use it to resets - using Stop and then Start - every variable to its default value. It only resets variable concerning the event and not your character's variables.") -- tbd
-			say("The tickets related to this event are: 0030149, 0030150 and 0031479.") -- tbd
-			say("Have Fun!") -- tbd
+			say_reward(gameforge.pre_event_heavens_cave._440_sayReward) -- tbd
+			say(gameforge.pre_event_heavens_cave._350_say) -- tbd
+			say(gameforge.pre_event_heavens_cave._360_say) -- tbd
+			say(gameforge.pre_event_heavens_cave._370_say) -- tbd
+			say(gameforge.pre_event_heavens_cave._380_say) -- tbd
+			say(gameforge.pre_event_heavens_cave._390_say) -- tbd
 			say("") -- tbd
-			say("Benjamin") -- tbd
-			local startevent = select("Start the Event", "Stop the Event", "Close") -- tbd
+			say(gameforge.pre_event_heavens_cave._400_say) -- tbd
+			local startevent = select(gameforge.pre_event_heavens_cave._410_select, gameforge.pre_event_heavens_cave._420_select, gameforge.pre_event_heavens_cave._430_select) -- tbd
 			if startevent == 1 then
 				game.set_event_flag("pre_event_hc", 1) -- tbd
 				game.set_event_flag("glyphstones_collected", 0) -- tbd
@@ -212,9 +212,9 @@ quest pre_event_heavens_cave begin
 					wait()
 					say(gameforge.pre_event_heavens_cave._20_say)
 					say(gameforge.pre_event_heavens_cave._110_say)
-					say(string.format("%dx", potion1amount))
+					say(string.format(gameforge.pre_event_heavens_cave._440_say, potion1amount))
 					say_item_vnum(potion1)
-					say(string.format("%dx", potion2amount))
+					say(string.format(gameforge.pre_event_heavens_cave._440_say, potion2amount))
 					say_item_vnum(potion2)
 					wait()
 					say(string.format(gameforge.pre_event_heavens_cave._120_say, potion3amount))
@@ -243,7 +243,6 @@ quest pre_event_heavens_cave begin
 							say(gameforge.pre_event_heavens_cave._20_say)
 							say(gameforge.pre_event_heavens_cave._160_say)
 							say(gameforge.pre_event_heavens_cave._170_say)
-							say(gameforge.pre_event_heavens_cave._180_say) 
 							say(gameforge.pre_event_heavens_cave._190_say)
 							say(gameforge.pre_event_heavens_cave._200_say)
 							wait()
@@ -321,15 +320,15 @@ quest pre_event_heavens_cave begin
 			until goldcounter > 5
 			local choosegold = 0
 			if buttoncounter == 2 then
-				choosegold = select(gameforge.pre_event_heavens_cave._290_select, string.format("%dx %s", gold[1].amount, gold[1].name))
+				choosegold = select(gameforge.pre_event_heavens_cave._290_select, string.format(gameforge.pre_event_heavens_cave._450_stringFormat, gold[1].amount, gold[1].name))
 			elseif buttoncounter == 3 then
-				choosegold = select(gameforge.pre_event_heavens_cave._290_select, string.format("%dx %s", gold[1].amount, gold[1].name), string.format("%dx %s", gold[2].amount, gold[2].name))
+				choosegold = select(gameforge.pre_event_heavens_cave._290_select, string.format(gameforge.pre_event_heavens_cave._450_stringFormat, gold[1].amount, gold[1].name), string.format(gameforge.pre_event_heavens_cave._450_stringFormat, gold[2].amount, gold[2].name))
 			elseif buttoncounter == 4 then
-				choosegold = select(gameforge.pre_event_heavens_cave._290_select, string.format("%dx %s", gold[1].amount, gold[1].name), string.format("%dx %s", gold[2].amount, gold[2].name), string.format("%dx %s", gold[3].amount, gold[3].name))
+				choosegold = select(gameforge.pre_event_heavens_cave._290_select, string.format(gameforge.pre_event_heavens_cave._450_stringFormat, gold[1].amount, gold[1].name), string.format(gameforge.pre_event_heavens_cave._450_stringFormat, gold[2].amount, gold[2].name), string.format(gameforge.pre_event_heavens_cave._450_stringFormat, gold[3].amount, gold[3].name))
 			elseif buttoncounter == 5 then
-				choosegold = select(gameforge.pre_event_heavens_cave._290_select, string.format("%dx %s", gold[1].amount, gold[1].name), string.format("%dx %s", gold[2].amount, gold[2].name), string.format("%dx %s", gold[3].amount, gold[3].name), string.format("%dx %s", gold[4].amount, gold[4].name))
+				choosegold = select(gameforge.pre_event_heavens_cave._290_select, string.format(gameforge.pre_event_heavens_cave._450_stringFormat, gold[1].amount, gold[1].name), string.format(gameforge.pre_event_heavens_cave._450_stringFormat, gold[2].amount, gold[2].name), string.format(gameforge.pre_event_heavens_cave._450_stringFormat, gold[3].amount, gold[3].name), string.format(gameforge.pre_event_heavens_cave._450_stringFormat, gold[4].amount, gold[4].name))
 			elseif buttoncounter == 6 then
-				choosegold = select(gameforge.pre_event_heavens_cave._290_select, string.format("%dx %s", gold[1].amount, gold[1].name), string.format("%dx %s", gold[2].amount, gold[2].name), string.format("%dx %s", gold[3].amount, gold[3].name), string.format("%dx %s", gold[4].amount, gold[4].name), string.format("%dx %s", gold[5].amount, gold[5].name))
+				choosegold = select(gameforge.pre_event_heavens_cave._290_select, string.format(gameforge.pre_event_heavens_cave._450_stringFormat, gold[1].amount, gold[1].name), string.format(gameforge.pre_event_heavens_cave._450_stringFormat, gold[2].amount, gold[2].name), string.format(gameforge.pre_event_heavens_cave._450_stringFormat, gold[3].amount, gold[3].name), string.format(gameforge.pre_event_heavens_cave._450_stringFormat, gold[4].amount, gold[4].name), string.format(gameforge.pre_event_heavens_cave._450_stringFormat, gold[5].amount, gold[5].name))
 			end
 			if choosegold > 1 then
 				choosegold = choosegold -1
@@ -422,15 +421,15 @@ quest pre_event_heavens_cave begin
 				local scorecounter0 = 0
 				local scorecounter1 = 1
 				local savescore = 0
-				say_title(gameforge.pre_event_heavens_cave._340_say_title)
+				say_title(gameforge.pre_event_heavens_cave._20_say)
 				repeat
 					score = string.format("score%d", scorecounter0)
 					savescore = scoretable[scorecounter1]["score"] /100
 					game.set_event_flag(score, savescore)
 					if scorecounter1 == scoreplace then
-						say_reward(string.format(gameforge.pre_event_heavens_cave._350_say_reward, scorecounter1, scoretable[scorecounter1]["score"]))
+						say_reward(string.format(gameforge.locale.label_value, scorecounter1, string.format(locale.gold, scoretable[scorecounter1]["score"])))
 					else
-						say(string.format(gameforge.pre_event_heavens_cave._350_say_reward, scorecounter1, scoretable[scorecounter1]["score"]))
+						say(string.format(gameforge.locale.label_value, scorecounter1, string.format(locale.gold, scoretable[scorecounter1]["score"])))
 					end
 					scorecounter0 = scorecounter0 +1
 					scorecounter1 = scorecounter1 +1

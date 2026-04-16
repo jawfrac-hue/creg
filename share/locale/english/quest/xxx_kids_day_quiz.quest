@@ -1,96 +1,96 @@
 quest kids_day_quiz begin
     state start begin
-	when 20041.chat."GM: Quiz Event" with pc.is_gm() begin
+	when 20041.chat.gameforge.xxx_kids_day_quiz._530_npcChat with pc.is_gm() begin
 	    local low_value=game.get_event_flag("kids_day_drop")
 	    local high_value=game.get_event_flag("kids_day_drop_high")
 	    
-	    say_title("Prozentsatz des Kistendrop fur Quiz Event")
-	    say(string.format("Der Prozent des niedrige Level : 1/%d", low_value))
-	    say(string.format("Der Prozent des hohe Level  : 1/%d", high_value))
-	    local s=select("Veränderung für niedrige Level", "Veränderung für höhere Level", "Schließen")
+	    say_title(gameforge.xxx_kids_day_quiz._010_sayTitle)
+	    say(string.format(gameforge.xxx_kids_day_quiz._420_say, low_value))
+	    say(string.format(gameforge.xxx_kids_day_quiz._430_say, high_value))
+	    local s=select(gameforge.xxx_kids_day_quiz._020_select, gameforge.xxx_kids_day_quiz._030_select, gameforge.xxx_kids_day_quiz._040_select)
 	    
 	    if s==1 then
-		say_title("Veränderung der Dropchance der Kisten fürs niedrige Level")
+		say_title(gameforge.xxx_kids_day_quiz._050_sayTitle)
 		say("")
-		say(string.format("Prozent Dropchance 1/%d -> ", low_value))
+		say(string.format(gameforge.xxx_kids_day_quiz._440_say, low_value))
 		local v=tonumber(input())
 		if v<300 then
-		    say("Weniger als 300 kann man nicht einstellen")
+		    say(gameforge.xxx_kids_day_quiz._060_say)
 
 		    if not is_test_server() then
 		    	return
 		    end
 
-		    say("Beim Test Server moglich")
+		    say(gameforge.xxx_kids_day_quiz._070_say)
 		end
 
-		say(string.format("Die Dropchance 1/%d -> 1/%d", low_value, v))
+		say(string.format(gameforge.xxx_kids_day_quiz._450_say, low_value, v))
 		say("")
-		local s=select("Bestätigen", "Abbrechen")
+		local s=select(gameforge.xxx_kids_day_quiz._080_select, gameforge.xxx_kids_day_quiz._090_select)
 		if s==1 then
 		    say("")	
-		    say("Geändert")
+		    say(gameforge.xxx_kids_day_quiz._100_say)
 		    game.set_event_flag("kids_day_drop", v)
 		else
 		    say("")
-		    say("Abgebrochen")
+		    say(gameforge.xxx_kids_day_quiz._110_say)
 		end
 	    
 	    elseif s==2 then
-		say_title("Veränderung der Dropchance der Kisten fürs hohe Level")
-		say(string.format("Prozent Dropchance 1/%d -> ", high_value))
+		say_title(gameforge.xxx_kids_day_quiz._120_sayTitle)
+		say(string.format(gameforge.xxx_kids_day_quiz._440_say, high_value))
 		local v=tonumber(input())
 		if v<300 then
-		    say("Weniger als 300 kann man nicht einstellen")
+		    say(gameforge.xxx_kids_day_quiz._060_say)
 
 		    if not is_test_server() then
 		    	return
 		    end
 
-		    say("Beim Test Sever moglich")
+		    say(gameforge.xxx_kids_day_quiz._130_say)
 		end
 
-		say(string.format("Die Dropchance für hohes Level 1/%d -> 1/%d", high_value, v))
+		say(string.format(gameforge.xxx_kids_day_quiz._460_say, high_value, v))
 		say("")
-		local s=select("Bestatigen", "Abbrechen")
+		local s=select(gameforge.xxx_kids_day_quiz._140_select, gameforge.xxx_kids_day_quiz._090_select)
 		if s==1 then
-		    say("Geändert")
+		    say(gameforge.xxx_kids_day_quiz._100_say)
 		    game.set_event_flag("kids_day_drop_high", v)
 		else
-		    say("Abgebrochen")
+		    say(gameforge.xxx_kids_day_quiz._110_say)
 		end
 	    end
 	end
 	
-	when 20041.chat."GM: Quiz Event" with pc.is_gm() and game.get_event_flag("kids_day_drop")==0 begin
-		say("Soll das Quiz Event durchgeführt werden?")
+	when 20041.chat.gameforge.xxx_kids_day_quiz._530_npcChat with pc.is_gm() and game.get_event_flag("kids_day_drop")==0 begin
+		say(gameforge.xxx_kids_day_quiz._150_say)
 		say("")
-		local s=select("Starten", "Schließen")
+		local s=select(gameforge.xxx_kids_day_quiz._160_select, gameforge.xxx_kids_day_quiz._040_select)
 		if s==1 then
 		    local default_value=1000;
 		    game.set_event_flag("kids_day_drop", default_value)
 		    game.set_event_flag("kids_day_drop_high", default_value)
-		    say(string.format("Die Dropchance der Kisten fürs Event: 1/%d", default_value))
+		    say(string.format(gameforge.xxx_kids_day_quiz._470_say, default_value))
 		end
 	end
 	
-	when 20041.chat."GM: Quiz Event beenden" with pc.is_gm() and game.get_event_flag("kids_day_drop")!=0 begin
-		say("Soll das Quiz Event beendet werden?")
+	when 20041.chat.gameforge.xxx_kids_day_quiz._540_npcChat with pc.is_gm() and game.get_event_flag("kids_day_drop")!=0 begin
+		say(gameforge.xxx_kids_day_quiz._170_say)
 		say("")
-		local s=select("Beenden", "Schließen")
+		local s=select(gameforge.xxx_kids_day_quiz._180_select, gameforge.xxx_kids_day_quiz._040_select)
 		if s==1 then
 		    game.set_event_flag("kids_day_drop", 0)
 		    game.set_event_flag("kids_day_drop_high", 0)
 		end
 	end
 	
-	when 20041.chat."GM: Das Metin2 Quiz!" with pc.is_gm() begin
-	    say_title("Das Metin2 Quiz")
-	    say("Du kannst am Quiz teilnehmen es beginnt mit")
-	    say("der ersten von 10 Fragen.")
+	when 20041.chat.gameforge.xxx_kids_day_quiz._550_npcChat with pc.is_gm() begin
+	    say_title(gameforge.xxx_kids_day_quiz._190_sayTitle)
+	    say(gameforge.xxx_kids_day_quiz._200_say)
+	    say(gameforge.xxx_kids_day_quiz._210_say)
 
 	    local max=table.getn(locale.quiz)
-	    say(string.format("(Die Frage Anzahl : %d)", max))
+	    say(string.format(gameforge.xxx_kids_day_quiz._480_say, max))
 
 	    local quiz_begin = input()
 	    if quiz_begin=="" then
@@ -102,22 +102,22 @@ quest kids_day_quiz begin
 
 	    for quiz_index=quiz_begin, quiz_end do
 		local quiz_data=locale.quiz[quiz_index]
-		say_title(string.format("Das Metin2 Quiz! #%d", quiz_index))
+		say_title(string.format(gameforge.xxx_kids_day_quiz._490_sayTitle, quiz_index))
 		say(quiz_data[1])
 		say("")
-		local s=select(quiz_data[2], quiz_data[3], quiz_data[4], quiz_data[5], "Schließen")
+		local s=select(quiz_data[2], quiz_data[3], quiz_data[4], quiz_data[5], gameforge.xxx_kids_day_quiz._560_select)
 		if s==5 then
 		    return
 		elseif s==quiz_data[6] then
-		    say_title("Das Metin2 Quiz!")
-		    say("richtig")
+		    say_title(gameforge.xxx_kids_day_quiz._220_sayTitle)
+		    say(gameforge.xxx_kids_day_quiz._230_say)
 		    say("")
 		    wait()
 		else
-		    say_title("Das Metin2 Quiz!")
-		    say("falsch")
+		    say_title(gameforge.xxx_kids_day_quiz._220_sayTitle)
+		    say(gameforge.xxx_kids_day_quiz._240_say)
 		    say("")
-		    say(string.format("#%d.", quiz_index))
+		    say(string.format(gameforge.xxx_kids_day_quiz._500_say, quiz_index))
 		    say(quiz_data[1])
 		    say_reward(quiz_data[1+quiz_data[6]])
 		    say("")
@@ -128,14 +128,14 @@ quest kids_day_quiz begin
 	end
 	
 	when 50034.use begin
-	    say_title("Das Metin2 Quiz!")
-	    say("Das ist eine Erinnerung an das Metin2 Quiz!")
-	    say("wenn man die Fragen richtig beantwortet hat")
-	    say("bekommt man eine Belohnung")
+	    say_title(gameforge.xxx_kids_day_quiz._220_sayTitle)
+	    say(gameforge.xxx_kids_day_quiz._250_say)
+	    say(gameforge.xxx_kids_day_quiz._260_say)
+	    say(gameforge.xxx_kids_day_quiz._270_say)
 	    say("")
-	    say("Willst du es versuchen?")
+	    say(gameforge.xxx_kids_day_quiz._280_say)
 	    say("")
-	    local s=select("Ja!", "Nein!")
+	    local s=select(gameforge.xxx_kids_day_quiz._290_select, gameforge.xxx_kids_day_quiz._300_select)
 	    if 2==s then
 		return
 	    end
@@ -155,20 +155,20 @@ quest kids_day_quiz begin
 		size=5
 	    end
 
-	    say_title("Das Metin2 Quiz!")
+	    say_title(gameforge.xxx_kids_day_quiz._220_sayTitle)
 
 	    if size==5 then
-		say(string.format("Quiz hat insgesammt %d Frage, wenn man in der gegebenen zeit richt erratet", size))
-		say("bekommt man die Produktartikel. Huete hat man mehr frage als es beim anderen Tagen")
-		say("um so mehr kriegt man die Geschenke")
+		say(string.format(gameforge.xxx_kids_day_quiz._510_say, size))
+		say(gameforge.xxx_kids_day_quiz._310_say)
+		say(gameforge.xxx_kids_day_quiz._320_say)
 		say("")
-		say("Fur Beginn drucke die Taste")
+		say(gameforge.xxx_kids_day_quiz._330_say)
 		say("")
 	    else
-		say(string.format("Quiz hat %d Frage, wenn man in der gegeben Zeit richtig erratet", size))
-		say("das Produktartikel bekommen. ")
+		say(string.format(gameforge.xxx_kids_day_quiz._520_say, size))
+		say(gameforge.xxx_kids_day_quiz._340_say)
 		say("")
-		say("Fur beginn drucke die Taste")
+		say(gameforge.xxx_kids_day_quiz._350_say)
 		say("")
 	    end
 	    wait()
@@ -178,43 +178,43 @@ quest kids_day_quiz begin
 		local quiz_index=number(1, table.getn(locale.quiz))
 		local quiz_data=locale.quiz[quiz_index]
 
-		say_title(string.format("Das Metin2 Quiz! #%d", i))
+		say_title(string.format(gameforge.xxx_kids_day_quiz._490_sayTitle, i))
 		say(quiz_data[1])
 		say("")
 		local s=select(quiz_data[2], quiz_data[3], quiz_data[4], quiz_data[5])
 		if s==quiz_data[6] then
 		    if i==size then
-			say_title("Das Metin2 Quiz!")
-			say("Da du alle Frage richtig beantwortet,")
-			say("kriegst du die Belohnung! ")
+			say_title(gameforge.xxx_kids_day_quiz._220_sayTitle)
+			say(gameforge.xxx_kids_day_quiz._360_say)
+			say(gameforge.xxx_kids_day_quiz._370_say)
 			say("")
 
 			pc.setqf("success_count", pc.getqf("success_count")+1)
 
 			if 5==size then
-			    say_item("Die Geschenkkarton fur den Kindertag", 50036, "")
-			    say_reward("Als Geschenk habe cih eine Karton fur den Kindertag.")
-			    say_reward("Es gibt besseres Geschenk je nach der Frage.")
+			    say_item(gameforge.xxx_kids_day_quiz._570_sayItem, 50036, "")
+			    say_reward(gameforge.xxx_kids_day_quiz._580_sayReward)
+			    say_reward(gameforge.xxx_kids_day_quiz._590_sayReward)
 			    pc.give_item2(50036)
 			else
-			    say_item("die geschenkkarton fur Kindertag", 50035, "")
-			    say_reward("Als Geschenk habe ich die geschenkkasten bekommen.")
+			    say_item(gameforge.xxx_kids_day_quiz._600_sayItem, 50035, "")
+			    say_reward(gameforge.xxx_kids_day_quiz._610_sayReward)
 			    pc.give_item2(50035)
 			end
 			say("")
 			return
 		    else
-			say_title("Das Metin2 Quiz!")
-			say_reward("richtig!!")
-			say("Fur die nachste Frage duucke die Taste.")
+			say_title(gameforge.xxx_kids_day_quiz._220_sayTitle)
+			say_reward(gameforge.xxx_kids_day_quiz._620_sayReward)
+			say(gameforge.xxx_kids_day_quiz._380_say)
 			say("")
 			wait()
 		    end
 		else
-		    say_title("Das Metin2 Quiz!")
-		    say("BB- Tut mir leid. Falsch. ")
-		    say("Beim nachstes mal versuche wieder")
-		    say("dann tschu©¬~")
+		    say_title(gameforge.xxx_kids_day_quiz._220_sayTitle)
+		    say(gameforge.xxx_kids_day_quiz._390_say)
+		    say(gameforge.xxx_kids_day_quiz._400_say)
+		    say(gameforge.xxx_kids_day_quiz._410_say)
 		    say("")
 		    return
 		end

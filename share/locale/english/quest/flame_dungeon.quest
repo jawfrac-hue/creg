@@ -148,7 +148,7 @@ quest flame_dungeon begin
 			------------------------------------------------------------------------------------------------------------------------------------------------------
 				-- pc.set_warp_location(0, 0 , 0) --튕겼을때 다시 돌아오게 만들어 주는 부분
 				pc.set_warp_location(ENTRY_MAP_INDEX, setting.outside_entry_pos[1] , setting.outside_entry_pos[2]) -- 던전 나갔을 때 밖으로 튕기게함
-				local ticketGroup = {71095, 1, 71130, 1}
+				local ticketGroup = {get_special_item_group(TICKET_GROUP)}
 				if d.getf("dungeon_enter") == 0 then -- 진행중이 아니면
 					local canPass = false
 					for i=1, table.getn(ticketGroup),2 do 
@@ -227,7 +227,7 @@ quest flame_dungeon begin
 					local notEnoughLevelMembers = {}
 					local ticketCheck = true
 					local levelCheck = true
-					local ticketGroup = {71095, 1, 71130, 1}
+					local ticketGroup = {get_special_item_group(TICKET_GROUP)}
 					for i, pid in next, pids, nil do
 						q.begin_other_pc_block(pid)
 						local canPass = false
@@ -253,7 +253,7 @@ quest flame_dungeon begin
 						say_title(mob_name(ENTRY_MAN))
 						say(gameforge.flame_dungeon._610_say)
 						for i, name in next, noTicketMembers, nil do
-							say(color(1,1,0), "    "..name)
+							say(color(1,1,0), string.format(gameforge.locale.indented_name, name))
 						end
 						if levelCheck then
 							return
@@ -266,7 +266,7 @@ quest flame_dungeon begin
 						say_title(mob_name(ENTRY_MAN))
 						say(gameforge.flame_dungeon._630_say)
 						for i, name in next, notEnoughLevelMembers, nil do
-							say(color(1,1,0), "    "..name)
+							say(color(1,1,0), string.format(gameforge.locale.indented_name, name))
 						end
 						return
 					end
@@ -300,9 +300,9 @@ quest flame_dungeon begin
 		-- end
 		
 		
-		when ENTRY_MAN.chat."TEST : Init time limit init" with is_test_server() begin -- 테스트용
+		when ENTRY_MAN.chat.gameforge.flame_dungeon._660_npcChat with is_test_server() begin -- 테스트용
 			pc.setf("flame_dungeon","exit_time",get_global_time()-1800)
-			say("Done")
+			say(gameforge.flame_dungeon._650_say)
 		end
 		-- when DUNGEON_MAN.chat."Test : 현재 상태" with is_test_server() begin -- 테스트용
 			-- say("남은 몬스터 : "..d.count_monster())
@@ -325,7 +325,7 @@ quest flame_dungeon begin
 			-- flame_dungeon.clear_timer(d.get_map_index())
 			-- flame_dungeon.make_dungeon()
 		-- end
-		when DUNGEON_MAN.chat."Test : Boss Room" with is_test_server() begin -- 테스트용
+		when DUNGEON_MAN.chat.gameforge.flame_dungeon._670_npcChat with is_test_server() begin -- 테스트용
 			flame_dungeon.go_boss()
 		end
 		
@@ -399,7 +399,7 @@ quest flame_dungeon begin
 				-- 통행증 관련된 처리
 				-- 입장 후에 티켓을 없앤 사람을 튕겨내기 위해서 타이머를 이용해 티켓을 제거한다.
 				local pids = {party.get_member_pids()}
-				local ticketGroup = {71095, 1, 71130, 1}
+				local ticketGroup = {get_special_item_group(TICKET_GROUP)}
 				for i, pid in next, pids, nil do
 					q.begin_other_pc_block(pid)
 					local canPass = false
