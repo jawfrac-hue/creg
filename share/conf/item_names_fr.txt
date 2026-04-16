@@ -3630,10 +3630,10 @@ VNUM	LOCALE_NAME
 30304	Clé de Zin-Bong
 30311	Clé à cristal d'âme
 30312	Totem grimace
-30315	NoNAme
-30316	NoNAme
-30317	NoNAme
-30318	NoNAme
+30315	Pain
+30316	Plat d'offrandes
+30317	Offrande
+30318	Fruit de la bénédiction
 30319	Tête réduite
 30320	Tête réduite
 30321	Citrouille d'Halloween
@@ -3819,14 +3819,14 @@ VNUM	LOCALE_NAME
 31082	Anneau de magma
 31083	Anneau de Samaël
 31084	Teinture des nimbes
-31085	NoNAme
-31086	NoNAme
-31087	NoNAme
-31088	NoNAme
+31085	Eau lourde
+31086	Spores de champignon
+31087	Flamme d'esprit ardent
+31088	Potion de feu
 31089	NoNAme
-31090	NoNAme
+31090	Cœur de Nemere
 31091	Sang du roi flamme
-31092	NoNAme
+31092	Peau de monstre algide
 35000	Herbes médicinales+
 35001	Foie d'un Tigre+
 38001	VIP-Feature
@@ -4201,7 +4201,7 @@ VNUM	LOCALE_NAME
 41316	Armure d'Azraël (f)
 41317	Armure d'Azraël+ (m)
 41318	Armure d'Azraël+ (f)
-41319	Èæ»ç°©
+41319	Tunique cobra
 41320	Costume de Jack Pumpkin
 41321	Robe de Jack Pumpkin (f)
 41322	Costume de Jack Pumpkin+ 
@@ -4340,7 +4340,7 @@ VNUM	LOCALE_NAME
 45152	Heaume d'Azraël (f)
 45153	Heaume d'Azraël+ (m)
 45154	Heaume d'Azraël+ (f)
-45155	Èæ»çÅõ±¸
+45155	Coiffe cobra
 45156	Tête de Jack Pumpkin (m)
 45157	Tête de Jack Pumpkin (f)
 45158	Tête de Jack Pumpkin+ (m)
@@ -4452,7 +4452,7 @@ VNUM	LOCALE_NAME
 50120	Cassette en fer
 50121	Coffret en fer
 50122	Coffre en fer
-50123	NoNAme
+50123	Glace
 50124	Boîte en Bois Usé
 50125	Coffre mystérieux
 50126	Coffre mystérieux
@@ -4511,7 +4511,7 @@ VNUM	LOCALE_NAME
 50194	Coffre de maître II
 50195	Coffre de maître III
 50196	Coffre de grand maître
-50197	NoNAme
+50197	Sacoche inconnue
 50198	NoNAme
 50199	NoNAme
 50200	Paquet
@@ -4957,7 +4957,7 @@ VNUM	LOCALE_NAME
 52705	Certificat de renne (m)
 52706	Certificat de renne (f)
 52707	Certificat de Dragor
-53001	NoNAme
+53001	feu
 53002	Sceau du faon
 53003	Sceau : phœnix de glace
 53005	Bébé Azraël
@@ -4973,21 +4973,21 @@ VNUM	LOCALE_NAME
 53015	Sceau mini-bourreau (or)
 53016	Sceau de Boney
 53017	Sceau du Phoenix de jade
-53501	NoNAme
+53501	Cage Phœnix flamboyant
 53502	Coffre du faon
 53503	Cage de phœnix de glace
 53504	NoNAme
-53505	NoNAme
-53506	NoNAme
-53507	³ì°¢ º¸°üÇÔ
-53508	³ì°¢ º¸°üÇÔ
-53509	³ì°¢ º¸°üÇÔ
-53510	³ì°¢ º¸°üÇÔ
-53511	³ì°¢ º¸°üÇÔ
-53512	³ì°¢ º¸°üÇÔ
-53513	³ì°¢ º¸°üÇÔ
-53514	³ì°¢ º¸°üÇÔ
-53515	³ì°¢ º¸°üÇÔ
+53505	Coffre bébé Azraël
+53506	Coffre bébé Azraël (or)
+53507	Coffre Bambi
+53508	Coffre Knuud
+53509	Coffre Bao Bao
+53510	Coffre Léonidas
+53511	Coffre Khan
+53512	Coffre Porky
+53513	Coffre Rufus
+53514	Coffre de mini-bourreau
+53515	Coffre mini-bourreau(or)
 53516	Coffre d'os
 53517	Cage de jade
 54702	Coffre de Razador
@@ -5184,7 +5184,7 @@ VNUM	LOCALE_NAME
 71099	Anneau de remplacement
 71100	Parchemin de compétence
 71101	Potion de célérité
-71102	NoNAme
+71102	Potion de célérité+
 71103	Redistribution (VIT)
 71104	Redistribution (INT)
 71105	Redistribution (STR)
@@ -5202,7 +5202,7 @@ VNUM	LOCALE_NAME
 71119	Sceau Bleu du Tigre
 71120	Sceau Jaune du Lion
 71121	Sceau Bleu du Lion
-71122	NoNAme
+71122	Entrée Temple du dragon
 71123	Écaille de dragon
 71124	Lion blanc
 71125	Sceau Sanglier Pugnace
@@ -5211,10 +5211,10 @@ VNUM	LOCALE_NAME
 71128	Sceau Lion Carnassier
 71129	Griffe de dragon
 71130	Ticket
-71131	NoNAme
-71132	NoNAme
-71133	NoNAme
-71134	NoNAme
+71131	Cheval noir
+71132	Cheval noir
+71133	Cheval noir
+71134	Cheval noir
 71135	Anneau croissant de lune
 71136	Sucette de la force
 71137	Sceau: tigre royal bleu
@@ -5298,19 +5298,19 @@ VNUM	LOCALE_NAME
 72049	Anneau d'expérience
 72050	Anneau d'expérience
 72301	Parchemin de Bénédiction
-72302	NoNAme
-72303	NoNAme
-72304	NoNAme
-72305	NoNAme
-72306	NoNAme
-72307	NoNAme
+72302	Livre du chef
+72303	Anneau d'expérience
+72304	Orbe de bénédiction
+72305	Miroir de disparition
+72306	Note du forgeron
+72307	Note de l'homme sage
 72308	Minerai : cuivre magique
-72309	NoNAme
-72310	NoNAme
-72311	NoNAme
-72312	NoNAme
-72313	NoNAme
-72314	NoNAme
+72309	Manuel du forgeron
+72310	Parchemin d'exorcisme
+72311	Bénédiction du Dragon
+72312	Attaque du dieu dragon
+72313	Défense du dieu dragon
+72314	Parchemin du Dieu Dragon
 72501	Anneau d'exp.(iCafé)
 72502	Gants de voleur (iCafé)
 72701	Bottes du vent

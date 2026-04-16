@@ -3819,14 +3819,14 @@ VNUM	LOCALE_NAME
 31082	Magmas ring
 31083	Samaels ring
 31084	NoNAme
-31085	NoNAme
-31086	NoNAme
-31087	NoNAme
-31088	NoNAme
+31085	Tungt Vand
+31086	Svampe sporer
+31087	Flamme. Flamme Spøgelse
+31088	Ild Eliksir
 31089	NoNAme
-31090	NoNAme
+31090	Nemere's Hjerte
 31091	NoNAme
-31092	NoNAme
+31092	Is Monster Hud
 35000	Medicinske planter+
 35001	Lever fra en tiger+
 38001	VIP-Feature
@@ -4201,7 +4201,7 @@ VNUM	LOCALE_NAME
 41316	Azraels rustning (f)
 41317	Azraels rustning+ (m)
 41318	Azraels rustning+ (f)
-41319	Èæ»ç°©
+41319	Kobra Outfit
 41320	Græskar Jack dragt (m)
 41321	Græskar Jack kjole (f)
 41322	Græskar Jack dragt+ (m)
@@ -4340,7 +4340,7 @@ VNUM	LOCALE_NAME
 45152	Azraels hjelm (f)
 45153	Azraels hjelm+ (m)
 45154	Azraels hjelm+ (f)
-45155	Èæ»çÅõ±¸
+45155	Kobra Frisure
 45156	Græskar Jack hoved (m)
 45157	Græskar Jack hoved (f)
 45158	Græskar Jack hoved+ (m)
@@ -4511,7 +4511,7 @@ VNUM	LOCALE_NAME
 50194	Stormester kiste II
 50195	Stormester kiste III
 50196	Stormester kiste
-50197	NoNAme
+50197	Ukendt Taske
 50198	NoNAme
 50199	NoNAme
 50200	Bundt
@@ -4957,7 +4957,7 @@ VNUM	LOCALE_NAME
 52705	Rensdyr Certifikat (m)
 52706	Rensdyr Certifikat (f)
 52707	Dragor certifikat
-53001	NoNAme
+53001	Ild Føniks
 53002	Unge Rensdyr Segl
 53003	Is Føniks Segl
 53005	Baby Azrael
@@ -4973,7 +4973,7 @@ VNUM	LOCALE_NAME
 53015	Mini Executor segl(guld)
 53016	Boney segl
 53017	Jade Føniks segl
-53501	NoNAme
+53501	Ild Føniks Bur
 53502	Unge Rensdyr Kiste
 53503	Is Føniks Bur
 53504	NoNAme
@@ -5184,7 +5184,7 @@ VNUM	LOCALE_NAME
 71099	Efterfølgerens ring
 71100	Uddannelses certifikat
 71101	Hastigheds eliksir
-71102	NoNAme
+71102	Hastigheds Eliksir+
 71103	Omfordeling (VIT)
 71104	Omfordeling (INT)
 71105	Omfordeling (STR)
@@ -5202,7 +5202,7 @@ VNUM	LOCALE_NAME
 71119	Tiger segl (blå)
 71120	Løve segl (gul)
 71121	Løve segl (blå)
-71122	NoNAme
+71122	Dragens Tempel Indgang
 71123	Drageskæl
 71124	Hvid løve
 71125	Krigs-Vildsvin-segl
@@ -5298,19 +5298,19 @@ VNUM	LOCALE_NAME
 72049	Erfaringsring
 72050	Erfaringsring
 72301	Velsignelses dok.
-72302	NoNAme
-72303	NoNAme
-72304	NoNAme
-72305	NoNAme
-72306	NoNAme
-72307	NoNAme
+72302	Lederens Bog
+72303	Erfaringsring
+72304	Velsignelseskugle
+72305	Usynligheds spejl
+72306	Smedens Notits
+72307	Vismandens Notits
 72308	Magisk kobbermalm
-72309	NoNAme
-72310	NoNAme
-72311	NoNAme
-72312	NoNAme
-72313	NoNAme
-72314	NoNAme
+72309	Smede håndbog
+72310	Eksorcisme-dokument
+72311	Dragens velsignelse
+72312	Dragegudens Angreb
+72313	Dragegudens Forsvar
+72314	Dragens dokument
 72501	Erfaringsring (iCafe)
 72502	Tyvens handsker (iCafe)
 72701	Vindsko

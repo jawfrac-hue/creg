@@ -3819,14 +3819,14 @@ VNUM	LOCALE_NAME
 31082	Magma Ring
 31083	Ring van Samael
 31084	NoNAme
-31085	NoNAme
-31086	NoNAme
-31087	NoNAme
-31088	NoNAme
+31085	Zwaar Water
+31086	Paddenstoelsporen
+31087	Vlam Spook Vlam
+31088	Vuur Brouwsel
 31089	NoNAme
-31090	NoNAme
+31090	Nemere's Hart
 31091	NoNAme
-31092	NoNAme
+31092	IJsmonster Huid
 35000	Medische Kruiden+
 35001	Tijgerlever+
 38001	VIP-Feature
@@ -4201,7 +4201,7 @@ VNUM	LOCALE_NAME
 41316	Azraels Pantser (v)
 41317	Azraels Pantser+ (m)
 41318	Azraels Pantser+ (v)
-41319	Èæ»ç°©
+41319	Cobra Outfit
 41320	Pompoenen Jan Pak (m)
 41321	Pompoenen Jan Jurk (v)
 41322	Pompoenen Jan Pak+ (m)
@@ -4340,7 +4340,7 @@ VNUM	LOCALE_NAME
 45152	Azraels Helm (v)
 45153	Azraels Helm+ (m)
 45154	Azraels Helm+ (v)
-45155	Èæ»çÅõ±¸
+45155	Cobra Haarstijl
 45156	Pompoenen Jan hoofd (m)
 45157	Pompoenen Jan Hoofd (v)
 45158	Pompoenen Jan Hoofd+ (m)
@@ -4511,7 +4511,7 @@ VNUM	LOCALE_NAME
 50194	Meester Kist II
 50195	Meester Kist III
 50196	Grootmeester Kist
-50197	NoNAme
+50197	Onbekende Zak
 50198	NoNAme
 50199	NoNAme
 50200	Bundel
@@ -4957,7 +4957,7 @@ VNUM	LOCALE_NAME
 52705	Rendier Certificaat (m)
 52706	Rendier Certificaat (v)
 52707	Dragor Certificaat
-53001	NoNAme
+53001	Vuurfeniks
 53002	Jong Rendier Zegel
 53003	IJs Feniks Zegel
 53005	Baby Azrael
@@ -4973,7 +4973,7 @@ VNUM	LOCALE_NAME
 53015	Mini-Beul Zegel (Goud)
 53016	Botje Zegel
 53017	Jade Fenikszegel
-53501	NoNAme
+53501	Vuurfeniks Kooi
 53502	Jong Rendier Kist
 53503	IJs Feniks Kooi
 53504	NoNAme
@@ -5184,7 +5184,7 @@ VNUM	LOCALE_NAME
 71099	Ring van Opvolging
 71100	Leer Wissel Geschrift
 71101	Brouwsel van Haast
-71102	NoNAme
+71102	Brouwsel van Haast+
 71103	Herverdeling (VIT)
 71104	Herverdeling (IN)
 71105	Herverdeling (KRA)
@@ -5202,7 +5202,7 @@ VNUM	LOCALE_NAME
 71119	Tijger Zegel (blauw)
 71120	Leeuw Zegel (geel)
 71121	Leeuw Zegel (blauw)
-71122	NoNAme
+71122	Drakentempel Toegang
 71123	Draken Schubben
 71124	Witte Leeuw
 71125	Wilde Strijd Zwijn Zegel
@@ -5237,7 +5237,7 @@ VNUM	LOCALE_NAME
 71154	Drank der Stijging (3u)
 71155	Drankje der Wijsheid /3u
 71156	Drank der Geest (3u)
-71157	NoNAme
+71157	Ervaringsdrank
 71158	Helden Medaille
 71159	Milon's Kist
 71160	Athena's Kist
@@ -5298,19 +5298,19 @@ VNUM	LOCALE_NAME
 72049	Ervarings Ring
 72050	Ervarings Ring
 72301	Zegening Geschrift
-72302	NoNAme
-72303	NoNAme
-72304	NoNAme
-72305	NoNAme
-72306	NoNAme
-72307	NoNAme
+72302	Leider Boek
+72303	Ervarings Ring
+72304	Gezegende Bol
+72305	Verdwijnende Spiegel
+72306	Smid's Notitie
+72307	Wijze Man's Notitie
 72308	Magische Koper Erts
-72309	NoNAme
-72310	NoNAme
-72311	NoNAme
-72312	NoNAme
-72313	NoNAme
-72314	NoNAme
+72309	Smid Handboek
+72310	Exorcisme Geschrift
+72311	Zegening der Draken
+72312	Draken God Aanval
+72313	Draken God Verdediging
+72314	Draken Geschrift
 72501	Ervarings Ring(iCafe)
 72502	Dieven Handschoen(iCafe)
 72701	Windschoenen

@@ -3792,7 +3792,7 @@ VNUM	LOCALE_NAME
 31055	NoNAme
 31056	NoNAme
 31057	NoNAme
-31058	NoNAme
+31058	Zoccolo di Ogre
 31059	NoNAme
 31060	NoNAme
 31061	NoNAme
@@ -3819,14 +3819,14 @@ VNUM	LOCALE_NAME
 31082	Anello di magma
 31083	Anello di Samael
 31084	Tintura Nimbus
-31085	NoNAme
-31086	NoNAme
-31087	NoNAme
-31088	NoNAme
+31085	Acqua pesante
+31086	Spore micetiche
+31087	Fiamma Spirito del fuoco
+31088	Pozione focosa
 31089	NoNAme
-31090	NoNAme
+31090	Cuore di Nemere
 31091	Sangue Re delle fiamme
-31092	NoNAme
+31092	Brandelli di Gelomostro
 35000	Erbe Medicinali+
 35001	Fegato di una Tigre+
 38001	VIP-Feature
@@ -4201,7 +4201,7 @@ VNUM	LOCALE_NAME
 41316	Armatura di Azrael (f)
 41317	Armatura di Azrael+ (m)
 41318	Armatura di Azrael+ (f)
-41319	Èæ»ç°©
+41319	Veste cobra
 41320	Abito Jack Pumpkin (m)
 41321	Vestito Jack Pumpkin (f)
 41322	Abito Jack Pumpkin+ (m)
@@ -4340,7 +4340,7 @@ VNUM	LOCALE_NAME
 45152	Elmo di Azrael (f)
 45153	Elmo di Azrael+ (m)
 45154	Elmo di Azrael+ (f)
-45155	Èæ»çÅõ±¸
+45155	Pettinatura Cobra
 45156	Testa Jack Pumpkin (m)
 45157	Testa Jack Pumpkin (f)
 45158	Testa Jack Pumpkin+ (m)
@@ -4511,7 +4511,7 @@ VNUM	LOCALE_NAME
 50194	Baule Maestro II
 50195	Baule Maestro III
 50196	Baule Gran Maestro
-50197	NoNAme
+50197	Sacchetto sconosciuto
 50198	NoNAme
 50199	NoNAme
 50200	Fagotto
@@ -4957,7 +4957,7 @@ VNUM	LOCALE_NAME
 52705	Certificato Renna (m)
 52706	Certificato Renna (f)
 52707	Certificato Dragor
-53001	NoNAme
+53001	Fenice di fuoco
 53002	Sigillo Cucciolo Renna
 53003	Sigillo Fenice Ghiaccio
 53005	Piccolo Azrael
@@ -4973,7 +4973,7 @@ VNUM	LOCALE_NAME
 53015	Sigillo Miniboia (oro)
 53016	Sigillo Boney
 53017	Sigillo Fenice di Giada
-53501	NoNAme
+53501	Gabbia Fenice di fuoco
 53502	Forziere Cucciolo Renna
 53503	Gabbia Fenice Ghiaccio
 53504	NoNAme
@@ -5184,7 +5184,7 @@ VNUM	LOCALE_NAME
 71099	Anello del successore
 71100	Papiro Cambia Dottrina
 71101	Pozione della Fretta
-71102	NoNAme
+71102	Pozione della fretta+
 71103	Redistribuzione (VIT)
 71104	Redistribuzione (INT)
 71105	Redistribuzione (STR)
@@ -5202,7 +5202,7 @@ VNUM	LOCALE_NAME
 71119	Sigillo Tigre Blu
 71120	Sigillo Leone Giallo
 71121	Sigillo Leone Blu
-71122	NoNAme
+71122	Accesso Stanza del Drago
 71123	Squame di Drago
 71124	Leone bianco
 71125	Sigillo Cinghiale Comb.
@@ -5298,19 +5298,19 @@ VNUM	LOCALE_NAME
 72049	Anello dell'Esperienza
 72050	Anello dell'Esperienza
 72301	Papiro Consacrato
-72302	NoNAme
-72303	NoNAme
-72304	NoNAme
-72305	NoNAme
-72306	NoNAme
-72307	NoNAme
+72302	Libro del Capo
+72303	Anello dell'Esperienza
+72304	Sfera benedetta
+72305	Specchio Invisibilità
+72306	Notizia del Fabbro
+72307	Notizia del Saggio
 72308	Minerale di rame magico
-72309	NoNAme
-72310	NoNAme
-72311	NoNAme
-72312	NoNAme
-72313	NoNAme
-72314	NoNAme
+72309	Libro del Fabbro
+72310	Papiro dell'Esorcismo
+72311	Benedizione del Drago
+72312	Attacco Dio Drago
+72313	Difesa del Dio Drago
+72314	Papiro del Drago
 72501	Anello Esperienza(iCafe)
 72502	Guanti del Ladro(iCafe)
 72701	Scarpe del Vento
