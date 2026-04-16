@@ -3819,14 +3819,14 @@ VNUM	LOCALE_NAME
 31082	Inel Magma
 31083	Inelul lui Samael
 31084	NoNAme
-31085	NoNAme
-31086	NoNAme
-31087	NoNAme
-31088	NoNAme
+31085	Apă Dură
+31086	Spori de Ciuperci
+31087	Flacără Spiritul Focului
+31088	Licoare de Foc
 31089	NoNAme
-31090	NoNAme
+31090	Inima lui Nemere
 31091	NoNAme
-31092	NoNAme
+31092	Piele Monstru de Gheaţă
 35000	Ierburi medicinale+
 35001	Ficatul unui tigru+
 38001	VIP-Feature
@@ -4201,7 +4201,7 @@ VNUM	LOCALE_NAME
 41316	Armura Azrael (f)
 41317	Armura Azrael+ (m)
 41318	Armura Azrael+ (f)
-41319	Čć»ç°©
+41319	Costum Cobra
 41320	Costum Jack Dovleacul (m)
 41321	Rochie Jack Dovleacul (f)
 41322	Costum Jack Dovleacul+ (m
@@ -4340,7 +4340,7 @@ VNUM	LOCALE_NAME
 45152	Coif Azrael (f)
 45153	Coif Azrael+ (m)
 45154	Coif Azrael+ (f)
-45155	Čć»çĹő±¸
+45155	Frizură Cobra
 45156	Capatana Jack Dovleacul
 45157	Capatana Jack Dovleacul
 45158	Capatana Jack Dovleacul+
@@ -4511,7 +4511,7 @@ VNUM	LOCALE_NAME
 50194	Cufar Master II
 50195	Cufar Master III
 50196	Cufar Mare Maestru
-50197	NoNAme
+50197	Pachet Necunoscut
 50198	NoNAme
 50199	NoNAme
 50200	Mănunchi
@@ -4957,7 +4957,7 @@ VNUM	LOCALE_NAME
 52705	Autorizatie pt Ren (M)
 52706	Autorizatie pt Ren (F)
 52707	Certificat Dragor
-53001	NoNAme
+53001	Phoenix de Foc
 53002	Sigiliu Pui de Ren
 53003	Sigiliu Phoenix de Gheata
 53005	Baby Azrael
@@ -4973,7 +4973,7 @@ VNUM	LOCALE_NAME
 53015	Sig. Mini Executor(aur)
 53016	Sigiliu de Os
 53017	Sigiliu Phoenix de Jad
-53501	NoNAme
+53501	Cuşcă Phoenix de Foc
 53502	Cufarul Puiului de Ren
 53503	Colivia Phoenix de Gheata
 53504	NoNAme
@@ -5184,7 +5184,7 @@ VNUM	LOCALE_NAME
 71099	Inelul Urmasului
 71100	Pergam. Reset Invatatura
 71101	Licoarea Grabei
-71102	NoNAme
+71102	Licoarea Grabei+
 71103	Redistribuire (VIT)
 71104	Redistribuire (INT)
 71105	Redistribuire (STR)
@@ -5202,7 +5202,7 @@ VNUM	LOCALE_NAME
 71119	Sigiliu Tigru (albastru)
 71120	Sigiliu Leu (galben)
 71121	Sigiliu Leu (albastru)
-71122	NoNAme
+71122	Intrare Templul Dragon
 71123	Balanţa Dragonului
 71124	Leul Alb
 71125	Sigiliu Mistret de Lupta
@@ -5298,19 +5298,19 @@ VNUM	LOCALE_NAME
 72049	Inelul experienţei
 72050	Inelul experienţei
 72301	Pergament Binecuvantat
-72302	NoNAme
-72303	NoNAme
-72304	NoNAme
-72305	NoNAme
-72306	NoNAme
-72307	NoNAme
+72302	Cartea Comandantului
+72303	Inelul Experienţei
+72304	Marmură Binecuvântată
+72305	Oglinda Invizibilităţii
+72306	Nota Fierarului
+72307	Nota Înţeleptului
 72308	Minereu Magic de Cupru
-72309	NoNAme
-72310	NoNAme
-72311	NoNAme
-72312	NoNAme
-72313	NoNAme
-72314	NoNAme
+72309	Manualul Fierarului
+72310	Pergamentul Exorcizării
+72311	Binecuvântarea Dragon
+72312	Atacul Zeului Dragon
+72313	Apărarea Zeului Dragon
+72314	Pergamentul Dragonului
 72501	Inelul experienţei(iCafe
 72502	Mănuşa tâlharului(iCafe)
 72701	Papuci de Vant

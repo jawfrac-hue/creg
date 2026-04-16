@@ -3819,14 +3819,14 @@ VNUM	LOCALE_NAME
 31082	Magma Çemberi
 31083	Samael'in Yüzüğü
 31084	Ayla Tentürü
-31085	NoNAme
-31086	NoNAme
-31087	NoNAme
-31088	NoNAme
+31085	Ağır su
+31086	Mantar Hücresi
+31087	Ateş ruhu alevi
+31088	Ateş iksiri
 31089	NoNAme
-31090	NoNAme
+31090	Nemere'nin kalbi
 31091	Alev Kralı'nın Kanı
-31092	NoNAme
+31092	B. canavarı deri parçası
 35000	Şifalı Bitkiler+
 35001	Kaplan Karaciğeri+
 38001	VIP-Feature
@@ -4201,7 +4201,7 @@ VNUM	LOCALE_NAME
 41316	Azrail'in Zırhı (k)
 41317	Azrail'in Zırhı+ (e)
 41318	Azrail'in Zırhı+ (k)
-41319	Èæ»ç°©
+41319	Kobra Giysisi
 41320	Jack Pumpkin takımı (e)
 41321	Jack Pumpkin elbisesi (k)
 41322	Jack Pumpkin takımı+ (e)
@@ -4340,7 +4340,7 @@ VNUM	LOCALE_NAME
 45152	Azrail'in Miğferi (k)
 45153	Azrail'in Miğferi+ (e)
 45154	Azrail'in Miğferi+ (k)
-45155	Èæ»çÅõ±¸
+45155	Kobra Saç Modeli
 45156	Jack Pumpkin kafası (e)
 45157	Jack Pumpkin kafası (k)
 45158	Jack Pumpkin kafası+ (e)
@@ -4511,7 +4511,7 @@ VNUM	LOCALE_NAME
 50194	Usta Sandığı II
 50195	Usta Sandığı III
 50196	Büyük Üstat Sandığı
-50197	NoNAme
+50197	Bilinmeyen torba
 50198	NoNAme
 50199	NoNAme
 50200	Paket
@@ -4957,7 +4957,7 @@ VNUM	LOCALE_NAME
 52705	RenGeyiği Sertifikası(e)
 52706	RenGeyiği Sertifikası(d)
 52707	Ejdercik Sertifikası
-53001	NoNAme
+53001	Ateş Ankası
 53002	Ren Geyiği Yavrusu Mührü
 53003	Buz Ankası Mührü
 53005	Yavru Azrail
@@ -4973,7 +4973,7 @@ VNUM	LOCALE_NAME
 53015	Cellatcık Mührü (altın)
 53016	Boney Mührü
 53017	Yeşim Ankası Mührü
-53501	NoNAme
+53501	Ateş Ankası Kafesi
 53502	Ren Geyiği Yavrusu Sand.
 53503	Buz Ankası Kafesi
 53504	NoNAme
@@ -5184,7 +5184,7 @@ VNUM	LOCALE_NAME
 71099	Yer Değiştirme Yüzüğü
 71100	Bilgi Değişim Kağıdı
 71101	Soğutma İksiri
-71102	NoNAme
+71102	Soğutma iksiri+
 71103	Tekrar Dağıtma (VIT)
 71104	Tekrar dğtma kağıdı(INT)
 71105	Tekrar Dağıtma (STR)
@@ -5202,7 +5202,7 @@ VNUM	LOCALE_NAME
 71119	Kaplan Mührü (mavi)
 71120	Aslan Mührü (sarı)
 71121	Aslan Mührü (mavi)
-71122	NoNAme
+71122	Ejderha tapınağı girişi
 71123	Ejderha Pulu
 71124	Beyaz Aslan
 71125	Savaş Yaban Domuzu Mührü
@@ -5298,19 +5298,19 @@ VNUM	LOCALE_NAME
 72049	Tecrübe Yüzüğü
 72050	Tecrübe Yüzüğü
 72301	Kutsama Kağıdı
-72302	NoNAme
-72303	NoNAme
-72304	NoNAme
-72305	NoNAme
-72306	NoNAme
-72307	NoNAme
+72302	Liderin Kitabı
+72303	Tecrübe Yüzüğü
+72304	Kutsama Küresi
+72305	Gizlenme Aynası
+72306	Demircinin Notu
+72307	Erdemli Adamın Notu
 72308	Büyülü Bakır
-72309	NoNAme
-72310	NoNAme
-72311	NoNAme
-72312	NoNAme
-72313	NoNAme
-72314	NoNAme
+72309	Demircinin El Kitabı
+72310	Kötü Ruh Kovma Kağıdı
+72311	Ejderha kutsaması
+72312	Ejderha tanrı saldırısı
+72313	Ejderha tanrı savunması
+72314	Ejderha Parşömeni
 72501	Tecrübe Yüzüğü(iCafe)
 72502	Hırsız Eldiveni(iCafe)
 72701	Rüzgarın Ayakkabıları

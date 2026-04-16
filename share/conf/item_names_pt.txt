@@ -3819,14 +3819,14 @@ VNUM	LOCALE_NAME
 31082	Anel de Magma
 31083	Anel de Samael
 31084	NoNAme
-31085	NoNAme
-31086	NoNAme
-31087	NoNAme
-31088	NoNAme
+31085	Água Pesada
+31086	Esporos de Cogumelo
+31087	Chama de Fantasma Chamas
+31088	Poção de Fogo
 31089	NoNAme
-31090	NoNAme
+31090	Coração Nemere
 31091	NoNAme
-31092	NoNAme
+31092	Pele de Monstro de Gelo
 35000	Ervas Medicinais+
 35001	Fígado de Tigre+
 38001	VIP-Feature
@@ -4201,7 +4201,7 @@ VNUM	LOCALE_NAME
 41316	Armadura Azrael (f)
 41317	Armadura Azrael+ (m)
 41318	Armadura Azrael+ (f)
-41319	Èæ»ç°©
+41319	Disfarce Cobra
 41320	Fato Jack Abóbora (m)
 41321	Vestido Jack Abóbora (f)
 41322	Fato Jack Abóbora+ (m)
@@ -4340,7 +4340,7 @@ VNUM	LOCALE_NAME
 45152	Elmo Azrael (f)
 45153	Elmo Azrael+ (m)
 45154	Elmo Azrael+ (f)
-45155	Èæ»çÅõ±¸
+45155	Penteado Cobra
 45156	Cabeça do Jack Abóbora (m
 45157	Cabeça do Jack Abóbora (f
 45158	Cabeça do Jack Abóbora+ (
@@ -4511,7 +4511,7 @@ VNUM	LOCALE_NAME
 50194	Cofre do Mestre II
 50195	Cofre do Mestre III
 50196	Cofre do Grande Mestre
-50197	NoNAme
+50197	Saco Desconhecido
 50198	NoNAme
 50199	NoNAme
 50200	Pacote
@@ -4957,7 +4957,7 @@ VNUM	LOCALE_NAME
 52705	Certificado da Rena (M)
 52706	Certificado da Rena (F)
 52707	Certificado do Dragor
-53001	NoNAme
+53001	Fénix de Fogo
 53002	Selo da Rena Jovem
 53003	Selo da Fénix de Gelo
 53005	Azrael Bebé
@@ -4973,7 +4973,7 @@ VNUM	LOCALE_NAME
 53015	Selo Mini-Executor(ouro)
 53016	Selo do Boney
 53017	Selo da Fénix Jade
-53501	NoNAme
+53501	Gaiola da Fénix de Fogo
 53502	Cofre da Rena Jovem
 53503	Gaiola da Fénix de Gelo
 53504	NoNAme
@@ -5184,7 +5184,7 @@ VNUM	LOCALE_NAME
 71099	Anel do Substituto
 71100	Pergaminho da Mudança
 71101	Poção da Rapidez
-71102	NoNAme
+71102	Poção da Rapidez+
 71103	Redistribuição (VIT)
 71104	Redistribuição (INT)
 71105	Redistribuição (FRÇ)
@@ -5202,7 +5202,7 @@ VNUM	LOCALE_NAME
 71119	Selo do Tigre (Azul)
 71120	Selo do Leão (Amarelo)
 71121	Selo do Leão (Azul)
-71122	NoNAme
+71122	Bilhete Templo do Dragão
 71123	Escamas do Dragão
 71124	Leão Branco
 71125	Selo do Javali de Guerra
@@ -5298,19 +5298,19 @@ VNUM	LOCALE_NAME
 72049	Anel de Experiência
 72050	Anel de Experiência
 72301	Pergaminho da Bênção
-72302	NoNAme
-72303	NoNAme
-72304	NoNAme
-72305	NoNAme
-72306	NoNAme
-72307	NoNAme
+72302	Livro do Líder
+72303	Anel de Experiência
+72304	Mármore da Bênção
+72305	Espelho Invisível
+72306	Memorando do Ferreiro
+72307	Memorando do Sábio
 72308	Ferro Mágico
-72309	NoNAme
-72310	NoNAme
-72311	NoNAme
-72312	NoNAme
-72313	NoNAme
-72314	NoNAme
+72309	Manual do Ferreiro
+72310	Pergaminho do Exorcismo
+72311	Bênção do Dragão
+72312	Ataque do Deus Dragão
+72313	Defesa do Deus Dragão
+72314	Pergaminho do Dragão
 72501	Anel Experiência(iCafe)
 72502	Luva de Ladrão (iCafe)
 72701	Sapatos de Vento

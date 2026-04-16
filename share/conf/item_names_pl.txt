@@ -3819,14 +3819,14 @@ VNUM	LOCALE_NAME
 31082	Pierścień Magmy
 31083	Pierścień Samaela
 31084	Deszczowy Olejek
-31085	NoNAme
-31086	NoNAme
-31087	NoNAme
-31088	NoNAme
+31085	Ciężka Woda
+31086	Zarodniki Grzybów
+31087	Płomień Ognistego Ducha
+31088	Eliksir Ognia
 31089	NoNAme
-31090	NoNAme
+31090	Serce Nemere
 31091	Krew Ognistego Króla
-31092	NoNAme
+31092	Skr. Skóry Mroźn. Potw.
 35000	Zioła Lecznicze+
 35001	Wątroba Tygrysa+
 38001	VIP-Feature
@@ -4201,7 +4201,7 @@ VNUM	LOCALE_NAME
 41316	Zbroja Azraela (k)
 41317	Zbroja Azraela+ (m)
 41318	Zbroja Azraela+ (k)
-41319	Čć»ç°©
+41319	Szata Kobry
 41320	Strój Jacka Pumpkina (m)
 41321	Sukienka Jacka Pumpkina (
 41322	Strój Jacka Pumpkina+ (m)
@@ -4340,7 +4340,7 @@ VNUM	LOCALE_NAME
 45152	Hełm Azraela (k)
 45153	Hełm Azraela+ (m)
 45154	Hełm Azraela+ (k)
-45155	Čć»çĹő±¸
+45155	Fryzura Kobry
 45156	Czerep Jacka Pumpkina (m)
 45157	Czerep Jacka Pumpkina (k)
 45158	Czerep Jacka Pumpkina+ (m
@@ -4511,7 +4511,7 @@ VNUM	LOCALE_NAME
 50194	Skrzynia Mistrza II
 50195	Skrzynia Mistrza III
 50196	Skrzynia Arcymistrza
-50197	NoNAme
+50197	Nieznany Worek
 50198	NoNAme
 50199	NoNAme
 50200	Tobół
@@ -4957,7 +4957,7 @@ VNUM	LOCALE_NAME
 52705	Świadectwo Renifera (m)
 52706	Świadectwo Renifera (ż)
 52707	Certyfikat Dragora
-53001	NoNAme
+53001	Ognisty Feniks
 53002	Pieczęć Reniferka
 53003	Pieczęć Lodowego Feniksa
 53005	Azraeluś
@@ -4973,7 +4973,7 @@ VNUM	LOCALE_NAME
 53015	Pieczęć Kata (złota)
 53016	Pieczęć Kostka
 53017	Pieczęć Feniksa Jadeitu
-53501	NoNAme
+53501	Klatka Ognistego Feniksa
 53502	Skrzynia Reniferka
 53503	Klatka Lodowego Feniksa
 53504	NoNAme
@@ -5184,7 +5184,7 @@ VNUM	LOCALE_NAME
 71099	Pierścień Zastępstwa
 71100	Zwój Zmiany Profesji
 71101	Mikstura Pośpiechu
-71102	NoNAme
+71102	Mikstura Pośpiechu+
 71103	Zwój Redystrybucji (WIT)
 71104	Zwój Redystrybucji (INT)
 71105	Zwój Redystrybucji (SIŁ)
@@ -5202,7 +5202,7 @@ VNUM	LOCALE_NAME
 71119	Pieczęć Tygrysa (nieb.)
 71120	Pieczęć Lwa (żółta)
 71121	Pieczęć Lwa (niebieska)
-71122	NoNAme
+71122	Wstęp do Świątyni Smoka
 71123	Smocza Łuska
 71124	Biały Lew
 71125	Pieczęć Dzika Wojennego
@@ -5298,19 +5298,19 @@ VNUM	LOCALE_NAME
 72049	Pierścień Doświadczenia
 72050	Pierścień Doświadczenia
 72301	Zwój Błogosławieństwa
-72302	NoNAme
-72303	NoNAme
-72304	NoNAme
-72305	NoNAme
-72306	NoNAme
-72307	NoNAme
+72302	Książka Lidera
+72303	Pierścień Doświadczenia
+72304	Kula Błogosławieństwa
+72305	Ginące Lustro
+72306	Notatka Kowala
+72307	Notatka Mędrca
 72308	Magiczna Ruda Miedzi
-72309	NoNAme
-72310	NoNAme
-72311	NoNAme
-72312	NoNAme
-72313	NoNAme
-72314	NoNAme
+72309	Podręcznik Kowala
+72310	Zwój Egzorcyzmu
+72311	Błogosławieństwo Smoka
+72312	Atak Boga Smoków
+72313	Obrona Boga Smoków
+72314	Zwój Boga Smoków
 72501	Pierścień Dośw. (iCafe)
 72502	Rękawica Złodz. (iCafe)
 72701	Buty Wiatru

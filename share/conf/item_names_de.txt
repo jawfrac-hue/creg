@@ -4201,7 +4201,7 @@ VNUM	LOCALE_NAME
 41316	Azraels Rüstung (w)
 41317	Azraels Rüstung+ (m)
 41318	Azraels Rüstung+ (w)
-41319	Èæ»ç°©
+41319	Kobragewand
 41320	Jack-Pumpkin-Anzug (m)
 41321	Jack-Pumpkin-Kleid (w)
 41322	Jack-Pumpkin-Anzug+ (m)
@@ -4340,7 +4340,7 @@ VNUM	LOCALE_NAME
 45152	Azraels Helm (w)
 45153	Azraels Helm+ (m)
 45154	Azraels Helm+ (w)
-45155	Èæ»çÅõ±¸
+45155	Kobrafrisur
 45156	Jack-Pumpkin-Kopf (m)
 45157	Jack-Pumpkin-Kopf (w)
 45158	Jack-Pumpkin-Kopf+ (m)
@@ -4979,15 +4979,15 @@ VNUM	LOCALE_NAME
 53504	Truhe4
 53505	Hörner-Aufbewahrungsfach
 53506	Azrael Box
-53507	³ì°¢ º¸°üÇÔ
-53508	³ì°¢ º¸°üÇÔ
-53509	³ì°¢ º¸°üÇÔ
-53510	³ì°¢ º¸°üÇÔ
-53511	³ì°¢ º¸°üÇÔ
-53512	³ì°¢ º¸°üÇÔ
-53513	³ì°¢ º¸°üÇÔ
-53514	³ì°¢ º¸°üÇÔ
-53515	³ì°¢ º¸°üÇÔ
+53507	Bambi-Truhe
+53508	Knuud-Truhe
+53509	Bao Bao-Truhe
+53510	Leonidas-Truhe
+53511	Khan-Truhe
+53512	Porkie-Truhe
+53513	Rufus-Truhe
+53514	Henkerchen-Truhe
+53515	Henkerchen-Truhe (gold)
 53516	Knochentruhe
 53517	Jadekäfig
 54702	Truhe des Razador

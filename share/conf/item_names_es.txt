@@ -2870,97 +2870,97 @@ VNUM	LOCALE_NAME
 17567	Pendientes de zafiro+7
 17568	Pendientes de zafiro+8
 17569	Pendientes de zafiro+9
-18000	Unknown Item
-18001	Unknown Item
-18002	Unknown Item
-18003	Unknown Item
-18004	Unknown Item
-18005	Unknown Item
-18006	Unknown Item
-18007	Unknown Item
-18008	Unknown Item
-18009	Unknown Item
-18010	Unknown Item
-18011	Unknown Item
-18012	Unknown Item
-18013	Unknown Item
-18014	Unknown Item
-18015	Unknown Item
-18016	Unknown Item
-18017	Unknown Item
-18018	Unknown Item
-18019	Unknown Item
-18020	Unknown Item
-18021	Unknown Item
-18022	Unknown Item
-18023	Unknown Item
-18024	Unknown Item
-18025	Unknown Item
-18026	Unknown Item
-18027	Unknown Item
-18028	Unknown Item
-18029	Unknown Item
-18030	Unknown Item
-18031	Unknown Item
-18032	Unknown Item
-18033	Unknown Item
-18034	Unknown Item
-18035	Unknown Item
-18036	Unknown Item
-18037	Unknown Item
-18038	Unknown Item
-18039	Unknown Item
-18040	Unknown Item
-18041	Unknown Item
-18042	Unknown Item
-18043	Unknown Item
-18044	Unknown Item
-18045	Unknown Item
-18046	Unknown Item
-18047	Unknown Item
-18048	Unknown Item
-18049	Unknown Item
-18050	Unknown Item
-18051	Unknown Item
-18052	Unknown Item
-18053	Unknown Item
-18054	Unknown Item
-18055	Unknown Item
-18056	Unknown Item
-18057	Unknown Item
-18058	Unknown Item
-18059	Unknown Item
-18060	Unknown Item
-18061	Unknown Item
-18062	Unknown Item
-18063	Unknown Item
-18064	Unknown Item
-18065	Unknown Item
-18066	Unknown Item
-18067	Unknown Item
-18068	Unknown Item
-18069	Unknown Item
-18070	Unknown Item
-18071	Unknown Item
-18072	Unknown Item
-18073	Unknown Item
-18074	Unknown Item
-18075	Unknown Item
-18076	Unknown Item
-18077	Unknown Item
-18078	Unknown Item
-18079	Unknown Item
-18080	Unknown Item
-18081	Unknown Item
-18082	Unknown Item
-18083	Unknown Item
-18084	Unknown Item
-18085	Unknown Item
-18086	Unknown Item
-18087	Unknown Item
-18088	Unknown Item
-18089	Unknown Item
-18900	Unknown Item
+18000	Cinto de lino +0
+18001	Cinto de lino +1
+18002	Cinto de lino +2
+18003	Cinto de lino +3
+18004	Cinto de lino +4
+18005	Cinto de lino +5
+18006	Cinto de lino +6
+18007	Cinto de lino +7
+18008	Cinto de lino +8
+18009	Cinto de lino +9
+18010	Cinto de cuero +0
+18011	Cinto de cuero +1
+18012	Cinto de cuero +2
+18013	Cinto de cuero +3
+18014	Cinto de cuero +4
+18015	Cinto de cuero +5
+18016	Cinto de cuero +6
+18017	Cinto de cuero +7
+18018	Cinto de cuero +8
+18019	Cinto de cuero +9
+18020	Cinto elegante +0
+18021	Cinto elegante +1
+18022	Cinto elegante +2
+18023	Cinto elegante +3
+18024	Cinto elegante +4
+18025	Cinto elegante +5
+18026	Cinto elegante +6
+18027	Cinto elegante +7
+18028	Cinto elegante +8
+18029	Cinto elegante +9
+18030	Cinto de sabiduría +0
+18031	Cinto de sabiduría +1
+18032	Cinto de sabiduría +2
+18033	Cinto de sabiduría +3
+18034	Cinto de sabiduría +4
+18035	Cinto de sabiduría +5
+18036	Cinto de sabiduría +6
+18037	Cinto de sabiduría +7
+18038	Cinto de sabiduría +8
+18039	Cinto de sabiduría +9
+18040	Cinto real +0
+18041	Cinto real +1
+18042	Cinto real +2
+18043	Cinto real +3
+18044	Cinto real +4
+18045	Cinto real +5
+18046	Cinto real +6
+18047	Cinto real +7
+18048	Cinto real +8
+18049	Cinto real +9
+18050	Cinto sombrío +0
+18051	Cinto sombrío +1
+18052	Cinto sombrío +2
+18053	Cinto sombrío +3
+18054	Cinto sombrío +4
+18055	Cinto sombrío +5
+18056	Cinto sombrío +6
+18057	Cinto sombrío +7
+18058	Cinto sombrío +8
+18059	Cinto sombrío +9
+18060	Cinto rúnico +0
+18061	Cinto rúnico +1
+18062	Cinto rúnico +2
+18063	Cinto rúnico +3
+18064	Cinto rúnico +4
+18065	Cinto rúnico +5
+18066	Cinto rúnico +6
+18067	Cinto rúnico +7
+18068	Cinto rúnico +8
+18069	Cinto rúnico +9
+18070	Cinto de la Osa Mayor +0
+18071	Cinto de la Osa Mayor +1
+18072	Cinto de la Osa Mayor +2
+18073	Cinto de la Osa Mayor +3
+18074	Cinto de la Osa Mayor +4
+18075	Cinto de la Osa Mayor +5
+18076	Cinto de la Osa Mayor +6
+18077	Cinto de la Osa Mayor +7
+18078	Cinto de la Osa Mayor +8
+18079	Cinto de la Osa Mayor +9
+18080	Cinturón de almas +0
+18081	Cinturón de almas +1
+18082	Cinturón de almas +2
+18083	Cinturón de almas +3
+18084	Cinturón de almas +4
+18085	Cinturón de almas +5
+18086	Cinturón de almas +6
+18087	Cinturón de almas +7
+18088	Cinturón de almas +8
+18089	Cinturón de almas +9
+18900	Piedra roja en llamas
 20000	Arm. cuerno diabólico+0
 20001	Arm. cuerno diabólico+1
 20002	Arm. cuerno diabólico+2
@@ -3616,7 +3616,7 @@ VNUM	LOCALE_NAME
 30251	Joya de la Envidia
 30252	Joya de la Sabiduría
 30253	Joya de la lealtad
-30254	Ãµ¿Á
+30254	Cielo e infierno
 30265	Fragmento de Medalla (1)
 30266	Fragmento de Medalla (2)
 30267	Fragmento de Medalla (3)
@@ -3630,10 +3630,10 @@ VNUM	LOCALE_NAME
 30304	Llave Zin-Bong-In
 30311	Llave Cristal del Alma
 30312	Tótem de la Mueca
-30315	NoNAme
-30316	NoNAme
-30317	NoNAme
-30318	NoNAme
+30315	Pan
+30316	Plato de ofrenda
+30317	Alimento para la ofrenda
+30318	Fruto de la bendición
 30319	Cabeza reducida
 30320	Cabeza reducida
 30321	Calabaza de Halloween
@@ -3672,69 +3672,69 @@ VNUM	LOCALE_NAME
 30521	Elemento de Anillo
 30522	Eslabones
 30523	Elemento de Joyería
-30524	Unknown Item
-30525	Unknown Item
-30526	Unknown Item
-30527	Unknown Item
-30528	Unknown Item
-30529	Unknown Item
-30530	Unknown Item
-30531	Unknown Item
-30532	Unknown Item
-30533	Unknown Item
-30534	Unknown Item
-30535	Unknown Item
-30536	Unknown Item
-30537	Unknown Item
-30538	Unknown Item
-30539	Unknown Item
-30540	Unknown Item
-30541	Unknown Item
-30542	Unknown Item
-30543	Unknown Item
-30544	Unknown Item
-30545	Unknown Item
-30546	Unknown Item
-30547	Unknown Item
-30548	Unknown Item
-30549	Unknown Item
-30550	Unknown Item
-30551	Unknown Item
-30552	Unknown Item
-30553	Unknown Item
-30554	Unknown Item
-30555	Unknown Item
-30556	Unknown Item
-30557	Unknown Item
-30558	Unknown Item
-30559	Unknown Item
-30560	Unknown Item
-30561	Unknown Item
-30562	Unknown Item
-30563	Unknown Item
-30564	Unknown Item
-30565	Unknown Item
-30566	Unknown Item
-30567	Unknown Item
-30568	Unknown Item
-30569	Unknown Item
-30570	Unknown Item
-30571	Unknown Item
-30572	Unknown Item
-30573	Unknown Item
-30574	Unknown Item
-30575	Unknown Item
-30576	Unknown Item
-30577	Unknown Item
-30578	Unknown Item
-30579	Unknown Item
-30580	Unknown Item
-30581	Unknown Item
-30582	Unknown Item
-30583	Unknown Item
-30584	Unknown Item
-30585	Unknown Item
-30586	Unknown Item
+30524	Piedra en llamas
+30525	Piedra helada en llamas
+30526	Anillo doble de oro
+30527	Anillo doble de plata
+30528	Anillo doble de bronce
+30529	Anillo doble de madera
+30530	Anillo doble azul
+30531	Anillo doble verde
+30532	Anillo doble rojo
+30533	Anillo doble púrpura
+30534	Anillo de oro procesado
+30535	Anillo de plata procesado
+30536	Anillo de bronce procesado
+30537	Anillo de madera procesado
+30538	Ver comentario
+30539	Ver comentario
+30540	Ver comentario
+30541	Ver comentario
+30542	Anillo sencillo de plata
+30543	Anillo sencillo de bronce
+30544	Anillo sencillo de madera
+30545	Anillo sencillo de zafiro
+30546	Anillo sencillo de esmeralda
+30547	Anillo sencillo de rubí
+30548	Cinturón sencillo (amarillo)
+30549	Cinturón sencillo (marrón)
+30550	Cinturón azul
+30551	Cinturón sencillo (negro)
+30552	Cinturón sencillo (morado)
+30553	Cinturón sencillo (verde)
+30554	Arena brillante (naranja)
+30555	Arena brillante (negra)
+30556	Arena brillante (azul)
+30557	Arena brillante (verde)
+30558	Hilo rojo brillante
+30559	Arena brillante (púrpura)
+30560	Ver comentario
+30561	Ver comentario
+30562	Ver comentario
+30563	Ver comentario
+30564	Ver comentario
+30565	Ver comentario
+30566	Ver comentario
+30567	Ver comentario
+30568	Ver comentario
+30569	Ver comentario
+30570	Ver comentario
+30571	Ver comentario
+30572	Ver comentario
+30573	Ver comentario
+30574	Ver comentario
+30575	Ver comentario
+30576	Ver comentario
+30577	Ver comentario
+30578	Ver comentario
+30579	Ver comentario
+30580	Joyería lisa de plata
+30581	Joyería lisa de bronce
+30582	Joyería lisa de madera
+30583	Joyería lisa (azul)
+30584	Joyería lisa (verde)
+30585	Joyería lisa (roja)
+30586	Joyería lisa (púrpura)
 31001	Copia de la Inscripción
 31002	Documento Antiguo
 31003	Antídoto
@@ -3743,90 +3743,90 @@ VNUM	LOCALE_NAME
 31006	Cuarzo Rojo Infernal
 31007	Tierra Volcánica
 31008	Lágrima Celestial
-31009	³¶ÀÎÁ·ÀÇ ¼­½ÅÁ¶°¢
-31010	ºÓÀº ¼­½Å Á¶°¢
-31011	ºÓÀº ¸¶Áö¸· ¼­½Å Á¶°¢
-31012	¹üÀÍÁ·ÀÇ ¼­½Å
-31013	¿Ü¾ÈÅõ±ÍÀÇ ¼­Âû
-31014	¾àÈ¯ÀÇ ¼­ÇÑ
-31015	Áö¹«½Å¿ÕÀÇ ¼­Âû
-31016	ÀÌÃæÀÇ ¼­½Å
-31017	Ãµ¹«½Å³àÀÇ ¼­Âû
-31018	°©°¢Á¾ÀÇ °©°ñ¹®
-31019	°©°¢Á¾ÀÇ °©°ñ°¡·ç
-31020	¾Ë ¼ö ¾ø´Â ¾àÃÊ
-31021	¾îÀÎÁ·ÀÇ Á¡ÅäÆÇ
-31022	¾îÀÎÁ·ÀÇ ºñ´Ã
-31023	³¯Ä«·Î¿î È­»ì
-31024	¹üÀÍÁ·ÀÇ °¡Á×
-31025	¾îÀÎÁ·ÀÇ Áö´À·¯¹Ì
-31026	°©°¢Á¾ÀÇ ²®Áú
-31027	Áú ÁÁÀº Èë
-31028	º®µ¹
-31029	¿Ü¾ÈÅõ±ÍÀÇ ³»´Ü
-31030	°ÅÀÎÁ·ÀÇ ³»´Ü
-31031	Ãµ³â¸íÁÖ
-31032	ÇÐÀÚÀÇ ½Å¾à
-31033	ºÓÀº µµÀû´ÜÀÇ ¸ÁÅä
-31034	°ÅÀÎÁ·ÀÇ º¸ÁÖ
-31035	°ËÀº µ¹Á¶°¢
-31036	°ËÀº È²±Ý °ßº»
-31037	°ËÀº È²±Ý ²Ù·¯¹Ì
-31038	Á¬¹ä ÁÖ¸Ó´Ï
-31039	µ¿Àü ÁÖ¸Ó´Ï
-31040	³ë¶õ ¸Åµì
-31041	À¯Åä
-31042	³¯Ä«·Î¿î ÀÛ»ì
-31043	¼ö»óÇÑ ¼®ÆÇ
-31044	³¶ÀÎÁ·ÀÇ ÈÄÃß°¡·ç
-31045	³¶ÀÎÁ·ÀÇ °íÃß°¡·ç
-31046	°©°¢Á¾ÀÇ Áý°Ô¹ß
-31047	ÃÌÀåÀÌ ÁÁ¾ÆÇÏ´Â ¿ä¸®
-31048	°ÅÁöÀÇ ±ÝÈ­ÁÖ¸Ó´Ï
-31049	°í±â²Ù·¯¹Ì
-31050	¾àÁ¦ ²Ù·¯¹Ì
-31051	ö
-31052	È¥·ÉÃÊ
-31053	³¶ÀÎÁ·ÀÇ ÅÐ¹¶Ä¡
-31054	¹üÀÍÁ·ÀÇ ÅÐ°¡Á×
-31055	ÀÌ¸§¸ð¸¦ ¾àÃÊ
-31056	¿Ü¾ÈÅõ±ÍÀÇ ¼ÕÅé
-31057	°ÅÀÎÁ·ÀÇ »Ô
-31058	ÀúÀÎÁ·ÀÇ ¹ß±Á
-31059	¸Á·®Á·ÀÇ ±ÍÈ¥¼®
-31060	¾îÀÎÇâ
-31061	±Í¸ñÀÇ °¡Áö
-31062	Áú ÁÁÀº ÇÑÃ¶
-31063	ÁÖ¸Ô¹ä
-31064	ºÒ¼ºÃÊ
-31065	¹üÀÍÁ·ÀÇ ÇÇÁö
-31066	¼±ÃÊ
-31067	±»°Ô Àá±ä ¿ø¼® »óÀÚ
-31068	¿ë°ñ
-31069	±Í¸ñÀÇ ¼ö¾×
-31070	¸¶°ßÀÇ ¸ñ°ÉÀÌ
-31071	¾Ë¼ö¾ø´Â ¸íÆÐ
-31072	¸¶°æ
-31073	½ÅºñÀÇ È¯¾à
-31074	ÃÊ¸¶´ÜÀÇ ¸íÆÐ
-31075	ÃÊ¸¶´ÜÀÇ ¼­½Å
-31076	Unknown Item
-31077	Unknown Item
-31078	Unknown Item
-31079	Unknown Item
-31080	Unknown Item
-31081	Unknown Item
-31082	Unknown Item
-31083	Unknown Item
-31084	Unknown Item
-31085	Unknown Item
-31086	Unknown Item
-31087	Unknown Item
-31088	Unknown Item
-31089	Unknown Item
-31090	Unknown Item
-31091	Unknown Item
-31092	Unknown Item
+31009	Carta a los gnolls
+31010	Carta a ladrones rojos
+31011	Fragmento final de la carta roja
+31012	Carta de mantícora
+31013	Nota
+31014	Carta de Yak-Hwan
+31015	Carta del capitán Karfio
+31016	Carta de Lee Chung
+31017	Carta sellada
+31018	Caparazón con escrituras
+31019	Polvo de caparazón
+31020	Raíz de flor de roca
+31021	Tablilla de arcilla de tritón
+31022	Escama de Oin
+31023	Flecha afilada
+31024	Cuero mantícora
+31025	Aleta de tritón
+31026	Armadura crustácea
+31027	Arena fina
+31028	Teja
+31029	Luz interior
+31030	Luz interior
+31031	Esencia milenaria
+31032	Perla de Leviatán
+31033	Capa del general
+31034	Tótem de los gigantes
+31035	Piedra negra
+31036	Oro negro
+31037	Bolsa de cuero
+31038	Tierra bendita
+31039	Bolsa de monedas
+31040	Insignia dorada
+31041	Tierra fósil
+31042	Lanza de tritón
+31043	Tabla lemúrida
+31044	Pimienta gnoll
+31045	Polvo de chile gnoll
+31046	Pinza de caparazón
+31047	Plato favorito del jefe del pueblo
+31048	Bolsa de oro del mendigo
+31049	Fardo de carne
+31050	Bolsa de medicinas
+31051	Hierro
+31052	Vinagre de alma espectral
+31053	Ovillo de pelaje gnoll
+31054	Cuero de mantícora
+31055	Hierbas desconocidas
+31056	Uña de cíclope
+31057	Cuerno de gigante
+31058	Pezuña de ogro
+31059	Piedra del alma de los no muertos
+31060	Incienso de tritón
+31061	Rama de zelkova
+31062	Hierro de alta calidad
+31063	Bolitas de arroz
+31064	Hierbas de la consciencia
+31065	Sebo de mantícora
+31066	Hierbas de nueva vida
+31067	Cofre de mineral bien cerrado
+31068	Huesos de dragón
+31069	Líquido de zelkova
+31070	Collar de perro demoníaco
+31071	Placa con nombre desconocido
+31072	Espejo demoníaco
+31073	Banda del buscaoro
+31074	Collar remachado
+31075	Collar espinoso
+31076	Hierbas del sol
+31077	Polvo piedra fundación
+31078	Lumen puro
+31079	Carta a Yak-Hwan
+31080	Sangre del Rey Fuego
+31081	Materia negra
+31082	Anillo magmático
+31083	Anillo de Samael
+31084	Tintura de nimbo
+31085	Agua pesada
+31086	Esporas de seta
+31087	Llama de espíritu ígneo
+31088	Poción de fuego
+31089	Bloque de hielo mágico
+31090	Corazón de Nemere
+31091	Sangre del Rey Fuego
+31092	Pellejo de hielimaña
 35000	Hierbas Medicinales+
 35001	Hígado de un Tigre+
 38001	VIP-Feature
@@ -3843,7 +3843,7 @@ VNUM	LOCALE_NAME
 38054	Baúl Tormenta Desierto
 38055	Caja de Cachorros
 38056	Baúl festivo
-38057	Unknown Item
+38057	Baúl del norte
 38100	Supercomida (7 días)
 38101	Supercomida (15 días)
 38102	Supercomida (30 días)
@@ -4045,134 +4045,134 @@ VNUM	LOCALE_NAME
 41150	Vestido Navideño (negro)
 41151	Disfraz de Reno + (m)
 41152	Disfraz de Reno + (f)
-41153	Unknown Item
-41154	Unknown Item
-41155	Unknown Item
-41156	Unknown Item
-41157	Unknown Item
-41158	Unknown Item
-41159	Unknown Item
-41160	Unknown Item
-41161	Unknown Item
-41162	Unknown Item
-41163	Unknown Item
-41164	Unknown Item
-41165	Unknown Item
-41166	Unknown Item
-41167	Unknown Item
-41168	Unknown Item
-41169	Unknown Item
-41170	Unknown Item
-41171	Unknown Item
-41172	Unknown Item
-41173	Unknown Item
-41174	Unknown Item
-41175	Unknown Item
-41176	Unknown Item
-41177	Unknown Item
-41178	Unknown Item
-41179	Unknown Item
-41180	Unknown Item
-41181	Unknown Item
-41182	Unknown Item
-41183	Unknown Item
-41184	Unknown Item
-41185	Unknown Item
-41186	Unknown Item
-41187	Unknown Item
-41188	Unknown Item
-41189	Unknown Item
-41190	Unknown Item
-41191	Unknown Item
-41192	Unknown Item
-41193	Unknown Item
-41194	Unknown Item
-41195	Unknown Item
-41196	Unknown Item
-41197	Unknown Item
-41198	Unknown Item
-41199	Unknown Item
-41200	Unknown Item
-41201	Unknown Item
-41202	Unknown Item
-41203	Unknown Item
-41204	Unknown Item
-41205	Unknown Item
-41206	Unknown Item
-41207	Unknown Item
-41208	Unknown Item
-41209	Unknown Item
-41210	Unknown Item
-41211	Unknown Item
-41212	Unknown Item
-41213	Unknown Item
-41214	Unknown Item
-41215	Unknown Item
-41216	Unknown Item
-41217	Unknown Item
-41218	Unknown Item
-41219	Unknown Item
-41220	Unknown Item
-41221	Unknown Item
-41222	Unknown Item
-41223	Unknown Item
-41224	Unknown Item
-41225	Unknown Item
-41226	Unknown Item
-41227	Unknown Item
-41228	Unknown Item
-41229	Unknown Item
-41230	Unknown Item
-41231	Unknown Item
-41232	Unknown Item
-41233	Unknown Item
-41234	Unknown Item
-41235	Unknown Item
-41236	Unknown Item
-41237	Unknown Item
-41238	Unknown Item
-41239	Unknown Item
-41240	Unknown Item
-41241	Unknown Item
-41242	Unknown Item
-41243	Unknown Item
-41244	Unknown Item
-41245	Unknown Item
-41246	Unknown Item
-41247	Unknown Item
-41248	Unknown Item
-41249	Unknown Item
-41250	Unknown Item
-41251	Unknown Item
-41252	Unknown Item
-41253	Unknown Item
-41254	Unknown Item
-41255	Unknown Item
-41256	Unknown Item
-41257	Unknown Item
-41258	Unknown Item
-41259	Unknown Item
-41260	Unknown Item
-41261	Unknown Item
-41262	Unknown Item
-41263	Unknown Item
-41264	Unknown Item
-41265	Unknown Item
-41266	Unknown Item
-41267	Unknown Item
-41268	Unknown Item
-41269	Unknown Item
-41270	Unknown Item
-41271	Unknown Item
-41272	Unknown Item
-41273	Unknown Item
-41274	Unknown Item
-41275	Unknown Item
-41276	Unknown Item
-41277	Unknown Item
-41278	Unknown Item
-41279	Unknown Item
-41280	Unknown Item
+41153	AC Miryang (m)
+41154	AC Miryang (f)
+41155	AFC Yayang (m)
+41156	AFC Yayang (f)
+41157	RSC Campo Serpiente (m)
+41158	RSC Campo Serpiente (f)
+41159	Yongan FC (m)
+41160	Yongan FC (f)
+41161	FC Bakra (m)
+41162	FC Bakra (f)
+41163	FC Bokjung (m)
+41164	FC Bokjung (f)
+41165	FC Hwang Baviera (m)
+41166	FC Hwang Baviera (f)
+41167	Borussia Chunjo (m)
+41168	Borussia Chunjo (f)
+41169	SC Doyum (m)
+41170	SC Doyum (f)
+41171	SC Hasun Dong (m)
+41172	SC Hasun Dong (f)
+41173	CFR Dragón de Fuego (m)
+41174	CFR Dragón de Fuego (f)
+41175	FC Daeyami (m)
+41176	FC Daeyami (f)
+41177	GNK Kuahlo Dong (m)
+41178	GNK Kuahlo Dong (f)
+41179	FC Dinamo de Imha (m)
+41180	FC Dinamo de Imha (f)
+41181	FC Tierra de hielo (m)
+41182	FC Tierra de hielo (f)
+41183	FC Gumsan (m)
+41184	FC Gumsan (f)
+41185	Galawaryong (m)
+41186	Galawaryong (f)
+41187	Juventus de Yongbi (m)
+41188	Juventus de Yongbi (f)
+41189	Lungsam OSC (m)
+41190	Lungsam OSC (f)
+41191	Doyyumhwan CF (m)
+41192	Doyyumhwan CF (f)
+41193	Nephrit City FC (m)
+41194	Nephrit City FC (f)
+41195	Shinsoo United (m)
+41196	Shinsoo United (f)
+41197	Seungryong SC (m)
+41198	Seungryong SC (f)
+41199	Montañas Trueno FC (m)
+41200	Montañas Trueno FC (f)
+41201	Pyungmoo SaintHwang (m)
+41202	Pyungmoo SaintHwang (f)
+41203	Real Sohan (m)
+41204	Real Sohan (f)
+41205	FC Jinno 04 (m)
+41206	FC Jinno 04 (f)
+41207	FC Sangsun Dong (m)
+41208	FC Sangsun Dong (f)
+41209	Camiseta CZE (m)
+41210	Camiseta CZE (f)
+41211	Spartak de Jungrang (m)
+41212	Spartak de Jungrang (f)
+41213	FC Tierra de Fuego (m)
+41214	FC Tierra de Fuego (f)
+41215	FC St. Seungryong (m)
+41216	FC St. Seungryong (f)
+41217	AC Miryang+ (m)
+41218	AC Miryang+ (f)
+41219	AFC Yayang+ (m)
+41220	AFC Yayang+ (f)
+41221	RSC Campo Serpiente+ (m)
+41222	RSC Campo Serpiente+ (f)
+41223	Yongan FC+ (m)
+41224	Yongan FC+ (f)
+41225	FC Bakra+ (m)
+41226	FC Bakra+ (f)
+41227	Camiseta fútbol+ UKR (m)
+41228	Camiseta fútbol+ UKR (f)
+41229	Camiseta fútbol+ WAL (m)
+41230	Camiseta fútbol+ WAL (f)
+41231	Borussia Chunjo+ (m)
+41232	Borussia Chunjo+ (f)
+41233	Camiseta fútbol+ AUT (m)
+41234	Camiseta fútbol+ AUT (f)
+41235	SC Hasun Dong+ (m)
+41236	SC Hasun Dong+ (f)
+41237	CFR Dragón de Fuego+ (m)
+41238	CFR Dragón de Fuego+ (f)
+41239	FC Daeyami+ (m)
+41240	FC Daeyami+ (f)
+41241	GNK Kuahlo Dong+ (m)
+41242	GNK Kuahlo Dong+ (f)
+41243	FC Dinamo de Imha+ (m)
+41244	FC Dinamo de Imha+ (f)
+41245	FC Tierra de hielo+ (m)
+41246	FC Tierra de hielo+ (f)
+41247	FC Gumsan+ (m)
+41248	FC Gumsan+ (f)
+41249	Galawaryong+ (m)
+41250	Galawaryong+ (f)
+41251	Juventus de Yongbi+ (m)
+41252	Juventus de Yongbi+ (f)
+41253	Lungsam OSC+ (m)
+41254	Lungsam OSC+ (f)
+41255	Doyyumhwan CF+ (m)
+41256	Doyyumhwan CF+ (f)
+41257	Nephrit City FC+ (m)
+41258	Nephrit City FC+ (f)
+41259	Shinsoo United+ (m)
+41260	Shinsoo United+ (f)
+41261	Seungryong SC+ (m)
+41262	Seungryong SC+ (f)
+41263	Montañas Trueno FC+ (m)
+41264	Montañas Trueno FC+ (f)
+41265	Camiseta fútbol+ SCO (m)
+41266	Camiseta fútbol+ SCO (f)
+41267	Real Sohan+ (m)
+41268	Real Sohan+ (f)
+41269	FC Jinno 04+ (m)
+41270	FC Jinno 04+ (f)
+41271	Camiseta fútbol+ MKD (m)
+41272	Camiseta fútbol+ MKD (f)
+41273	SL Jungsun Dong+ (m)
+41274	SL Jungsun Dong+ (f)
+41275	Camiseta fútbol+ CZE (m)
+41276	Camiseta fútbol+ CZE (f)
+41277	Camiseta fútbol+ FIN (m)
+41278	Camiseta fútbol+ FIN (f)
+41279	FC St. Seungryong+ (m)
+41280	FC St. Seungryong+ (f)
 41291	Atuendo conejo (negro)
 41292	Atuendo conejo (azul)
 41293	Atuendo conejo (verde)
@@ -4189,24 +4189,24 @@ VNUM	LOCALE_NAME
 41304	Atuendo conejita+ (azul)
 41305	Atuendo conejita+ (ver.)
 41306	Atuendo conejita+ (rosa)
-41307	Unknown Item
-41308	Unknown Item
-41309	Unknown Item
-41310	Unknown Item
-41311	Unknown Item
-41312	Unknown Item
-41313	Unknown Item
-41314	Unknown Item
-41315	Unknown Item
-41316	Unknown Item
-41317	Unknown Item
-41318	Unknown Item
-41319	Unknown Item
-41320	Unknown Item
-41321	Unknown Item
-41322	Unknown Item
-41323	Unknown Item
-45001	NoNAme
+41307	Ropaje de cobra (m)
+41308	Ropaje de cobra (f)
+41309	Ropaje de cobra+ (m)
+41310	Ropaje de cobra+ (f)
+41311	Luchador del des. (ngr)
+41312	Luchadora del des. (ngr)
+41313	Luchador del des.+ (ngr)
+41314	Luchadora del de.+ (ngr)
+41315	Armadura de Azrael
+41316	Armadura de Azrael (f)
+41317	Armadura de Azrael+ (m)
+41318	Armadura de Azrael+ (f)
+41319	Ropaje de cobra
+41320	Traje Jack Calabaza (m)
+41321	Traje Jack Calabaza (f)
+41322	Traje Jack Calabaza+ (m)
+41323	Traje Jack Calabaza+ (f)
+45001	Orejas conejita (marrón)
 45002	Orejas conejo (marrón)
 45003	Pañuelo (m)
 45004	Pañuelo (f)
@@ -4284,26 +4284,26 @@ VNUM	LOCALE_NAME
 45084	Gorro Élfico +
 45085	Cabeza de Reno + (m)
 45086	Cabeza de Reno + (f)
-45087	Unknown Item
-45088	Unknown Item
-45089	Unknown Item
-45090	Unknown Item
-45091	Unknown Item
-45092	Unknown Item
-45093	Unknown Item
-45094	Unknown Item
-45095	Unknown Item
-45096	Unknown Item
-45097	Unknown Item
-45098	Unknown Item
-45099	Unknown Item
-45100	Unknown Item
-45101	Unknown Item
-45102	Unknown Item
-45103	Unknown Item
-45104	Unknown Item
-45105	Unknown Item
-45106	Unknown Item
+45087	Bandana (blanca)
+45088	Bandana (blanca)
+45089	Bandana (negra)
+45090	Bandana (negra)
+45091	Bandana (amarilla)
+45092	Bandana (amarilla)
+45093	Bandana (naranja)
+45094	Bandana (naranja)
+45095	Bandana (azul)
+45096	Bandana (azul)
+45097	Bandana+ (blanca)
+45098	Bandana+ (blanca)
+45099	Bandana+ (negra)
+45100	Bandana+ (negra)
+45101	Bandana+ (amarilla)
+45102	Bandana+ (amarilla)
+45103	Bandana+ (naranja)
+45104	Bandana+ (naranja)
+45105	Bandana+ (azul)
+45106	Bandana+ (azul)
 45119	Orejas conejo (negro)
 45120	Orejas conejo (azul)
 45121	Orejas conejo (verde)
@@ -4320,31 +4320,31 @@ VNUM	LOCALE_NAME
 45132	Orejas conejita+ (azul)
 45133	Orejas conejita+ (verde)
 45134	Orejas conejita+ (rosa)
-45135	Unknown Item
-45136	Unknown Item
-45137	Unknown Item
-45138	Unknown Item
-45139	Unknown Item
-45140	Unknown Item
-45141	Unknown Item
-45142	Unknown Item
-45143	Unknown Item
-45144	Unknown Item
-45145	Unknown Item
-45146	Unknown Item
-45147	Unknown Item
-45148	Unknown Item
-45149	Unknown Item
-45150	Unknown Item
-45151	Unknown Item
-45152	Unknown Item
-45153	Unknown Item
-45154	Unknown Item
-45155	Unknown Item
-45156	Unknown Item
-45157	Unknown Item
-45158	Unknown Item
-45159	Unknown Item
+45135	Peinado de cobra (m)
+45136	Peinado de cobra (f)
+45137	Peinado de cobra+ (m)
+45138	Peinado de cobra+ (f)
+45139	Máscara de Tengu
+45140	Máscara veneciana
+45141	Máscara Kifwebe
+45142	Máscara maya
+45143	Máscara Tengu+
+45144	Máscara veneciana+
+45145	Máscara Kifwebe+
+45146	Máscara maya+
+45147	Turbante negro (m)
+45148	Turbante negro (f)
+45149	Turbante negro+ (m)
+45150	Turbante negro+ (f)
+45151	Yelmo de Azrael (m)
+45152	Yelmo de Azrael (f)
+45153	Yelmo de Azrael+ (m)
+45154	Yelmo de Azrael+ (f)
+45155	Peinado de cobra
+45156	Cabeza Jack Calabaza (m)
+45157	Cabeza Jack Calabaza (f)
+45158	Cabeza Jack Calabaza+(m)
+45159	Cabeza Jack Calabaza+(f)
 50001	Libro Afortunado
 50002	Anillo de Oro
 50003	Documento reajuste hab.
@@ -4447,12 +4447,12 @@ VNUM	LOCALE_NAME
 50115	Caja de Ébano Carmín
 50116	Señal de Cambio de Arma
 50117	Joyero
-50118	¿ë°¢º¸¹°»óÀÚ
-50119	¿µ¼®º¸µû¸®
+50118	Cofre del tesoro del dragón
+50119	Bolsa de Piedra Metin
 50120	Cofre de Hierro
 50121	Caja de Hierro
 50122	Baúl de Hierro
-50123	¾ÆÀÌ½ºÅ©¸²
+50123	Helado
 50124	Caja de madera podrida
 50125	Baúl misterioso
 50126	Baúl misterioso
@@ -4497,7 +4497,7 @@ VNUM	LOCALE_NAME
 50180	Cesta Vacía
 50181	Cesta con Hue. de Pascua
 50182	Baúl bendito
-50183	NoNAme
+50183	Dulces
 50184	¼ÒÈ¯ÀÇ ÆÐ ±³È¯±Ç (7ÀÏ)
 50185	¼ÒÈ¯ÀÇ ÆÐ ±³È¯±Ç (30ÀÏ)
 50186	Cofre de Azrael
@@ -4511,9 +4511,9 @@ VNUM	LOCALE_NAME
 50194	Baúl de Maestro II
 50195	Baúl de Maestro III
 50196	Baúl de Gran Maestro
-50197	¾Ë ¼ö ¾ø´Â º¸µû¸®
-50198	¾Ë ¼ö ¾ø´Â º¸µû¸®
-50199	¾Ë ¼ö ¾ø´Â º¸µû¸®
+50197	Bolsa desconocida
+50198	Bolsa desconocida
+50199	Bolsa desconocida
 50200	Paquete
 50201	Ramo
 50202	Ramo
@@ -4523,14 +4523,14 @@ VNUM	LOCALE_NAME
 50216	Vino Caliente
 50249	Baúl del Triunfo
 50252	Cor Draconis
-50253	ÀÚÁÖºû ±Ý¹Ú»óÀÚ
+50253	Caja de pan de oro púrpura
 50254	Baúl de la Oscuridad
 50255	Cor Draconis (en bruto)
 50256	Cor Draconis (afilado)
 50257	Cor Draconis (raro)
 50258	Cor Draconis (antiguo)
 50259	Cor Draconis (legend.)
-50260	Unknown Item
+50260	Cor Draconis (en bruto)
 50300	Manual de Habilidad
 50301	Arte de Guerra Sun Zi
 50302	Arte de Guerra Wu zi
@@ -4699,152 +4699,152 @@ VNUM	LOCALE_NAME
 50910	Receta para Agua Hwal
 51001	Fragmento de energía
 51002	Cristal de Energía
-51501	Unknown Item
-51502	Unknown Item
-51503	Unknown Item
-51504	Unknown Item
-51505	Unknown Item
-51506	Unknown Item
-51507	Unknown Item
-51508	Unknown Item
-51509	Unknown Item
-51510	Unknown Item
-51511	Unknown Item
-51512	Unknown Item
-51513	Unknown Item
-51514	Unknown Item
-51515	Unknown Item
-51516	Unknown Item
-51517	Unknown Item
-51518	Unknown Item
-51519	Unknown Item
-51520	Unknown Item
-51521	Unknown Item
-51522	Unknown Item
-51523	Unknown Item
-51524	Unknown Item
-51525	Unknown Item
-51526	Unknown Item
-51527	Unknown Item
-51528	Unknown Item
-51529	Unknown Item
-51530	Unknown Item
-51531	Unknown Item
-51532	Unknown Item
-51533	Unknown Item
-51534	Unknown Item
-51535	Unknown Item
-51536	Unknown Item
-51537	Unknown Item
-51538	Unknown Item
-51539	Unknown Item
-51540	Unknown Item
-51541	Unknown Item
-51542	Unknown Item
-51543	Unknown Item
-51544	Unknown Item
-51545	Unknown Item
-51546	Unknown Item
-51547	Unknown Item
-51548	Unknown Item
-51549	Unknown Item
-51550	Unknown Item
-51551	Unknown Item
-51552	Unknown Item
-51553	Unknown Item
-51554	Unknown Item
-51555	Unknown Item
-51556	Unknown Item
-51557	Unknown Item
-51558	Unknown Item
-51559	Unknown Item
-51560	Unknown Item
-51561	Unknown Item
-51562	Unknown Item
-51563	Unknown Item
-51564	Unknown Item
-51565	Unknown Item
-51566	Unknown Item
-51567	Unknown Item
-51568	Unknown Item
-51569	Unknown Item
-51570	Unknown Item
-51571	Unknown Item
-51572	Unknown Item
-51573	Unknown Item
-51574	Unknown Item
-51575	Unknown Item
-51576	Unknown Item
-51577	Unknown Item
-51578	Unknown Item
-51579	Unknown Item
-51580	Unknown Item
-51581	Unknown Item
-51582	Unknown Item
-51583	Unknown Item
-51584	Unknown Item
-51585	Unknown Item
-51586	Unknown Item
-51587	Unknown Item
-51588	Unknown Item
-51589	Unknown Item
-51590	Unknown Item
-51591	Unknown Item
-51592	Unknown Item
-51593	Unknown Item
-51594	Unknown Item
-51595	Unknown Item
-51596	Unknown Item
-51597	Unknown Item
-51598	Unknown Item
-51599	Unknown Item
-51600	Unknown Item
-51601	Unknown Item
-51602	Unknown Item
-51603	Unknown Item
-51604	Unknown Item
-51605	Unknown Item
-51606	Unknown Item
-51607	Unknown Item
-51608	Unknown Item
-51609	Unknown Item
-51610	Unknown Item
-51611	Unknown Item
-51612	Unknown Item
-51613	Unknown Item
-51614	Unknown Item
-51615	Unknown Item
-51616	Unknown Item
-51617	Unknown Item
-51618	Unknown Item
-51619	Unknown Item
-51620	Unknown Item
-51621	Unknown Item
-51622	Unknown Item
-51623	Unknown Item
-51624	Unknown Item
-51625	Unknown Item
-51626	Unknown Item
-51627	Unknown Item
-51628	Unknown Item
-51629	Unknown Item
-51630	Unknown Item
-51631	Unknown Item
-51632	Unknown Item
-51633	Unknown Item
-51634	Unknown Item
-51635	Unknown Item
-51636	Unknown Item
-51637	Unknown Item
-51638	Unknown Item
-51639	Unknown Item
-51640	Unknown Item
-51641	Unknown Item
-51642	Unknown Item
-51643	Unknown Item
-51644	Unknown Item
-51645	Unknown Item
-51646	Unknown Item
+51501	Cor Draconis (en bruto)
+51502	Cor Draconis (en bruto)
+51503	Cor Draconis (normal)
+51504	Cor Draconis (noble)
+51505	Cor Draconis (precioso)
+51506	Cor Draconis (místico)
+51507	Cor Draconis (afilado)
+51508	Cor Draconis (raro)
+51509	Cor Draconis (antiguo)
+51510	Cor Draconis (legen.)
+51511	Cor Diamas
+51512	Cor Rubinum
+51513	Cor Jadeit
+51514	Cor Saphirum
+51515	Cor Granatum
+51516	Cor Atrum
+51517	Cor Diamas (normal)
+51518	Cor Rubinum (normal)
+51519	Cor Jadeit (normal)
+51520	Cor Saphirum (normal)
+51521	Cor Granatum (normal)
+51522	Cor Atrum (normal)
+51523	Cor Diamas (noble)
+51524	Cor Rubinum (noble)
+51525	Cor Jadeit (noble)
+51526	Cor Saphirum (noble)
+51527	Cor Granatum (noble)
+51528	Cor Atrum (noble)
+51529	Cor Diamas (precioso)
+51530	Cor Rubinum (precioso)
+51531	Cor Jadeit (precioso)
+51532	Cor Saphirum (precioso)
+51533	Cor Granatum (precioso)
+51534	Cor Atrum (precioso)
+51535	Cor Diamas (impoluto)
+51536	Cor Rubinum (impoluto)
+51537	Cor Jadeit (impoluto)
+51538	Cor Saphirum (impoluto)
+51539	Cor Granatum (impoluto)
+51540	Cor Atrum (impoluto)
+51541	Cor Draconis (brillante)
+51542	Cor Diamas (brillante)
+51543	Cor Rubinum (brillante)
+51544	Cor Jadeit (brillante)
+51545	Cor Saphirum (brillante)
+51546	Cor Granatum (brillante)
+51547	Cor Atrum (brillante)
+51548	Cor Draconis (impoluto)
+51549	Cor Draconis (eterno)
+51550	Cor Diamas (eterno)
+51551	Cor Rubinum (eterno)
+51552	Cor Jadeit (eterno)
+51553	Cor Saphirum (eterno)
+51554	Cor Granatum (eterno)
+51555	Cor Atrum (eterno)
+51556	Cor Diamas (místico)
+51557	Cor Rubinum (místico)
+51558	Cor Jadeit (místico)
+51559	Cor Saphirum (místico)
+51560	Cor Granatum (místico)
+51561	Cor Atrum (místico)
+51562	Cor Draconis (épico)
+51563	Cor Diamas (épico)
+51564	Cor Rubinum (épico)
+51565	Cor Jadeit (épico)
+51566	Cor Saphirum (épico)
+51567	Cor Granatum (épico)
+51568	Cor Atrum (épico)
+51569	Cor Draconis (divino)
+51570	Cor Diamas (divino)
+51571	Cor Rubinum (divino)
+51572	Cor Jadeit (divino)
+51573	Cor Saphirum (divino)
+51574	Cor Granatum (divino)
+51575	Cor Atrum (divino)
+51576	Cor Draconis+ (normal)
+51577	Cor Diamas+ (normal)
+51578	Cor Rubinum+ (normal)
+51579	Cor Jadeit+ (normal)
+51580	Cor Saphirum+ (normal)
+51581	Cor Granatum+ (normal)
+51582	Cor Atrum+ (normal)
+51583	Cor Draconis+ (noble)
+51584	Cor Diamas+ (noble)
+51585	Cor Rubinum+ (noble)
+51586	Cor Jadeit+ (noble)
+51587	Cor Saphirum+ (noble)
+51588	Cor Granatum+ (noble)
+51589	Cor Atrum+ (noble)
+51590	Cor Draconis+ (precioso)
+51591	Cor Diamas+ (precioso)
+51592	Cor Rubinum+ (precioso)
+51593	Cor Jadeit+ (precioso)
+51594	Cor Saphirum+ (precioso)
+51595	Cor Granatum+ (precioso)
+51596	Cor Atrum+ (precioso)
+51597	Cor Draconis+ (impoluto)
+51598	Cor Diamas+ (impoluto)
+51599	Cor Rubinum+ (impoluto)
+51600	Cor Jadeit+ (impoluto)
+51601	Cor Saphirum+ (impoluto)
+51602	Cor Granatum+ (impoluto)
+51603	Cor Atrum+ (impoluto)
+51604	Cor Draconis+ (brillan.)
+51605	Cor Diamas+ (brillante)
+51606	Cor Rubinum+ (brillante)
+51607	Cor Jadeit+ (brillante)
+51608	Cor Saphirum+ (brillan.)
+51609	Cor Granatum+ (brillan.)
+51610	Cor Atrum+ (brillante)
+51611	Cor Draconis+ (eterno)
+51612	Cor Diamas+ (eterno)
+51613	Cor Rubinum+ (eterno)
+51614	Cor Jadeit+ (eterno)
+51615	Cor Saphirum+ (eterno)
+51616	Cor Granatum+ (eterno)
+51617	Cor Atrum+ (eterno)
+51618	Cor Draconis+ (místico)
+51619	Cor Diamas+ (místico)
+51620	Cor Rubinum+ (místico)
+51621	Cor Jadeit+ (místico)
+51622	Cor Saphirum+ (místico)
+51623	Cor Granatum+ (místico)
+51624	Cor Atrum+ (místico)
+51625	Cor Draconis+ (épico)
+51626	Cor Diamas+ (épico)
+51627	Cor Rubinum+ (épico)
+51628	Cor Jadeit+ (épico)
+51629	Cor Saphirum+ (épico)
+51630	Cor Granatum+ (épico)
+51631	Cor Atrum+ (épico)
+51632	Cor Draconis+ (divino)
+51633	Cor Diamas+ (divino)
+51634	Cor Rubinum+ (divino)
+51635	Cor Jadeit+ (divino)
+51636	Cor Saphirum+ (divino)
+51637	Cor Granatum+ (divino)
+51638	Cor Atrum+ (divino)
+51639	Baúl del dragón
+51640	Baúl del dragón+
+51641	Baúl dragón+ (colorido)
+51642	Baúl dragón (colorido)
+51643	Baúl noble del dragón
+51644	Baúl noble del dragón+
+51645	Baúl nob. dragón+ (col.)
+51646	Baúl noble dragón (col.)
 52001	Jabalí Joven (sello)
 52002	Jabalí Joven (sello)
 52003	Jabalí Joven (sello)
@@ -4935,61 +4935,61 @@ VNUM	LOCALE_NAME
 52088	Reno Valeroso (sello)
 52089	Reno Valeroso (sello)
 52090	Reno Valeroso (sello)
-52091	Unknown Item
-52092	Unknown Item
-52093	Unknown Item
-52094	Unknown Item
-52095	Unknown Item
-52096	Unknown Item
-52097	Unknown Item
-52098	Unknown Item
-52099	Unknown Item
-52100	Unknown Item
-52101	Unknown Item
-52102	Unknown Item
-52103	Unknown Item
-52104	Unknown Item
-52105	Unknown Item
+52091	Dragor joven
+52092	Dragor joven
+52093	Dragor joven
+52094	Dragor joven
+52095	Dragor joven
+52096	Dragor salvaje
+52097	Dragor salvaje
+52098	Dragor salvaje
+52099	Dragor salvaje
+52100	Dragor salvaje
+52101	Dragor valeroso
+52102	Dragor valeroso
+52103	Dragor valeroso
+52104	Dragor valeroso
+52105	Dragor valeroso
 52701	Título de León
 52702	Título de Tigre
 52703	Título de Jabalí
 52704	Título de Lobo
 52705	Título de Reno (m)
 52706	Título de Reno (h)
-52707	Unknown Item
-53001	NoNAme
+52707	Título de Dragor
+53001	Sello del Fénix de Fuego
 53002	Sello de Reno Joven
 53003	Sello del Fénix de Hielo
 53005	Azrael bebé
 53006	Azrael bebé (oro)
 53007	Sello de Bambi
-53008	¾Æ±â¹é°õ ¼ÒÈ¯±Ç
-53009	¾Æ±âÆæ´õ ¼ÒÈ¯±Ç
+53008	Sello de Nuud
+53009	Sello de Bao Bao
 53010	Sello de Leónidas
 53011	Sello de Khan
 53012	Sello de Porkie
 53013	Sello de Rufus
-53014	Unknown Item
-53015	Unknown Item
-53016	Unknown Item
-53017	Unknown Item
-53501	NoNAme
+53014	Verduguito gordo
+53015	Verduguito gordo (oro)
+53016	Huesines
+53017	Fénix de Jade
+53501	Jaula del Fénix de Fuego
 53502	Baúl del Reno Joven
 53503	Jaula del Fénix de Hielo
-53504	NoNAme
-53505	³ì°¢ º¸°üÇÔ
-53506	NoNAme
-53507	Unknown Item
-53508	Unknown Item
-53509	Unknown Item
-53510	Unknown Item
-53511	Unknown Item
-53512	Unknown Item
-53513	Unknown Item
-53514	Unknown Item
-53515	Unknown Item
-53516	Unknown Item
-53517	Unknown Item
+53504	Cofre 4
+53505	Baúl de Azrael bebé
+53506	Azrael bebé (oro)
+53507	Baúl de Bambi
+53508	Baúl de Nuud
+53509	Baúl de Bao Bao
+53510	Baúl de Leónidas
+53511	Baúl de Khan
+53512	Baúl de Porkie
+53513	Baúl de Rufus
+53514	Baúl de Verduguito
+53515	Baúl de Verduguito (oro)
+53516	Baúl de huesos
+53517	Jaula de jade
 54702	Baúl de Arrador
 54703	Baúl de Nemere
 60001	Rozadura
@@ -5184,7 +5184,7 @@ VNUM	LOCALE_NAME
 71099	Anillo de Emplazamiento
 71100	Reseteo de Habilidades
 71101	Poción de Prisa
-71102	¼Ó¿µÁÖ+
+71102	Poción de Prisa+
 71103	Redistribución (VIT)
 71104	Redistribución (INT)
 71105	Redistribución (STR)
@@ -5202,7 +5202,7 @@ VNUM	LOCALE_NAME
 71119	Sello del Tigre (azul)
 71120	Sello del León (amar.)
 71121	Sello del León (azul)
-71122	¼ö·æ¹æÀÔÀå±Ç
+71122	Entrada al Templo del Dragón
 71123	Escamas de Dragón
 71124	León Blanco
 71125	Sello Jabalí de Combate
@@ -5211,10 +5211,10 @@ VNUM	LOCALE_NAME
 71128	Sello León de Batalla
 71129	Garra de Dragón
 71130	Ticket de Entrada
-71131	NoNAme
-71132	NoNAme
-71133	NoNAme
-71134	NoNAme
+71131	Sello del caballo negro
+71132	Sello del caballo negro
+71133	Sello del caballo negro
+71134	Sello del caballo negro
 71135	Anillo de la Medialuna
 71136	Piruleta
 71137	Sello Tigre Real (azul)
@@ -5234,19 +5234,19 @@ VNUM	LOCALE_NAME
 71151	Magia Verde
 71152	Fuerza Verde
 71153	Poción de la Sabiduría
-71154	°æÇèÀÇ ¹°¾à
-71155	°æÇèÀÇ ¹°¾à
-71156	°æÇèÀÇ ¹°¾à
-71157	°æÇèÀÇ ¹°¾à
+71154	Poción del ascenso (3 h)
+71155	Poción de sabiduría (3h)
+71156	Poción de Espíritu (3 h)
+71157	Poción de experiencia
 71158	Medalla del Héroe
 71159	Baúl de Milon
 71160	Baúl de Atenea
 71161	Equus Purpur
 71164	Sello de Cometa
-71165	Unknown Item
-71166	Unknown Item
-71171	Unknown Item
-71172	Unknown Item
+71165	Depredador polar
+71166	Panda blindado
+71171	Unicornio
+71172	Pesadilla
 72001	Anillo de experiencia
 72002	Anillo de experiencia
 72003	Anillo de experiencia
@@ -5298,19 +5298,19 @@ VNUM	LOCALE_NAME
 72049	Anillo de experiencia
 72050	Anillo de experiencia
 72301	Pergamino Bendición
-72302	NoNAme
-72303	NoNAme
-72304	NoNAme
-72305	NoNAme
-72306	NoNAme
-72307	NoNAme
-72308	NoNAme
-72309	NoNAme
-72310	NoNAme
-72311	NoNAme
-72312	NoNAme
-72313	NoNAme
-72314	NoNAme
+72302	Libro del Líder
+72303	Anillo de experiencia
+72304	Bola bendición
+72305	Espejo del Ocaso
+72306	Nota del herrero
+72307	Nota del sabio
+72308	Mineral de Cobre Mágico
+72309	Manual del herrero
+72310	Pergamino de Exorcismo
+72311	Bendición del Dragón
+72312	Ataque del Dios Dragón
+72313	Defensa del Dios Dragón
+72314	Pergamino Dragón
 72501	Anillo Exp. (iCafe)
 72502	Ladrón
 72701	Zapatos Viento
@@ -5586,7 +5586,7 @@ VNUM	LOCALE_NAME
 90010	Piedra Fundación
 90011	Tronco
 90012	Chapeado
-90013	¹öÆ°ÀÌ¹ÌÁö
+90013	Imagen de botón
 100000	Elixir del tiempo (P)
 100001	Elixir del tiempo (M)
 100002	Elixir del tiempo (G)

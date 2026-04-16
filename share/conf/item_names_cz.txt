@@ -3819,14 +3819,14 @@ VNUM	LOCALE_NAME
 31082	Magmový prsten
 31083	Samaelův prsten
 31084	Svěcená voda
-31085	NoNAme
-31086	NoNAme
-31087	NoNAme
-31088	NoNAme
+31085	Těžká voda
+31086	Spóry houby
+31087	Plamen Ducha plamenů
+31088	Ohnivý lektvar
 31089	NoNAme
-31090	NoNAme
+31090	Nemerovo srdce
 31091	NoNAme
-31092	NoNAme
+31092	Kůže ledové příšery
 35000	Léčivé byliny+
 35001	Tygří játra+
 38001	VIP-Feature
@@ -4201,7 +4201,7 @@ VNUM	LOCALE_NAME
 41316	Azraelovo brnění (ž)
 41317	Azraelovo brnění+ (m)
 41318	Azraelovo brnění+ (ž)
-41319	Čć»ç°©
+41319	Oblek kobry
 41320	Oblek Dýně Jacka (m)
 41321	Šaty Dýně Jacka (ž)
 41322	Oblek Dýně Jacka+ (m)
@@ -4340,7 +4340,7 @@ VNUM	LOCALE_NAME
 45152	Azraelova helma (ž)
 45153	Azraelova helma+ (m)
 45154	Azraelova helma+ (ž)
-45155	Čć»çĹő±¸
+45155	Účes kobry
 45156	Hlava Dýně Jacka (m)
 45157	Hlava Dýně Jacka (ž)
 45158	Hlava Dýně Jacka+ (m)
@@ -4511,7 +4511,7 @@ VNUM	LOCALE_NAME
 50194	Truhla mistra II
 50195	Truhla mistra III
 50196	Truhla velkého mistra
-50197	NoNAme
+50197	Neznámý vak
 50198	NoNAme
 50199	NoNAme
 50200	Měšec
@@ -4957,7 +4957,7 @@ VNUM	LOCALE_NAME
 52705	Sobí certifikát (M)
 52706	Sobí certifikát (Ž)
 52707	Certifikát Dragora
-53001	NoNAme
+53001	Ohnivý fénix
 53002	Pečeť mladého soba
 53003	Pečeť ledového Fénixe
 53005	Baby Azrael
@@ -4973,7 +4973,7 @@ VNUM	LOCALE_NAME
 53015	Pečeť Mini-Exekutora (z)
 53016	Kostěná pečeť
 53017	Pečeť Nefritového fénixe
-53501	NoNAme
+53501	Klec Ohnivého fénixe
 53502	Truhla mladého soba
 53503	Klec ledového Fénixe
 53504	NoNAme
@@ -5184,7 +5184,7 @@ VNUM	LOCALE_NAME
 71099	Prsten následnictví
 71100	Certifikát změny výcviku
 71101	Lektvar spěchu
-71102	NoNAme
+71102	Lektvar spěchu+
 71103	Svitek znovurozd. (VIT)
 71104	Svitek znovurozd. (INT)
 71105	Znovurozdělení (SÍLA)
@@ -5202,7 +5202,7 @@ VNUM	LOCALE_NAME
 71119	Pečeť tygra (M)
 71120	Pečeť lva (Ž)
 71121	Pečeť lva (M)
-71122	NoNAme
+71122	Vstup do Dračího chrámu
 71123	Dračí šupiny
 71124	Bílý Lev
 71125	Pečeť div. boj. kance
@@ -5298,19 +5298,19 @@ VNUM	LOCALE_NAME
 72049	Prsten zkušeností
 72050	Prsten zkušeností
 72301	Požehnaný pergamen
-72302	NoNAme
-72303	NoNAme
-72304	NoNAme
-72305	NoNAme
-72306	NoNAme
-72307	NoNAme
+72302	Kniha náčelníka
+72303	Prsten zkušeností
+72304	Mramor požehnání
+72305	Zrcadlo neviditelnosti
+72306	Kovářova poznámka
+72307	Mudrcova poznámka
 72308	Magická měděná ruda
-72309	NoNAme
-72310	NoNAme
-72311	NoNAme
-72312	NoNAme
-72313	NoNAme
-72314	NoNAme
+72309	Příručka o kování
+72310	Pergamen exorcismu
+72311	Požehnání draka
+72312	Útok dračího boha
+72313	Obrana dračího boha
+72314	Pergamen draka
 72501	Prsten zkuš.  (iCafe)
 72502	Zloděj. rukavice (iCafe)
 72701	Větrné boty

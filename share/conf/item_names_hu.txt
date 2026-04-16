@@ -3630,10 +3630,10 @@ VNUM	LOCALE_NAME
 30304	Zin-Bong-In kulcs
 30311	Lélekkristály-kulcs
 30312	Grimaszoló totem
-30315	NoNAme
-30316	NoNAme
-30317	NoNAme
-30318	NoNAme
+30315	Kenyér
+30316	Adományozó tányér
+30317	Ételadomány
+30318	Áldás gyümölcs
 30319	Zsugorított fej
 30320	Zsugorított fej
 30321	Halloween Tök
@@ -3819,14 +3819,14 @@ VNUM	LOCALE_NAME
 31082	Magmagyűrű
 31083	Samael gyűrűje
 31084	Dicsfény tinktúra
-31085	NoNAme
-31086	NoNAme
-31087	NoNAme
-31088	NoNAme
+31085	Nehézvíz
+31086	Gombaspórák
+31087	Lángszellem láng
+31088	Tűz bájital
 31089	NoNAme
-31090	NoNAme
+31090	Nemere szíve
 31091	Lángkirály-vér
-31092	NoNAme
+31092	Jégszörny bőr
 35000	Gyógynövények+
 35001	Tigris máj+
 38001	VIP-Feature
@@ -4201,7 +4201,7 @@ VNUM	LOCALE_NAME
 41316	Azrael páncélja (n)
 41317	Azrael páncélja+ (f)
 41318	Azrael páncélja+ (n)
-41319	Čć»ç°©
+41319	Kobra jelmez
 41320	Sütőtök Jack öltözék (f)
 41321	Sütőtök Jack ruha (n)
 41322	Sütőtök Jack öltözék+ (f)
@@ -4340,7 +4340,7 @@ VNUM	LOCALE_NAME
 45152	Azrael sisakja (n)
 45153	Azrael sisakja+ (f)
 45154	Azrael sisakja+ (n)
-45155	Čć»çĹő±¸
+45155	Kobra fejdísz
 45156	Sütőtök Jack fej (f)
 45157	Sütőtök Jack fej (n)
 45158	Sütőtök Jack fej+ (f)
@@ -4452,7 +4452,7 @@ VNUM	LOCALE_NAME
 50120	Vas Ékszertároló
 50121	Vas Doboz
 50122	Vas Láda
-50123	NoNAme
+50123	Fagylalt
 50124	Rothadt Fadoboz
 50125	Titokzatos láda
 50126	Titokzatos láda
@@ -4497,7 +4497,7 @@ VNUM	LOCALE_NAME
 50180	Üres kosár
 50181	Kosár Hímes tojásokkal
 50182	Áldás láda
-50183	NoNAme
+50183	Édesség
 50184	NoNAme
 50185	NoNAme
 50186	Azrael ládája
@@ -4511,7 +4511,7 @@ VNUM	LOCALE_NAME
 50194	Mester ládája II
 50195	Mester ládája III
 50196	Nagymester ládája
-50197	NoNAme
+50197	Ismeretlen táska
 50198	NoNAme
 50199	NoNAme
 50200	Csomó
@@ -4973,21 +4973,21 @@ VNUM	LOCALE_NAME
 53015	Minihóhér-pecsét (arany)
 53016	Csonti pecsét
 53017	Jáde főnix-pecsét
-53501	NoNAme
+53501	Tűzfőnix-kalitka
 53502	Rénszarvas gida láda
 53503	Jégfőnix kalitka
 53504	NoNAme
-53505	NoNAme
-53506	NoNAme
-53507	łě°˘ ş¸°üÇÔ
-53508	łě°˘ ş¸°üÇÔ
-53509	łě°˘ ş¸°üÇÔ
-53510	łě°˘ ş¸°üÇÔ
-53511	łě°˘ ş¸°üÇÔ
-53512	łě°˘ ş¸°üÇÔ
-53513	łě°˘ ş¸°üÇÔ
-53514	łě°˘ ş¸°üÇÔ
-53515	łě°˘ ş¸°üÇÔ
+53505	Baby Azrael-láda
+53506	Baby Azrael-láda (arany)
+53507	Bambi-láda
+53508	Knuud-láda
+53509	Bao Bao-láda
+53510	Leonidász-láda
+53511	Kán-láda
+53512	Porky-láda
+53513	Rufusz-láda
+53514	Minihóhér-láda
+53515	Minihóhér-láda (arany)
 53516	Csontláda
 53517	Jáde kalitka
 54702	Razador ládája
@@ -5184,7 +5184,7 @@ VNUM	LOCALE_NAME
 71099	Utód gyűrű
 71100	Tancsere bizonyítvány
 71101	Sietség itala
-71102	NoNAme
+71102	Sietség itala+
 71103	Újraelosztás (VIT)
 71104	Újraelosztás (INT)
 71105	Újraelosztás (ERŐ)
@@ -5202,7 +5202,7 @@ VNUM	LOCALE_NAME
 71119	Tigris Pecsét (kék)
 71120	Oroszlán Pecsét (sárga)
 71121	Oroszlán Pecsét (kék)
-71122	NoNAme
+71122	Sárkány temploma belépő
 71123	Sárkány pikkely
 71124	Fehér oroszlán
 71125	Harci vadkan pecsét
@@ -5211,10 +5211,10 @@ VNUM	LOCALE_NAME
 71128	Harci oroszlán pecsét
 71129	Sárkány karom
 71130	Belépési engedély
-71131	NoNAme
-71132	NoNAme
-71133	NoNAme
-71134	NoNAme
+71131	Fekete ló
+71132	Fekete ló
+71133	Fekete ló
+71134	Fekete ló
 71135	Holdsarló gyűrű
 71136	Nyalóka
 71137	Királytigris pecsét (k)
@@ -5234,9 +5234,9 @@ VNUM	LOCALE_NAME
 71151	Zöld Mágia
 71152	Zöld Erő
 71153	Bölcsesség itala
-71154	NoNAme
-71155	NoNAme
-71156	NoNAme
+71154	Felemelkedés itala (3h)
+71155	Bölcsesség itala (3h)
+71156	Lélek itala
 71157	NoNAme
 71158	Hősi medál
 71159	Milon ládája
@@ -5298,19 +5298,19 @@ VNUM	LOCALE_NAME
 72049	Tapasztalat gyűrű
 72050	Tapasztalat gyűrű
 72301	Áldástekercs
-72302	NoNAme
-72303	NoNAme
-72304	NoNAme
-72305	NoNAme
-72306	NoNAme
-72307	NoNAme
+72302	Vezér könyve
+72303	Tapasztalat gyűrű
+72304	Megáldó márvány
+72305	Láthatatlanság tükör
+72306	Kovács jegyzete
+72307	Bölcs jegyzete
 72308	Mágikus rézérc
-72309	NoNAme
-72310	NoNAme
-72311	NoNAme
-72312	NoNAme
-72313	NoNAme
-72314	NoNAme
+72309	Kovács kézikönyv
+72310	Ördögűző tekercs
+72311	Sárkány áldása
+72312	Sárkányisten támadás
+72313	Sárkányisten védekezés
+72314	Sárkánytekercs
 72501	Tapasztalat gyűrű(iCafe)
 72502	Tolvaj kesztyű (iCafe)
 72701	Szélcipő
