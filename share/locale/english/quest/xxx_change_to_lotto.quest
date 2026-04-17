@@ -1,32 +1,32 @@
 quest change_to_lotto begin
     state start begin
-	when oldwoman.chat."Tausch dies gegen ein Lotterielos." with game.get_event_flag("luck_scroll")>0 begin
-	    say_title("Alte Frau")
+	when oldwoman.chat.gameforge.xxx_change_to_lotto._130_npcChat with game.get_event_flag("luck_scroll")>0 begin
+	    say_title(gameforge.xxx_change_to_lotto._010_sayTitle)
 	    say("")
 	    ---                                                   l
-	    say("Junger Herr, ich habe gehört, dass ein")
-	    say("landesweites Ereignis stattfindet.")
-	    say("Die Reichsverwalter sind dafür zuständig, aber")
-	    say("sie sind sehr beschäftigt daher haben sie mich")
-	    say("gefragt, ob ich das übernehmen kann")
-	    say("Wenn Du mir ein Lotterielos bringst,")
-	    say("werde ich Dir dafür das Glücksbuch geben.")
-	    say("Die Nummer, die im Glücksbuch steht, ist Deine")
+	    say(gameforge.xxx_change_to_lotto._020_say)
+	    say(gameforge.xxx_change_to_lotto._030_say)
+	    say(gameforge.xxx_change_to_lotto._040_say)
+	    say(gameforge.xxx_change_to_lotto._050_say)
+	    say(gameforge.xxx_change_to_lotto._060_say)
+	    say(gameforge.xxx_change_to_lotto._070_say)
+	    say(gameforge.xxx_change_to_lotto._080_say)
+	    say(gameforge.xxx_change_to_lotto._090_say)
 	    say("")
 
 	    if pc.countitem(50027) > 0 then
-		say("Bist Du interessiert, ein Lotterielos")
-		say("gegen das Glücksbuch zu tauschen?")
-		local s = select('Ja', 'Nein')
+		say(gameforge.xxx_change_to_lotto._100_say)
+		say(gameforge.xxx_change_to_lotto._110_say)
+		local s = select(gameforge.xxx_change_to_lotto._140_select, gameforge.xxx_change_to_lotto._150_select)
 
 		if s == 1 then
 		    pc.removeitem("50027", 1)
 		    pc.give_lotto()
 		end
 	    else
-		say_title("Alte Frau")
+		say_title(gameforge.xxx_change_to_lotto._010_sayTitle)
 		say("")
-		say("Na gut! Bringe mir ein Lotterielos.")
+		say(gameforge.xxx_change_to_lotto._120_say)
 	    end
 	end
     end

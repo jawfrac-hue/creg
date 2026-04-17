@@ -1,65 +1,65 @@
 quest larbor_day begin
     state start begin
-	when 20041.chat."GM: Die Veranstaltung des Arbeitstag" with pc.is_gm() begin
-	    say(string.format("Die Suche des Arbeitstag : %d", game.get_event_flag("larbor_day_quest")))
+	when 20041.chat.gameforge.xxx_larbor_day._1590_npcChat with pc.is_gm() begin
+	    say(string.format(gameforge.xxx_larbor_day._1580_say, game.get_event_flag("larbor_day_quest")))
 	end
-	when 20041.chat."GM: Durchfuhrung der Veranstaltung des Arbeitstag" with pc.is_gm() and game.get_event_flag("larbor_day_quest")==0 begin
-		say("Möchtest Du die Veranstaltung des Arbeitstag annehmen?")
-		local s=select("Ja", "Nein")
+	when 20041.chat.gameforge.xxx_larbor_day._1600_npcChat with pc.is_gm() and game.get_event_flag("larbor_day_quest")==0 begin
+		say(gameforge.xxx_larbor_day._010_say)
+		local s=select(gameforge.xxx_larbor_day._020_select, gameforge.xxx_larbor_day._030_select)
 		if s==1 then
 		    game.set_event_flag("larbor_day_quest", 1)
 		end
 	end
-	when 20041.chat."GM: Beenden der Veranstaltung des Arbeitstag" with pc.is_gm() and game.get_event_flag("larbor_day_quest")==1 begin
-		say("Möchtest Du die Veranstaltung des Arbeitstag abbrechen?")
-		local s=select("Abbrechen", "Schliessen")
+	when 20041.chat.gameforge.xxx_larbor_day._1610_npcChat with pc.is_gm() and game.get_event_flag("larbor_day_quest")==1 begin
+		say(gameforge.xxx_larbor_day._040_say)
+		local s=select(gameforge.xxx_larbor_day._050_select, gameforge.xxx_larbor_day._060_select)
 		if s==1 then
 		    game.set_event_flag("larbor_day_quest", 0)
 		end
 	end
-	when 20041.chat."Ha Ha! Nun ist es der Tag des Fleißes" with game.get_event_flag("larbor_day_quest")==1 begin
+	when 20041.chat.gameforge.xxx_larbor_day._1620_npcChat with game.get_event_flag("larbor_day_quest")==1 begin
 	    say_pc_name()
 	    ----"12345678901234567890123456789012345678901234567890"|
 	    say("")
-	    say("Hey Du! Was treibst Du dich hier")
-	    say("herum? Sieh dich nur mal an! ")
-	    say("Du trägst die Kleider eines Bettlers.")
+	    say(gameforge.xxx_larbor_day._070_say)
+	    say(gameforge.xxx_larbor_day._080_say)
+	    say(gameforge.xxx_larbor_day._090_say)
 	    say("")
 	    wait()
-	    say_title("Wanderer:")
+	    say_title(gameforge.xxx_larbor_day._100_sayTitle)
 	    say("")
-	    say("Ich ein Bettler? Bewerte nicht mein Äußeres! Ich")
-	    say("achte nur nicht so auf meine Kleidung wie aufs")
-	    say("Essen. Ich arbeite hart für mein Brot. Wie kann")
-	    say("man mich da einen Bettler nennen?")
+	    say(gameforge.xxx_larbor_day._110_say)
+	    say(gameforge.xxx_larbor_day._120_say)
+	    say(gameforge.xxx_larbor_day._130_say)
+	    say(gameforge.xxx_larbor_day._140_say)
 	    say("")
-	    local s=select("Entschuldigen", "Schliessen")
+	    local s=select(gameforge.xxx_larbor_day._150_select, gameforge.xxx_larbor_day._060_select)
 	    if s==1 then
 		say_pc_name()
 		say("")
-		say("Oh!!! Bitte verzeih, das ich so vorschnell")
-		say(" urteilte! Um meinen Fehler wieder")
-		say(" gutzumachen, möchte ich gerne etwas für dich")
-		say(" tun. Kann ich Dir bei etwas helfen?")
+		say(gameforge.xxx_larbor_day._160_say)
+		say(gameforge.xxx_larbor_day._170_say)
+		say(gameforge.xxx_larbor_day._180_say)
+		say(gameforge.xxx_larbor_day._190_say)
 		say("")
 		wait()
-		say_title("Der Wanderer:")
+		say_title(gameforge.xxx_larbor_day._200_sayTitle)
 		say("")
-		say("Ich könnte wohl gerade etwas Hilfe brauchen...")
-		say("Hm. Lass mal sehen  wie gut du bist.")
-		say("Töte zuerst 20 Wildhunde. Sie stören die ")
-		say("friedlichen Leute.")
+		say(gameforge.xxx_larbor_day._210_say)
+		say(gameforge.xxx_larbor_day._220_say)
+		say(gameforge.xxx_larbor_day._230_say)
+		say(gameforge.xxx_larbor_day._240_say)
 		say("")
 		----"12345678901234567890123456789012345678901234567890"|
-		local s=select("OK", "Nein")
+		local s=select(gameforge.xxx_larbor_day._250_select, gameforge.xxx_larbor_day._030_select)
 		if 1==s then
-		    say("Das ist nicht schwer! Ich werde bald zurück")
-		    say("sein.")
+		    say(gameforge.xxx_larbor_day._260_say)
+		    say(gameforge.xxx_larbor_day._270_say)
 		    say("")
 		elseif 2==s then
-		    say("Was soll denn das!? Ich soll Wildhunde")
-		    say(" jagen? Es ist besser dich einfach zu")
-		    say(" ignorieren.")
+		    say(gameforge.xxx_larbor_day._280_say)
+		    say(gameforge.xxx_larbor_day._290_say)
+		    say(gameforge.xxx_larbor_day._300_say)
 		end
 		set_state(mission1)
 	    elseif s==2 then
@@ -68,33 +68,33 @@ quest larbor_day begin
     end
     state report begin
 	when letter begin
-	    send_letter("Suche den Wanderer auf!")
+	    send_letter(gameforge.xxx_larbor_day._310_sendLetter)
 	end
 	when button or info begin
-	    say_title("Suche nach dem Wanderer")
+	    say_title(gameforge.xxx_larbor_day._320_sayTitle)
 	    say("")
-	    say("Finde den Wanderer und berichte ihm")
-	    say(" das du die Wildhunde getötet hast.")
+	    say(gameforge.xxx_larbor_day._330_say)
+	    say(gameforge.xxx_larbor_day._340_say)
 	    say("")
 	end
-	when 20041.chat."Die Aufgabe erledigt" begin
-	    say_title("Der Wanderer:")
+	when 20041.chat.gameforge.xxx_larbor_day._1630_npcChat begin
+	    say_title(gameforge.xxx_larbor_day._200_sayTitle)
 	    say("")
-	    say("Super. Gute Arbeit!")
-	    say("Ich bin eigentlich ein Beamter des Arbeitsamtes.")
-	    say("Nun gebe ich dem Jemand, ")
-	    say("der sehr fleissig arbeitet, einen Preis")
-	    say("bitte behalte die Tatsache geheim")
-	    say("und viel Spass damit.")
+	    say(gameforge.xxx_larbor_day._350_say)
+	    say(gameforge.xxx_larbor_day._360_say)
+	    say(gameforge.xxx_larbor_day._370_say)
+	    say(gameforge.xxx_larbor_day._380_say)
+	    say(gameforge.xxx_larbor_day._390_say)
+	    say(gameforge.xxx_larbor_day._400_say)
 	    say("")
 	    wait()
-	    say_title("Gewinn des Preis der Fleißigkeit")
-	    say("Aus der fleißigen Arbeit hast du von dem Beamten")
-	    say("den Preis der Fleissigkeit bekommenden")
-	    say_item("Der Preis der Fleissigkeit", 70004, "")
-	    say_reward("Du erhälst den Preis der Fleißigkeit")
-	    say("Kleidung +4, aber beachte: Einmal angezogen") 
-	    say_reward("kannst Du sie nicht wieder ablegen.")
+	    say_title(gameforge.xxx_larbor_day._410_sayTitle)
+	    say(gameforge.xxx_larbor_day._420_say)
+	    say(gameforge.xxx_larbor_day._430_say)
+	    say_item(gameforge.xxx_larbor_day._1740_sayItem, 70004, "")
+	    say_reward(gameforge.xxx_larbor_day._1750_sayReward)
+	    say(gameforge.xxx_larbor_day._440_say)
+	    say_reward(gameforge.xxx_larbor_day._1760_sayReward)
 	    say("")
 
 	    set_state(complete2)
@@ -108,39 +108,39 @@ quest larbor_day begin
     end
     state complete begin
 	when letter begin
-	    send_letter("Der Wiederversuch der Suche des Arbeitstag")
+	    send_letter(gameforge.xxx_larbor_day._450_sendLetter)
 	end
 	when button or info begin
-	    say_title("Der Wiederversuch der Suche des Arbeitstag")
+	    say_title(gameforge.xxx_larbor_day._460_sayTitle)
 	    say("")
-	    say("Die falsche Funktion des Sucheartikel! Nun die Suche")
-	    say("weiter machen.")
+	    say(gameforge.xxx_larbor_day._470_say)
+	    say(gameforge.xxx_larbor_day._480_say)
 	    say("")
-	    say("Entschuldige mich")
+	    say(gameforge.xxx_larbor_day._490_say)
 	    say("")
-	    local s=select("WiederBeginn mit der Suche", "Behaltung der Suche")
+	    local s=select(gameforge.xxx_larbor_day._500_select, gameforge.xxx_larbor_day._510_select)
 	    if s==1 then
-		say_title("Der Wiederversuch des Suche ser Arbeitstag")
-		say("Wenn man eine Wanderer anredet, wird die Suche wieder beginnen")
-		say("beginnen")
+		say_title(gameforge.xxx_larbor_day._520_sayTitle)
+		say(gameforge.xxx_larbor_day._530_say)
+		say(gameforge.xxx_larbor_day._540_say)
 		set_state(start)
 	    end
 	end
     end
     state mission1 begin
 	when letter begin
-	    send_letter("Test des Wanderers #1")
+	    send_letter(gameforge.xxx_larbor_day._550_sendLetter)
 	end
 	when button or info begin
-	    say_title("Ein Test vom Wanderer #1")
+	    say_title(gameforge.xxx_larbor_day._560_sayTitle)
 	    say("")
-	    say("Du hattest den Wanderer beleidigt und als")
-	    say("Entschuldigung deine Hilfe angeboten. So bat er")
-	    say("dich 20 Wildhunde zu töten um die Dorfbewohner")
-	    say("von der Plage zu befreien und dein können")
-	    say("zu testen.")
+	    say(gameforge.xxx_larbor_day._570_say)
+	    say(gameforge.xxx_larbor_day._580_say)
+	    say(gameforge.xxx_larbor_day._590_say)
+	    say(gameforge.xxx_larbor_day._600_say)
+	    say(gameforge.xxx_larbor_day._610_say)
 	    say("")
-	    say_reward("Töte 20 Wildhunde")
+	    say_reward(gameforge.xxx_larbor_day._1770_sayReward)
 	    say("")
 	end
 	when enter begin
@@ -151,67 +151,67 @@ quest larbor_day begin
 	    q.done()
 	end
 	when letter begin
-	    q.set_counter("Noch zu fangende Wildhunde", larbor_day.mission1_get_rest_count());
+	    q.set_counter(gameforge.xxx_larbor_day._1670_counter, larbor_day.mission1_get_rest_count());
 	end
 	when 101.kill begin
 	    local kill_count=pc.getqf("kill_count")+1
 	    pc.setqf("kill_count", kill_count)
-	    q.set_counter("Noch zu fangende Wildhunde", larbor_day.mission1_get_rest_count());
+	    q.set_counter(gameforge.xxx_larbor_day._1670_counter, larbor_day.mission1_get_rest_count());
 
 	    if larbor_day.mission1_is_end() then
 	        ----"12345678901234567890123456789012345678901234567890"|
-	        say_title("Alle Wildhunde getötet")
+	        say_title(gameforge.xxx_larbor_day._620_sayTitle)
 		say("")
-		say("Du hast alle Wildhunde getötet und die Dorfbewohner")
-		say("von der Plage befreit. Gehe nun zum Wanderer und ")
-		say("berichte ihm.")
+		say(gameforge.xxx_larbor_day._630_say)
+		say(gameforge.xxx_larbor_day._640_say)
+		say(gameforge.xxx_larbor_day._650_say)
 		say("")
 	    end
 	end
-	when 20041.chat."Nach der Aufgabe fragen" with not larbor_day.mission1_is_completed() begin
-	    say("Der Wanderer:")
+	when 20041.chat.gameforge.xxx_larbor_day._1650_npcChat with not larbor_day.mission1_is_completed() begin
+	    say(gameforge.xxx_larbor_day._660_say)
 	    say("")
-	    say("Da Du so geschickt bist, fange mir bitte noch")
-            say("30 Keiler")
-	    say("Das wird dir sicher nicht schwer fallen.")
+	    say(gameforge.xxx_larbor_day._670_say)
+            say(gameforge.xxx_larbor_day._680_say)
+	    say(gameforge.xxx_larbor_day._690_say)
 	    say("")
 	end
-	when 20041.chat."Die Aufgabe erledigt." with larbor_day.mission1_is_completed() begin
-	    say_title("Der Wanderer:")
+	when 20041.chat.gameforge.xxx_larbor_day._1640_npcChat with larbor_day.mission1_is_completed() begin
+	    say_title(gameforge.xxx_larbor_day._200_sayTitle)
 	    say("")
 	    ----"12345678901234567890123456789012345678901234567890"|
-	    say("Sehr gut! Du scheinst sehr gewand zu sein.")
-	    say("Ich war in meiner Jugend auch voller Tatendrang.")
+	    say(gameforge.xxx_larbor_day._700_say)
+	    say(gameforge.xxx_larbor_day._710_say)
 	    say("")
 	    wait()
 	    say_pc_name()
-	    say("VERDAMMT !! Das Alter weißt Du?")
-	    say("Meine alten Knochen wollen nicht mehr so wie ich.")
+	    say(gameforge.xxx_larbor_day._720_say)
+	    say(gameforge.xxx_larbor_day._730_say)
 	    say("")
 	    wait()
 	    ----"12345678901234567890123456789012345678901234567890"|
-	    say_title("Der Wanderer:")
+	    say_title(gameforge.xxx_larbor_day._200_sayTitle)
 	    say("")
-	    say("Du schaust gelangweilt aus. Ah, ich verstehe!")
-	    say("Weil der Test so einfach war?")
-	    say("Die Keiler machen die Wiesen und Wege kaputt. Es ")
-	    say("wäre nett von Dir, wenn Du sie vertreibst.")
-	    say("Würdest Du das tun?")
+	    say(gameforge.xxx_larbor_day._740_say)
+	    say(gameforge.xxx_larbor_day._750_say)
+	    say(gameforge.xxx_larbor_day._760_say)
+	    say(gameforge.xxx_larbor_day._770_say)
+	    say(gameforge.xxx_larbor_day._780_say)
 	    say("")
-	    local s=select("Ja", "Nein")
+	    local s=select(gameforge.xxx_larbor_day._020_select, gameforge.xxx_larbor_day._030_select)
 	    if 1==s then
 		----"12345678901234567890123456789012345678901234567890"|
-		say("Der Wanderer:")
+		say(gameforge.xxx_larbor_day._660_say)
 		say("")
-		say("Gut! Lauf schnell!")
-		say("Bevor die Keiler noch mehr Schaden anrichten")
+		say(gameforge.xxx_larbor_day._790_say)
+		say(gameforge.xxx_larbor_day._800_say)
 		say("")
 		set_state(mission2)
 	    elseif 2==s then
-		say("Der Wanderer:")
+		say(gameforge.xxx_larbor_day._660_say)
 		say("")
-		say("Er ist sicher zu beschäftigt um mir weiter")
-		say("zu helfen.Da kann man nichts machen.")
+		say(gameforge.xxx_larbor_day._810_say)
+		say(gameforge.xxx_larbor_day._820_say)
 		say("")
 		set_state(complete2)
 	    end
@@ -231,17 +231,17 @@ quest larbor_day begin
     end
     state mission2 begin
 	when letter begin
-	    send_letter("Test des Wanderers #2")
+	    send_letter(gameforge.xxx_larbor_day._830_sendLetter)
 	end
 	when button or info begin
-	    say_title("Test des Wanderers #2")
+	    say_title(gameforge.xxx_larbor_day._840_sayTitle)
 	    ----"12345678901234567890123456789012345678901234567890"|
 	    say("")
-	    say("Da ich den Wanderer beleidigt hatte, wollte ")
-	    say("ich ihm eine Bitte erfüllen. Nun")
-	    say("soll ich noch die Keiler vertreiben.")
+	    say(gameforge.xxx_larbor_day._850_say)
+	    say(gameforge.xxx_larbor_day._860_say)
+	    say(gameforge.xxx_larbor_day._870_say)
 	    say("")
-	    say_reward("Töte die Keiler 30 ")
+	    say_reward(gameforge.xxx_larbor_day._1780_sayReward)
 	end
 	when enter begin
 	    pc.setqf("kill_count", 0)
@@ -251,50 +251,50 @@ quest larbor_day begin
 	    q.done()
 	end
 	when letter begin
-	    q.set_counter("Töte Keiler", larbor_day.mission2_get_rest_count());
+	    q.set_counter(gameforge.xxx_larbor_day._1680_counter, larbor_day.mission2_get_rest_count());
 	end
 	when 108.kill begin
 	    local kill_count=pc.getqf("kill_count")+1
 	    pc.setqf("kill_count", kill_count)
-	    q.set_counter("Noch zu tötende Keiler", larbor_day.mission2_get_rest_count());
+	    q.set_counter(gameforge.xxx_larbor_day._1690_counter, larbor_day.mission2_get_rest_count());
 
 	    if larbor_day.mission2_is_end() then
-		say_title("Alle Keiler getötet")
+		say_title(gameforge.xxx_larbor_day._880_sayTitle)
 		----"12345678901234567890123456789012345678901234567890"|
 		say("")
-		say("Suche erneut den Wanderer auf und überbringe im")
-		say("die freudige Nachricht, das Du die Keiler")
-		say("vertrieben hast.")
+		say(gameforge.xxx_larbor_day._890_say)
+		say(gameforge.xxx_larbor_day._900_say)
+		say(gameforge.xxx_larbor_day._910_say)
 		say("")
 	    end
 	end
 
-	when 20041.chat."Die Aufgabe erledigt" with larbor_day.mission2_is_completed() begin
-	    say_title("Ein Wanderer:")
+	when 20041.chat.gameforge.xxx_larbor_day._1630_npcChat with larbor_day.mission2_is_completed() begin
+	    say_title(gameforge.xxx_larbor_day._920_sayTitle)
 	    say("")
-	    say("Hm. Das habe ich nicht erwartet. Ich habe gedacht,")
-	    say("dass Du sie schneller vertreiben kannst.")
-	    say("Du bist schlechter als ich erwartet habe. Aber")
-	    say("wenn Du 50 Bären tötest, werde ich darüber")
+	    say(gameforge.xxx_larbor_day._930_say)
+	    say(gameforge.xxx_larbor_day._940_say)
+	    say(gameforge.xxx_larbor_day._950_say)
+	    say(gameforge.xxx_larbor_day._960_say)
 	    ----"12345678901234567890123456789012345678901234567890"|
-	    say("hinweg sehen. Es ist so, dass die Bären den")
-	    say("ganzen Honig von den Bienen verzehren so das für")
-	    say("uns Menschen nichts mehr übrig bleibt")
-	    say("Es ist deine letzte Chance! Geb dir Mühe!!")
+	    say(gameforge.xxx_larbor_day._970_say)
+	    say(gameforge.xxx_larbor_day._980_say)
+	    say(gameforge.xxx_larbor_day._990_say)
+	    say(gameforge.xxx_larbor_day._1000_say)
 	    say("")
-	    local s=select("OK", "Absagen")
+	    local s=select(gameforge.xxx_larbor_day._250_select, gameforge.xxx_larbor_day._1010_select)
 	    if 1==s then
 		say_pc_name()
 		say("")
-		say("Nichts leichter als das!")
-		say("Die Bären kann ich blitzschnell jagen")
+		say(gameforge.xxx_larbor_day._1020_say)
+		say(gameforge.xxx_larbor_day._1030_say)
 		say("")
 		set_state(mission3)
 	    elseif 2==s then
 		say_pc_name()
 		say("")
-		say("Was? Deine Aufgaben werden immer schwerer!")
-		say("Tut mir leid. Ich kann es nicht!")
+		say(gameforge.xxx_larbor_day._1040_say)
+		say(gameforge.xxx_larbor_day._1050_say)
 		say("")
 		set_state(complete2)
 	    end
@@ -314,19 +314,19 @@ quest larbor_day begin
     end
     state mission3 begin
 	when letter begin
-	    send_letter("Test des Wanderers #3")
+	    send_letter(gameforge.xxx_larbor_day._1060_sendLetter)
 	end
 	when button or info begin
-	    say_title("Test des Wanderers #3")
+	    say_title(gameforge.xxx_larbor_day._1070_sayTitle)
 	    say("")
-	    say("Heute ist alles egal!")
-	    say("Da ich ihn beleidigt hatte, wollte ich seine Bitte")
-	    say("annehmen. Erst Wildhunde, dann Keiler töten nun")
-	    say("auch noch Bären!")
-	    say("Man sagt,diese Aufgabe ist der letzte Test.")
-	    say("Also werde ich es schnell erledigen.")
+	    say(gameforge.xxx_larbor_day._1080_say)
+	    say(gameforge.xxx_larbor_day._1090_say)
+	    say(gameforge.xxx_larbor_day._1100_say)
+	    say(gameforge.xxx_larbor_day._1110_say)
+	    say(gameforge.xxx_larbor_day._1120_say)
+	    say(gameforge.xxx_larbor_day._1130_say)
 	    say("")
-	    say_reward("Töte 50 Bären")
+	    say_reward(gameforge.xxx_larbor_day._1790_sayReward)
 	end
 	when enter begin
 	    pc.setqf("kill_count", 0)
@@ -335,68 +335,68 @@ quest larbor_day begin
 	    q.done()
 	end
 	when letter begin
-	    q.set_counter("Töte Bären", larbor_day.mission3_get_rest_count());
+	    q.set_counter(gameforge.xxx_larbor_day._1700_counter, larbor_day.mission3_get_rest_count());
 	end
 	when 110.kill begin
 	    local kill_count=pc.getqf("kill_count")+1
 	    pc.setqf("kill_count", kill_count)
-	    q.set_counter("Töte Bären", larbor_day.mission3_get_rest_count());
+	    q.set_counter(gameforge.xxx_larbor_day._1700_counter, larbor_day.mission3_get_rest_count());
 
 	    if larbor_day.mission3_is_end() then
-		say_title("Bären getötet")
+		say_title(gameforge.xxx_larbor_day._1140_sayTitle)
 		say("")
-		say("Ha ha. Das war so einfach!")
-		say("Nun schnell zum Wanderer. ")
+		say(gameforge.xxx_larbor_day._1150_say)
+		say(gameforge.xxx_larbor_day._1160_say)
 		say("")
 	    end
 	end
-	when 20041.chat."Nach der Aufgabe fragen" with not larbor_day.mission3_is_completed() begin
-	    say_title("Der Wanderer:")
+	when 20041.chat.gameforge.xxx_larbor_day._1650_npcChat with not larbor_day.mission3_is_completed() begin
+	    say_title(gameforge.xxx_larbor_day._200_sayTitle)
 	    say("")
-	    say("Du hast ja keine Angst vor Bären - oder? ")
-	    say("Dann geh und töte sie. ")
+	    say(gameforge.xxx_larbor_day._1170_say)
+	    say(gameforge.xxx_larbor_day._1180_say)
 	    say("")
 	end
-	when 20041.chat."Die Aufgabe erledigt." with larbor_day.mission3_is_completed() begin
-	    say_title("Der Wanderer:")
+	when 20041.chat.gameforge.xxx_larbor_day._1640_npcChat with larbor_day.mission3_is_completed() begin
+	    say_title(gameforge.xxx_larbor_day._200_sayTitle)
 	    say("")
 	    ----"12345678901234567890123456789012345678901234567890"|
-	    say("Gut. Sehr gut. ")
-	    say("Endlich kann ich mir wieder ein Honigbrot machen.")
-	    say("Ich vergesse einfach die Sache mit den Wildhunden")
-	    say("Eine letzte Bitte....")
-	    say("Könntest Du die Räuber in der Nähe vom Dorf")
-	    say("verjagen? ")
+	    say(gameforge.xxx_larbor_day._1190_say)
+	    say(gameforge.xxx_larbor_day._1200_say)
+	    say(gameforge.xxx_larbor_day._1210_say)
+	    say(gameforge.xxx_larbor_day._1220_say)
+	    say(gameforge.xxx_larbor_day._1230_say)
+	    say(gameforge.xxx_larbor_day._1240_say)
 	    say("")
 	    wait()
 	    say_pc_name()
 	    say("")
-	    say("Die Räuber sind sehr frech!")
-	    say("Sie haben mich überfallen und mir mein schönstes")
-	    say("Weinglas aus meiner Sammlung zerbrochen.")
+	    say(gameforge.xxx_larbor_day._1250_say)
+	    say(gameforge.xxx_larbor_day._1260_say)
+	    say(gameforge.xxx_larbor_day._1270_say)
 	    say("")
 	    wait()
-	    say_title("Der Wanderer:")
+	    say_title(gameforge.xxx_larbor_day._200_sayTitle)
 	    say("")
-	    say("Ha Ha. Die werden sich umgucken, wenn Du kommst.")
-	    say("Beseitige die Brut die strebsame Leute von der")
-	    say("Arbeit abhalten und ehrbare Bürger berauben.")
-	    say("Zeig es ihnen! Beseitige sie alle!")
+	    say(gameforge.xxx_larbor_day._1280_say)
+	    say(gameforge.xxx_larbor_day._1290_say)
+	    say(gameforge.xxx_larbor_day._1300_say)
+	    say(gameforge.xxx_larbor_day._1310_say)
 	    say("")
 
-	    local s=select("OK", "Absagen")
+	    local s=select(gameforge.xxx_larbor_day._250_select, gameforge.xxx_larbor_day._1010_select)
 	    if 1==s then
 		say_pc_name()
 		say("")
-		say("Keine leichte Aufgabe, aber ich schaffe das schon.")
+		say(gameforge.xxx_larbor_day._1320_say)
 		say("")
 		set_state(mission4)
 	    elseif 2==s then
 		say_pc_name()
 		say("")
-		say("Will er mich reinlegen?")
-		say("Langsam reichts!!!")
-		say("Ich höre auf.")
+		say(gameforge.xxx_larbor_day._1330_say)
+		say(gameforge.xxx_larbor_day._1340_say)
+		say(gameforge.xxx_larbor_day._1350_say)
 		say("")
 		set_state(complete2)
 	    end
@@ -416,20 +416,20 @@ quest larbor_day begin
     end
     state mission4 begin
 	when letter begin
-	    send_letter("Die Beseitigung der Weißer-Eid-Soldaten")
+	    send_letter(gameforge.xxx_larbor_day._1360_sendLetter)
 	end
 	when button or info begin
-	    say_title("Die Beseitigung der Weißer-Eid-Soldaten")
+	    say_title(gameforge.xxx_larbor_day._1370_sayTitle)
 	    say("")
-	    say("Es ist viel Zeit vergangen seit ich die")
-	    say("Testaufgaben vom Wanderer bekam. Nun denkt er ich")
-	    say("kann ihm helfen. Die Beseitigung der")
-	    say("Weißer-Eid-Soldaten und die Schwarzwindsoldaten!")
-	    say("Irgendwie glaube ich das er mich aus privaten ")
-	    say("Gründen gebeten hat. Nun, ich wollte es so ")
-	    say("und werde seiner Bitte ohne zu fragen nachkommen. ")
+	    say(gameforge.xxx_larbor_day._1380_say)
+	    say(gameforge.xxx_larbor_day._1390_say)
+	    say(gameforge.xxx_larbor_day._1400_say)
+	    say(gameforge.xxx_larbor_day._1410_say)
+	    say(gameforge.xxx_larbor_day._1420_say)
+	    say(gameforge.xxx_larbor_day._1430_say)
+	    say(gameforge.xxx_larbor_day._1440_say)
 	    say("")
-	    say_reward("Beseitige die Weißer-Eid-Soldaten 100 Stück.")
+	    say_reward(gameforge.xxx_larbor_day._1800_sayReward)
 	end
 	when enter begin
 	    pc.setqf("kill_count", 0)
@@ -439,24 +439,24 @@ quest larbor_day begin
 	    q.done()
 	end
 	when letter begin
-	    q.set_counter("Die Zahl des Weißer-Eid-Soldat", larbor_day.mission4_get_rest_count());
+	    q.set_counter(gameforge.xxx_larbor_day._1710_counter, larbor_day.mission4_get_rest_count());
 	end
-	when 20041.chat."Nach der Aufgabe fragen" begin
-	    say("Der Wanderer:")
+	when 20041.chat.gameforge.xxx_larbor_day._1650_npcChat begin
+	    say(gameforge.xxx_larbor_day._660_say)
 	    say("")
-	    say("Nach Erledigung werde ich Dich wahrscheinlich")
-	    say("gut belohnen.")
-	    say("Toi toi toi! Nun geh.")
+	    say(gameforge.xxx_larbor_day._1450_say)
+	    say(gameforge.xxx_larbor_day._1460_say)
+	    say(gameforge.xxx_larbor_day._1470_say)
 	    say("")
 	end
 	when 301.kill begin
 	    local kill_count=pc.getqf("kill_count")+1
 	    pc.setqf("kill_count", kill_count)
-	    q.set_counter("Die übrige Zahl der Weißer-Eid-Soldat", larbor_day.mission4_get_rest_count());
+	    q.set_counter(gameforge.xxx_larbor_day._1720_counter, larbor_day.mission4_get_rest_count());
 
 	    if larbor_day.mission4_is_end() then
-		say_title("Alle Weißer-Eid-Soldaten habe ich beseitigt")
-		say("Dann ist die Vernichtung der Schwarzwindsoldaten 100...")
+		say_title(gameforge.xxx_larbor_day._1480_sayTitle)
+		say(gameforge.xxx_larbor_day._1490_say)
 		say("")
 		set_state(mission5)
 	    end
@@ -476,17 +476,17 @@ quest larbor_day begin
     end
     state mission5 begin
 	when letter begin
-	    send_letter("Vernichtung der Schwarzwindsoldaten")
+	    send_letter(gameforge.xxx_larbor_day._1500_sendLetter)
 	end
 	when button or info begin
-            say_title("Vernichtung der Schwarzwindsoldaten")
+            say_title(gameforge.xxx_larbor_day._1510_sayTitle)
 	    say("")
-	    say("Nach einem langen Test und der Beseitigung der")
-	    say("Weißer-Eid-Soldaten, soll ich noch die")
-	    say("Schwarzwindsoldaten vernichten.")
+	    say(gameforge.xxx_larbor_day._1520_say)
+	    say(gameforge.xxx_larbor_day._1530_say)
+	    say(gameforge.xxx_larbor_day._1540_say)
 	    say("")
-	    say_reward("Beseitige die Weißer-Eid-Soldaten 100 (erledigt)")
-	    say_reward("Vernichte die Schwarzwindsoldaten(Progress)")
+	    say_reward(gameforge.xxx_larbor_day._1810_sayReward)
+	    say_reward(gameforge.xxx_larbor_day._1820_sayReward)
 	end
 	when enter begin
 	    pc.setqf("kill_count", 0)
@@ -496,20 +496,20 @@ quest larbor_day begin
 	    q.done()
 	end
 	when letter begin
-	    q.set_counter("Noch zu vernichtende Schwarzwindsoldaten", larbor_day.mission5_get_rest_count());
+	    q.set_counter(gameforge.xxx_larbor_day._1730_counter, larbor_day.mission5_get_rest_count());
 	end
-	when 20041.chat."Nach die Aufgabe fragen" begin
-	    say("Der Wanderer:")
+	when 20041.chat.gameforge.xxx_larbor_day._1660_npcChat begin
+	    say(gameforge.xxx_larbor_day._660_say)
 	    say("")
-	    say("Eile Dich!! Es bleibt nicht viel Zeit.")
-	    say("Wenn du alles erledigt hast, komme")
-	    say("vorbei. Es wird gutes geschehen.")
+	    say(gameforge.xxx_larbor_day._1550_say)
+	    say(gameforge.xxx_larbor_day._1560_say)
+	    say(gameforge.xxx_larbor_day._1570_say)
 	    say("")
 	end
 	when 401.kill begin
 	    local kill_count=pc.getqf("kill_count")+1
 	    pc.setqf("kill_count", kill_count)
-	    q.set_counter("Noch zu vernichtende Schwarzwindsoldaten", larbor_day.mission5_get_rest_count());
+	    q.set_counter(gameforge.xxx_larbor_day._1730_counter, larbor_day.mission5_get_rest_count());
 
 	    ---if laten larbor_day.mission5_is_end() then
 		---say_title("Vernichtung der Schwarzwindsoldaten erledigt")

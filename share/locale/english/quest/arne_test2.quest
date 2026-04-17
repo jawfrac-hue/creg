@@ -2,7 +2,7 @@ quest arne_test begin
 	state start begin
 		when login begin
 					NpcName=mob_name(20095) --SeonHae
---					notice("Script läuft.")
+--					notice("Script lï¿½uft.")
 --					notice("Npc heisst: "..NpcName..". Right on!")
 --					notice(string.format("Geschlecht ist: %s", pc.get_sex()))
 --					mob.spawn(20095, 356, 483, 1, 1, 1)
@@ -50,7 +50,7 @@ function challenge_calculate_rewards(TargetChallenge, AmountChallenge, TimeChall
 				}
 	
 	NewChallenge = (TargetChallenge + (2*AmountChallenge))*TimeChallenge
-	notice("Challenge computed")
+	notice(gameforge.arne_test2._010_notice)
 		if NewChallenge >= 30 then
 			BetMoney = BetRewardTable[4][1]
 			Reward = BetRewardTable[4][2]
@@ -92,45 +92,44 @@ end
 			end
 			
 			when button or info begin
-				say_title("Sprecht mit Seon-Hae")
-				say("Ihr habt einen alten Mann an der Brücke gesehen, der völlig aufgelöst ist und wahrscheinlich Hilfe braucht.")
+				say_title(gameforge.arne_test2._020_sayTitle)
+				say(gameforge.arne_test2._030_say)
 			end
 		
 
-			  when 20095.Chat."Teleport Command" begin
-			  	pc.setqf("pcx", pc.get_x())
-					pc.setqf("pcy", pc.get_y())
-			  	set_state(teleport)
-			  end   
-			  
-		  when 20095.Chat."ChallengeX" begin 
-		
-		  local MainMenuList = 
-		  		{
-		  		"Ziel Wählen",
-		  		"Menge Wählen",
-		  		"Zeit Wählen",
-		  		"Quest Starten",
-		  		"Abbruch",
-		  		}
-		  local TargetMenuList =
-		  	{
-		  		"Wildhunde",
-		  		"Wölfe",
-		  		"Tiger",
-		  	}
-		  local AmountMenuList =
-		  	{
-		  		"10",
-		  		"30",
-		  		"50",
-		  	}
-		  local TimeMenuList =
-		  	{
-		  		"60 min",
-		  		"30 min",
-		  		"10 min",
-		  	}
+			when 20095.Chat.gameforge.arne_test2._510_npcChat begin
+				pc.setqf("pcx", pc.get_x())
+				pc.setqf("pcy", pc.get_y())
+				set_state(teleport)
+			end
+
+			when 20095.Chat.gameforge.arne_test2._520_npcChat begin
+				local MainMenuList =
+				{
+					gameforge.arne_test2._530_select,
+					gameforge.arne_test2._540_select,
+					gameforge.arne_test2._550_select,
+					gameforge.arne_test2._560_select,
+					gameforge.arne_test2._570_select,
+				}
+				local TargetMenuList =
+				{
+					gameforge.arne_test2._580_select,
+					gameforge.arne_test2._590_select,
+					gameforge.arne_test2._600_select,
+				}
+				local AmountMenuList =
+				{
+					"10",
+					"30",
+					"50",
+				}
+				local TimeMenuList =
+				{
+					gameforge.arne_test2._610_select,
+					gameforge.arne_test2._620_select,
+					gameforge.arne_test2._630_select,
+				}
 		  TargetList =
 		  	{
 		  		101,
@@ -182,11 +181,11 @@ end
 			if Selected == 4 then
 				local NewRewardsTable = {}
 				NewRewardsTable = arne_test.challenge_calculate_rewards(TargetChallenge, AmountChallenge, TimeChallenge)
-				say_title("Quest starten")                                                                              
-				say("Quest mit folgenden Parametern starten?")                                                          
-				say(string.format("Jage %s x %s in %s Minuten",AmountList[AmountSelector],mob_name(TargetList[TargetSelector]),TimeList[TimeSelector]/60))
-				say(string.format("Challenge: %s  Einsatz: %s  Belohnung: %s Yang", NewRewardsTable[1], NewRewardsTable[2], NewRewardsTable[3]))  
-				local x = select("Ja", "Nein")                                                                          
+				say_title(gameforge.arne_test2._040_sayTitle)
+				say(gameforge.arne_test2._050_say)
+				say(string.format(gameforge.arne_test2._440_say,AmountList[AmountSelector],mob_name(TargetList[TargetSelector]),TimeList[TimeSelector]/60))
+				say(string.format(gameforge.arne_test2._450_say, NewRewardsTable[1], NewRewardsTable[2], NewRewardsTable[3]))
+				local x = select(gameforge.arne_test2._060_select, gameforge.arne_test2._070_select)
 				if x == 1 then                                                                                                                                                
 					pc.setqf("challenge_duration", get_time())
 					FinalTarget = TargetList[TargetSelector]
@@ -210,7 +209,7 @@ end
 
 	state bounceback begin
 		when enter or login begin
-			notice(string.format("%s ,%s ,%s", TimeChallenge, AmountChallenge, TargetChallenge))
+			notice(string.format(gameforge.arne_test2._460_notice, TimeChallenge, AmountChallenge, TargetChallenge))
 			set_state(talk_seon)
 		end      
 	end
@@ -221,12 +220,12 @@ state start_2quest begin
 			local timeToWait = pc.getqf("FinalTime")
 			local timeLeft = 0
 			timeLeft = timeToWait - (get_time() - pc.getqf("challenge_duration"))
-			send_letter(string.format("Jage %s x %s in %s Minuten",pc.getqf("FinalAmount"),mob_name(pc.getqf("FinalTarget")),pc.getqf("FinalTime")/60))
-			q.set_title(string.format("Jage %s x %s in %s Minuten",pc.getqf("FinalAmount"),mob_name(pc.getqf("FinalTarget")),pc.getqf("FinalTime")/60))
-			q.set_clock("Zeit:", timeLeft)	
+			send_letter(string.format(gameforge.arne_test2._470_sendLetter,pc.getqf("FinalAmount"),mob_name(pc.getqf("FinalTarget")),pc.getqf("FinalTime")/60))
+			q.set_title(string.format(gameforge.arne_test2._470_sendLetter,pc.getqf("FinalAmount"),mob_name(pc.getqf("FinalTarget")),pc.getqf("FinalTime")/60))
+			q.set_clock(gameforge.arne_test2._640_qSetClock, timeLeft)
 			if get_time() - pc.getqf("challenge_duration") >= timeToWait then
 			q.done()
-			notice("Challenge Zeit Abgelaufen") 
+			notice(gameforge.arne_test2._080_notice)
 			set_state(challenge_failed)
 			end
 		end
@@ -238,7 +237,7 @@ state start_2quest begin
 	--			q.set_counter_value(AmountSelector - pc.getqf("kill_count_1"))                       
 				if AmountSelector == pc.getqf("kill_count_1") and get_time() - pc.getqf("challenge_duration") < timeToWait then                                   
 					q.done()                                                                       
-					notice("Challenge Erfolg")      
+					notice(gameforge.arne_test2._090_notice)
 					set_state(challenge_success)                                                         
 				end                                                                              
 			end
@@ -262,10 +261,10 @@ end
 --					BeenHere = 1					
 --				end
 --				say_title("Challenge")
---				local s = select("Ziel auswählen", "Anzahl auswählen", "Zeit auswählen")
+--				local s = select("Ziel auswï¿½hlen", "Anzahl auswï¿½hlen", "Zeit auswï¿½hlen")
 --				if s == 1 then
---			 		say_title("Ziel auswählen")
---				 	local t = select("Wildhunde", "Wölfe", "Tiger")
+--			 		say_title("Ziel auswï¿½hlen")
+--				 	local t = select(gameforge.arne_test2._580_select, gameforge.arne_test2._590_select, "Tiger")
 --				 	if t == 1 then
 --				 		TargetSelector = Target1 
 --				 		TargetChallenge = 1 
@@ -317,28 +316,28 @@ end
 --			
 --			when 20095.Chat."Dem alten Mann helfen" begin
 --			target.delete("__TARGET__")
---				say_title("Hilfe für Seon-Hae")
---				say("Wehe! Diese verflixten Kläffer! Hungrige Wildunde haben meinen kleinen Hund Fu verschlungen! Mit zwei Bissen war er weg, der arme Kleine!")
+--				say_title("Hilfe fï¿½r Seon-Hae")
+--				say("Wehe! Diese verflixten Klï¿½ffer! Hungrige Wildunde haben meinen kleinen Hund Fu verschlungen! Mit zwei Bissen war er weg, der arme Kleine!")
 --				wait()
---				say(string.format("Rächt meinen Fu! Erschlagt %s hungrige Wildhunde und seine kleine Hundeseele wird mit Genugtuung in das Geisterreich eingehen können! Der arme Kleine ...",HuntAmount))
+--				say(string.format("Rï¿½cht meinen Fu! Erschlagt %s hungrige Wildhunde und seine kleine Hundeseele wird mit Genugtuung in das Geisterreich eingehen kï¿½nnen! Der arme Kleine ...",HuntAmount))
 --				set_state(hunting)
 --			end			
 --		
 --			when 20095.Chat."Dem alten Mann Ehre erweisen" begin
 --			target.delete("__TARGET__")
---				say_title("Tee für Seon-Hae")
---				say("*Der alte Mann Seon-Hae nickt euch zu, als ihr euch zur Begrüßung verbeugt. Er scheint von Sorgen geplagt.*")
+--				say_title("Tee fï¿½r Seon-Hae")
+--				say("*Der alte Mann Seon-Hae nickt euch zu, als ihr euch zur Begrï¿½ï¿½ung verbeugt. Er scheint von Sorgen geplagt.*")
 --				wait()
---				say("*Die Tradition würde gebieten, ihm einen Glockenblumentee zu reichen. Dies demonstriert eure Achtung und beruhigt seine Seele.*")
+--				say("*Die Tradition wï¿½rde gebieten, ihm einen Glockenblumentee zu reichen. Dies demonstriert eure Achtung und beruhigt seine Seele.*")
 --				wait()
---				say(string.format("*Sammelt %s Glockenblumen. Die Wildhunde erschnüffeln sie gere im Gras, von ihnen könnt ihr welche erbeuten.*", GatherAmount))
+--				say(string.format("*Sammelt %s Glockenblumen. Die Wildhunde erschnï¿½ffeln sie gere im Gras, von ihnen kï¿½nnt ihr welche erbeuten.*", GatherAmount))
 --				set_state(gather)
 --			end
 --		
 --		when 20095.Chat."Den alten Mann ausrauben" begin
 --			target.delete("__TARGET__")
---				say_title("Überfall auf Seon-Hae")
---				say("Rüpel! Ein alter Mann ist in Trauer um seinen besten Freund und ihr haltet ihm noch eine Klinge unter die Nase! Aber glaubt nur nicht das ihr damit davonkommt! Der Geist meines toten Hundes wird mir Schutz senden!")
+--				say_title("ï¿½berfall auf Seon-Hae")
+--				say("Rï¿½pel! Ein alter Mann ist in Trauer um seinen besten Freund und ihr haltet ihm noch eine Klinge unter die Nase! Aber glaubt nur nicht das ihr damit davonkommt! Der Geist meines toten Hundes wird mir Schutz senden!")
 --				wait()
 --				say("Fass, Fu! Fass!")
 --				set_state(fighting)
@@ -352,7 +351,7 @@ end
 				say_in_map("proper state")
 				set_state(arena_relocate)
 			else
-			notice("teleport begin")
+			notice(gameforge.arne_test2._100_notice)
 			command("private 112")
 			set_state(arena_relocate)
 			end
@@ -362,7 +361,7 @@ end
 		state arena_relocate begin
 			when enter or login begin
 				if pc.get_map_index() >= 1120000 then
-				notice("relocate")
+				notice(gameforge.arne_test2._110_notice)
 				command("go 88 88")
 --				say_in_map("proper state")
 				set_state(spawn_arena)
@@ -373,7 +372,7 @@ end
 		state spawn_arena begin
 			when enter or login begin
 				mob.spawn(101, 101, 101, 1,1, 3)
-				notice("spawn")
+				notice(gameforge.arne_test2._120_notice)
 				set_state(arena_combat)
 			end
 		end
@@ -382,7 +381,7 @@ end
 		
 		state arena_combat begin
 			when enter or login begin
-				notice("combat")
+				notice(gameforge.arne_test2._130_notice)
 --				if pc.is_dead()	== true then
 --					set_state(return_from_arena)
 --				end
@@ -393,7 +392,7 @@ end
 				pc.setqf("killcount", index)    
 
 				if pc.getqf("killcount") >= 3 then
-					notice("final kill")
+					notice(gameforge.arne_test2._140_notice)
 					set_state(return_from_arena)
 				end
 			end
@@ -404,12 +403,12 @@ end
 				local CordX = pc.getqf("pcx")*100
 				local CordY = pc.getqf("pcy")*100
 				pc.setqf("killcount", 0)  
-				say_title("Round Over")
-				say("Return home.")
-				local s = select("OK")
+				say_title(gameforge.arne_test2._150_sayTitle)
+				say(gameforge.arne_test2._160_say)
+				local s = select(gameforge.arne_test2._170_select)
 				if s == 1 then
 					pc.warp(CordX, CordY)
-					notice("timer over")
+					notice(gameforge.arne_test2._180_notice)
 					set_state(talk_seon)
 				end
 			end
@@ -418,15 +417,15 @@ end
 		state hunting begin
 			when enter begin	
 				q.start()
-				q.set_title("Hundejagd")
-				notice("Erlege hungrige Wildhunde.")
-				send_letter("Erlegt hungrige Wildhunde.")
-				q.set_counter("Noch übrig", HuntAmount)
+				q.set_title(gameforge.arne_test2._660_qSetTitle)
+				notice(gameforge.arne_test2._190_notice)
+				send_letter(gameforge.arne_test2._200_sendLetter)
+				q.set_counter(gameforge.arne_test2._650_qSetCounter, HuntAmount)
 			end
 			
 			when button or info begin
-				say_title("Erlege Wildhunde")
-				say(string.format("Erlegt %s hungrige Wildhunde um Fu zu rächen.", HuntAmount))
+				say_title(gameforge.arne_test2._210_sayTitle)
+				say(string.format(gameforge.arne_test2._480_say, HuntAmount))
 			end
 			
 			
@@ -438,7 +437,7 @@ end
 					q.set_counter_value(HuntAmount - pc.getqf("kill_count_1"))  
 					if HuntAmount == pc.getqf("kill_count_1") then
 						q.done()
-						notice("Das sollten genug Hunde gewesen sein, kehrt zu Seon-Hae zurück.")
+						notice(gameforge.arne_test2._220_notice)
 						set_state(back_to_npc)
 					end
 				end
@@ -448,27 +447,27 @@ end
 			state back_to_npc begin
 				when enter begin
 					q.start()
-					q.set_title("Zurück zu Seon-Hae")
-					send_letter("Zurück zu Seon-Hae")
+					q.set_title(gameforge.arne_test2._240_sayTitle)
+					send_letter(gameforge.arne_test2._230_sendLetter)
 					local v=find_npc_by_vnum(20095) -- Seon-Hae
 					if 0==v then
 					else
-						target.vid("__TARGET2__", v, "Seon-Hae")
+						target.vid("__TARGET2__", v, gameforge.arne_test2._700_target)
 					end
 				end
 				
 				when button or info begin
-					say_title("Zurück zu Seon-Hae")
-					say("Kehrt zu Seon-Hae zurück.")
+					say_title(gameforge.arne_test2._240_sayTitle)
+					say(gameforge.arne_test2._250_say)
 				end
 				
 				when __TARGET2__.target.click begin
 					target.delete("__TARGET2__")
-						say("Gute Arbeit, ihr habt es den Biestern gezeigt! Mein kleiner Fu kann nun getrost ins Geisterreich übergehen.") -- white font text
+						say(gameforge.arne_test2._260_say) -- white font text
 						wait()
-						say("Hier, dieses Geld hatte ich gespart um seine Leckereien zu kaufen. Ich schätze es gebührt euch.")
-						say_reward("Ihr erhaltet:")
-						say("Einen großen Beutel Yang")
+						say(gameforge.arne_test2._270_say)
+						say_reward(gameforge.arne_test2._680_sayReward)
+						say(gameforge.arne_test2._280_say)
 						q.done()
 						pc.change_money(10000)
 						pc.give_exp2(500)
@@ -479,15 +478,15 @@ end
 		
 			when enter begin
 				q.start()
-				q.set_title("Glockenblumen")
-				notice("Erlegt Wildhunde um Glockenblumen zu sammeln")
-				send_letter("Erlegt Wildhunde um Glockenblumen zu sammeln.")
-				q.set_counter("Noch übrig", GatherAmount)
+				q.set_title(gameforge.arne_test2._670_qSetTitle)
+				notice(gameforge.arne_test2._290_notice)
+				send_letter(gameforge.arne_test2._300_sendLetter)
+				q.set_counter(gameforge.arne_test2._650_qSetCounter, GatherAmount)
 			end
 
 				when button or info begin
-					say_title("Glockenblumen von Wildhunden")
-					say(string.format("Erbeutet %s Glockenblumen von den Wildhunden der Umgebung", GatherAmount))
+					say_title(gameforge.arne_test2._310_sayTitle)
+					say(string.format(gameforge.arne_test2._490_say, GatherAmount))
 				end
 											
 			when 101.kill begin -- yy unfinished yy
@@ -496,7 +495,7 @@ end
 					local index = pc.getqf("collect_count") + 1
 					q.set_counter_value(GatherAmount - pc.getqf("collect_count"))
 					pc.setqf("collect_count",index)
-					notice("Ihr habt eine Glockenblume gefunden")				
+					notice(gameforge.arne_test2._320_notice)
 					else
 					q.done()
 --					set_state(return_flowers)
@@ -507,22 +506,22 @@ end
 --		state return_flowers
 --			when enter begin
 --				q.start()
---				q.set_title("Der Tee für Seon-Hae")
---				notice("Kehrt zu Seon-Hae zurück")
---				send_letter("Kehrt zu Seon-Hae zurück")
+--				q.set_title("Der Tee fï¿½r Seon-Hae")
+--				notice("Kehrt zu Seon-Hae zurï¿½ck")
+--				send_letter("Kehrt zu Seon-Hae zurï¿½ck")
 --				if 0!=v then
 --					target.vid("__TARGET3__", v, "Seon-Hae")
 --				end
 --			end
 --
 --			when button or info begin
---				say_title("Glockenblumen für Seon-Hae")
---				say("Kehrt mit dne Glockenblumen zu Seon-Hae zurück.")
+--				say_title("Glockenblumen fï¿½r Seon-Hae")
+--				say("Kehrt mit dne Glockenblumen zu Seon-Hae zurï¿½ck.")
 --			end
 --			
 --			when __TARGET3__.target.click begin
 --				target.delete("__TARGET3__")
---				say("*Es dauert nicht lange, aus den Glockenblumen einen Tee zuzubereiten. Seon-Hae betrachtet euch wohlwollend als ihr ihm die Schale überreicht.*") -- white font text
+--				say("*Es dauert nicht lange, aus den Glockenblumen einen Tee zuzubereiten. Seon-Hae betrachtet euch wohlwollend als ihr ihm die Schale ï¿½berreicht.*") -- white font text
 --				wait()
 --				say("Das nenne ich gute Erziehung! Das war genau das,w as ich in dieser schweren Zeit brauchte. Ihr seid noch ein junger Mensch mit Manieren. Selten anzutreffen bei euch Abenteurern.")
 --				say_reward("*Seon-Hae steckt euch etwas zu:*")
@@ -537,14 +536,14 @@ end
 		state fighting begin
 			when enter begin
 				q.start()
-				q.set_title("Besiegt den Wolf")
-				send_letter("Besiegt den Wolf")
+				q.set_title(gameforge.arne_test2._340_sayTitle)
+				send_letter(gameforge.arne_test2._330_sendLetter)
 				mob.spawn(102, 356, 483, 1, 1, 1)
 			end
 			
 			when button or info begin
-				say_title("Besiegt den Wolf")
-				say("Besiegt den Wolfsgeist, der Seon-Ha zur Hilfe geeilt ist.")
+				say_title(gameforge.arne_test2._340_sayTitle)
+				say(gameforge.arne_test2._350_say)
 			end
 			
 			when 102.kill begin
@@ -557,29 +556,29 @@ end
 	state robbing begin
 			when enter begin
 				q.start()
-				q.set_title("Holt das Geld von Seon-Hae")
-				send_letter("Holt das Geld von Seon-Hae")
+				q.set_title(gameforge.arne_test2._360_sendLetter)
+				send_letter(gameforge.arne_test2._360_sendLetter)
 				local v=find_npc_by_vnum(20095) -- Seon-Hae
 				if 0==v then
 					else
-						target.vid("__TARGET2__", v, "Seon-Hae")
+						target.vid("__TARGET2__", v, gameforge.arne_test2._700_target)
 				end
 			end
 			
 			when button or info begin
-				say_title("Seon-Hae ausrauben")
-				say("Ihr habt Seon-Haes Wächter beseigt, nun ist es an der Zeit sich sein Geld zu schnappen.")
+				say_title(gameforge.arne_test2._370_sayTitle)
+				say(gameforge.arne_test2._380_say)
 			end	
 			
 			when __TARGET2__.target.click begin
 					target.delete("__TARGET2__")
-					say_title("Das Geld von Seon-Ha")
-					say("Ihr... Ihr habt ihn erschlagen! Bitte, tut mir nicht das gleiche an, ihr sollt alles bekommen, was ich habe!") -- white font text
+					say_title(gameforge.arne_test2._390_sayTitle)
+					say(gameforge.arne_test2._400_say) -- white font text
 					wait()
-					say("Da, nehmt meinen Besitz! Möge euch höchstpersönlich ein Metinstein auf den Kopf fallen, ehrloser Schurke!")
-					say_reward("Seon-Ha übergibt euch:")
+					say(gameforge.arne_test2._410_say)
+					say_reward(gameforge.arne_test2._690_sayReward)
 					say_item_vnum(11)
-					say("und einen großen Beutel Yang")
+					say(gameforge.arne_test2._420_say)
 					q.done()
 					pc.change_money(10000)
 					pc.give_item2(11, 1)
@@ -590,10 +589,10 @@ end
 		
 --	 when 20095.Chat."Ziele festlegen" begin
 --		say_title("Challenge")
---		local s = select("Ziel auswählen", "Anzahl auswählen", "Zeit auswählen")
+--		local s = select("Ziel auswï¿½hlen", "Anzahl auswï¿½hlen", "Zeit auswï¿½hlen")
 --		if s == 1 then
---	 		say_title("Ziel auswählen")
---		 	local t = select("Wildhunde", "Wölfe", "Tiger")
+--	 		say_title("Ziel auswï¿½hlen")
+--		 	local t = select(gameforge.arne_test2._580_select, gameforge.arne_test2._590_select, "Tiger")
 --		 	if t == 1 then
 --		 		TargetSelector = Target1 
 --		 		TargetChallenge = 1 
@@ -686,7 +685,7 @@ end
 	
 	state bounceback begin
 		when enter or login begin
-			notice(string.format("%s ,%s ,%s", TimeChallenge, AmountChallenge, TargetChallenge))
+			notice(string.format(gameforge.arne_test2._460_notice, TimeChallenge, AmountChallenge, TargetChallenge))
 			set_state(talk_seon)
 		end      
 	end
@@ -696,12 +695,12 @@ end
 			q.start()
 			timeToWait = TimeList[TimeSelector]
 			timeLeft = timeToWait - (get_time() - pc.getqf("challenge_duration"))
-			send_letter(string.format("Jage %s x %s in %s Minuten",AmountList[AmountSelector],mob_name(TargetList[TargetSelector]),TimeList[TimeSelector]/60))
-			q.set_title(string.format("Jage %s x %s in %s Minuten",AmountList[AmountSelector],mob_name(TargetList[TargetSelector]),TimeList[TimeSelector]/60))
-			q.set_clock("Zeit:", timeLeft)	
+			send_letter(string.format(gameforge.arne_test2._470_sendLetter,AmountList[AmountSelector],mob_name(TargetList[TargetSelector]),TimeList[TimeSelector]/60))
+			q.set_title(string.format(gameforge.arne_test2._470_sendLetter,AmountList[AmountSelector],mob_name(TargetList[TargetSelector]),TimeList[TimeSelector]/60))
+			q.set_clock(gameforge.arne_test2._640_qSetClock, timeLeft)
 			if get_time() - pc.getqf("challenge_duration") >= timeToWait then
 			q.done()
-			notice("Challenge Zeit Abgelaufen") 
+			notice(gameforge.arne_test2._080_notice)
 			set_state(challenge_failed)
 			end
 		end
@@ -713,7 +712,7 @@ end
 	--			q.set_counter_value(AmountSelector - pc.getqf("kill_count_1"))                       
 				if AmountSelector == pc.getqf("kill_count_1") and get_time() - pc.getqf("challenge_duration") < timeToWait then                                   
 					q.done()                                                                       
-					notice("Challenge Erfolg")      
+					notice(gameforge.arne_test2._090_notice)
 					set_state(challenge_success)                                                         
 				end                                                                              
 			end
@@ -723,14 +722,14 @@ end
 
 	state challenge_failed begin
 		when enter or login begin
-			notice("Challenge fehlgeschlagen")
+			notice(gameforge.arne_test2._430_notice)
 			set_state(talk_seon)
 		end
 	end
 	
 	state challenge_success begin
 		when enter or login begin
-			notice(string.format("Du erhälst", Reward))
+			notice(string.format(gameforge.arne_test2._500_notice, Reward))
 			pc.change_money(Reward)
 			set_state(talk_seon)
 		end

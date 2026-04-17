@@ -147,19 +147,19 @@ quest new_quest_lv7 begin
             -- "vom Bräutigam an seine Liebste überreicht" versteht das unsere Zielgruppe?
             wait()	
             say(gameforge.new_quest_lv7._054_say)
-            say_reward(string.format("%s x", NEED_RED))
+            say_reward(string.format(gameforge.locale.count_x, NEED_RED))
             say_item_vnum(ITEM_FLOWER_RED) -- icon of item
             say_reward(gameforge.new_quest_lv7._055_say)
             say(mob_name(new_quest_lv7_mob1))
             wait()
             say(gameforge.new_quest_lv7._056_say)
-            say_reward(string.format("%s x", NEED_ORANGE))
+            say_reward(string.format(gameforge.locale.count_x, NEED_ORANGE))
             say_item_vnum(ITEM_FLOWER_ORANGE) -- icon of item
             say_reward(gameforge.new_quest_lv7._055_say)
             say(mob_name(new_quest_lv7_mob2))
             wait()
             say(gameforge.new_quest_lv7._056_say)
-            say_reward(string.format("%s x", NEED_YELLOW))
+            say_reward(string.format(gameforge.locale.count_x, NEED_YELLOW))
             say_item_vnum(ITEM_FLOWER_YELLOW) -- icon of item
             say_reward(gameforge.new_quest_lv7._055_say )
             say(mob_name(new_quest_lv7_mob3))

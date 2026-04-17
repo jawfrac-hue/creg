@@ -117,7 +117,7 @@ quest main_quest_lv84 begin
 		end
 		when mysterious_man.chat.gameforge.main_quest_lv84._150_sendLetter begin
 			target.delete("__TARGET__")
-			say_title (" ")
+			say_title (gameforge.main_quest_lv84._165_sayTitle)
 			say(gameforge.main_quest_lv84._170_say)
 			wait()
 			say_title (gameforge.main_quest_lv66._300_sayTitle)

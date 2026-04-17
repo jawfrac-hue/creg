@@ -1,30 +1,30 @@
 quest training_mount begin
 state start begin
 		function no_level()
-			say_title(""..mob_name(20349).."")
+			say_title(mob_name(20349))
 			say(gameforge.training_mount._01_say)
 		end
 
 		function no_item()
-			say_title(""..mob_name(20349).."")
+			say_title(mob_name(20349))
 			say(gameforge.training_mount._02_say)
 		end	
 		function fail_msg()
-			say_title(""..mob_name(20349).."")
-			say(".............")
+			say_title(mob_name(20349))
+			say(gameforge.training_mount._050_say)
 			say(gameforge.training_mount._03_say)
 		end
 
 		when 20349.chat.gameforge.training_mount._04_say begin
-			say_title(""..mob_name(20349).."")
+			say_title(mob_name(20349))
 			say(gameforge.training_mount._05_say)
 			say("")
 			wait()
-			say_title(""..mob_name(20349).."")
+			say_title(mob_name(20349))
 			say(gameforge.training_mount._06_say)
 			say("")
 			wait()
-			say_title(""..mob_name(20349).."")
+			say_title(mob_name(20349))
 			say(gameforge.training_mount._07_say)
 			say("")
 			set_state(main_point)
@@ -33,15 +33,15 @@ state start begin
 
 	state main_point begin
 		when 20349.chat.gameforge.training_mount._08_say begin
-			say_title(""..mob_name(20349).."")
+			say_title(mob_name(20349))
 			say(gameforge.training_mount._09_say)
 			say("")
 			wait()
-			say_title(""..mob_name(20349).."")
+			say_title(mob_name(20349))
 			say(gameforge.training_mount._10_say)
 			say("")
 			wait()
-			say_title(""..mob_name(20349).."")
+			say_title(mob_name(20349))
 			say(gameforge.training_mount._11_say)
 
 			local s=select(gameforge.training_mount._12_say,gameforge.training_mount._13_say)
@@ -50,7 +50,7 @@ state start begin
 				return
 			end
 			if pc.count_item(50067) >0  or pc.count_item(50068)>0 then 
-				say_title(""..mob_name(20349).."")
+				say_title(mob_name(20349))
 				say(gameforge.training_mount._14_say)
 			else 
 					training_mount.no_item()
@@ -64,7 +64,7 @@ state start begin
 				elseif pc.level <25 then
 					training_mount.no_level()
 				else
-					say_title(""..mob_name(20349).."")
+					say_title(mob_name(20349))
 					say(""..item_name(50067)..gameforge.training_mount._17_say)
 				end
 			elseif 2==s   then
@@ -73,11 +73,11 @@ state start begin
 				elseif pc.level <45 then
 					training_mount.no_level()
 				else
-					say_title(""..mob_name(20349).."")
+					say_title(mob_name(20349))
 					say(gameforge.training_mount._18_say)
 				end
 			elseif 3==s then
-				say_title(""..mob_name(20349).."")
+				say_title(mob_name(20349))
 				say(gameforge.training_mount._19_say)
 				say("")
 				return
@@ -101,13 +101,12 @@ state start begin
 						training_mount.no_level(25)
 						return
 					end
-					say_title(""..mob_name(20349).."")
+					say_title(mob_name(20349))
 					say(gameforge.training_mount._20_say)
 					wait()
-					say(gameforge.training_mount._20_1_say)
 					
 					-- here we decide about, which bonus the player whiches for the mount
-					local bonus_selected = select("ATTBONUS_MONSTER","MALL_EXPBONUS","MAX_HP","DEF_GRADE_BONUS","ATT_GRADE_BONUS", "Abort")
+					local bonus_selected = select(gameforge.training_mount._060_select, gameforge.training_mount._070_select, gameforge.training_mount._080_select, gameforge.training_mount._090_select, gameforge.training_mount._100_select, gameforge.training_mount._110_select)
 					
 					if 6==bonus_selected  then
 						return
@@ -144,7 +143,7 @@ state start begin
 						training_mount.no_level()
 						return
 					end	
-					say_title(""..mob_name(20349).."")
+					say_title(mob_name(20349))
 					say(gameforge.training_mount._21_say)
 					wait()
 					say(gameforge.training_mount._22_say)
@@ -167,41 +166,41 @@ state start begin
 
 
 when 20349.chat.gameforge.training_mount._23_say  begin
-			say_title(""..mob_name(20349).."")
+			say_title(mob_name(20349))
 			say("")
 			say(gameforge.training_mount._24_say)
 			wait()
-			say_title(""..mob_name(20349).."")
+			say_title(mob_name(20349))
 			say("")
 			say(gameforge.training_mount._25_say)
 			wait()
-			say_title(""..mob_name(20349).."")
+			say_title(mob_name(20349))
 			say("")
 			say(gameforge.training_mount._26_say)
 			local s=select(locale.yes,locale.no)
 			if 2==s then
 				return
 			end
-			say_title(""..mob_name(20349).."")
+			say_title(mob_name(20349))
 			say("")
 			say(gameforge.training_mount._27_say)
 			say("")
 			wait()
 			if pc.count_item(50068) >0  then
 				if horse.get_level()>1 then 
-					say_title(""..mob_name(20349).."")
+					say_title(mob_name(20349))
 					say("")
 					say(gameforge.training_mount._28_say)
 					wait()
 					say(gameforge.training_mount._29_say)
 				else 
-					say_title(""..mob_name(20349).."")
+					say_title(mob_name(20349))
 					say("")
 					say(gameforge.training_mount._30_say)
 					return
 				end
 			else
-				say_title(""..mob_name(20349).."")
+				say_title(mob_name(20349))
 				say("")
 				say(gameforge.training_mount._31_say)
 				return

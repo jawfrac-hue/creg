@@ -30,16 +30,16 @@ quest prototype_training_fight begin
 			pc.setqf("pcy", 0)
 		end
 
-		when 20095.Chat."Trainingskämpfe" begin
-			say_title("Trainingskämpfe")
+		when 20095.Chat.gameforge.prototype_training_fight._010_sayTitle begin
+			say_title(gameforge.prototype_training_fight._010_sayTitle)
 			if pc.getqf("round") > pc.getqf("max_rounds") then 
-				say("Du hast alle Runden absolviert. Dein Training ist abgeschlossen.")
+				say(gameforge.prototype_training_fight._020_say)
 				set_state(__COMPLETE__)
 			else
-				say("Möchtest du eine Runde in der Tranginsarena versuchen?")
-				say(string.format("Deine aktuelle Runde ist: %s",pc.getqf("round")))
-				say("Du hast 5 Minuten um die Runde abzuschließen.")
-				local s = select("Ja", "Nein")
+				say(gameforge.prototype_training_fight._030_say)
+				say(string.format(gameforge.prototype_training_fight._140_say,pc.getqf("round")))
+				say(gameforge.prototype_training_fight._040_say)
+				local s = select(gameforge.prototype_training_fight._050_select, gameforge.prototype_training_fight._060_select)
 				if s == 1 then
 					-- storing current location of pc for return teleport later
 					pc.setqf("pcx", pc.get_x())
@@ -115,8 +115,8 @@ end
 
 		when enter or login begin	
 			if pc.get_map_index() < 650000 or pc.get_map_index() > 659999 then -- checking if player has left the arena mid-round = lose
-					say_title("Trainingskampf")
-					say("Trainingskampf abgebrochen!")
+					say_title(gameforge.prototype_training_fight._070_sayTitle)
+					say(gameforge.prototype_training_fight._080_say)
 					q.done()
 					set_state(menu)	
 			else						
@@ -138,25 +138,25 @@ end
 				local timeLeft = pc.getqf("max_round_time")- (get_time() - pc.getqf("round_timestamp"))
 				q.start()
 				q.set_clock(timeLeft)
-				send_letter("Trainingskampf")		
+				send_letter(gameforge.prototype_training_fight._090_sendLetter)
 			end
 		end
 		
 		when button or info begin
-			say_title("Trainingskampf")
+			say_title(gameforge.prototype_training_fight._070_sayTitle)
 			local timeLeft = pc.getqf("max_round_time")- (get_time() - pc.getqf("round_timestamp"))
 			local m = math.floor(timeLeft/60) -- conversion to minutes, use math.ceil if you prefer more optimism :)
-			say("Besige alle Gegner in der Arena innerhalb von 5 Minuten")
-			say(string.format("Deine aktuelle Runde ist: %s",pc.getqf("round")))
-			say(string.format("Verbleibende Gegner: %s",pc.getqf("required_kills")-pc.getqf("killcount")))
+			say(gameforge.prototype_training_fight._100_say)
+			say(string.format(gameforge.prototype_training_fight._140_say,pc.getqf("round")))
+			say(string.format(gameforge.prototype_training_fight._150_say,pc.getqf("required_kills")-pc.getqf("killcount")))
 			if m > 0 then
-				say_reward(string.format("Verbleibende Zeit in Minuten: %s", m))
+				say_reward(string.format(gameforge.prototype_training_fight._170_sayReward, m))
 			else
 			-- doing a bit of a dance here, as a seconds display will only update on window open, looks faulty versus q.set_clock
 				if m == 0 then
-					say_reward("Dir bleibt weniger als eine Minute!") 
+					say_reward(gameforge.prototype_training_fight._180_sayReward) 
 				else
-					say_reward("Zeit abgelaufen!")
+					say_reward(gameforge.prototype_training_fight._190_sayReward)
 				end				
 			end
 		end
@@ -200,10 +200,10 @@ end
 			local CordY = pc.getqf("pcy")*100 
 			local r = pc.getqf("round")
 			if pc.getqf("victory") == 1 then
-				say_title("Trainingskämpfe")
-				say("Du hast diese Runde erfolgreich absolviert.")
-				say(string.format("Du erhälst %s Yang und %s XP",Rewards[r][1], Rewards[r][2]))
-				local s = select("OK")
+				say_title(gameforge.prototype_training_fight._010_sayTitle)
+				say(gameforge.prototype_training_fight._110_say)
+				say(string.format(gameforge.prototype_training_fight._160_say,Rewards[r][1], Rewards[r][2]))
+				local s = select(gameforge.prototype_training_fight._120_select)
 				if s == 1 then
 					pc.change_money(Rewards[r][1])
 					pc.give_exp2(Rewards[r][2])
@@ -213,9 +213,9 @@ end
 					set_state(menu)
 				end
 			else
-				say_title("Trainingskämpfe")
-				say("Du konntest diese Runde nicht rechtzeitig abschließen.")
-				local x = select("OK")
+				say_title(gameforge.prototype_training_fight._010_sayTitle)
+				say(gameforge.prototype_training_fight._130_say)
+				local x = select(gameforge.prototype_training_fight._120_select)
 				if x == 1 then
 					pc.warp(CordX, CordY) -- returning to dialogue position
 					set_state(menu)	

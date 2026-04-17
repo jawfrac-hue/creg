@@ -1,29 +1,29 @@
 quest priv_guild begin
 	state start begin
-		when guild_man1.chat."GM: Bonus nach Gilde" or 	guild_man2.chat."GM: Bonus nach Gilde" or guild_man3.chat."GM: Bonus nach Gilde" with pc.get_gm_level()== 5 begin
+		when guild_man1.chat.gameforge.xxx_priv_guild._080_npcChat or 	guild_man2.chat.gameforge.xxx_priv_guild._080_npcChat or guild_man3.chat.gameforge.xxx_priv_guild._080_npcChat with pc.get_gm_level()== 5 begin
 
 			-- Select guild
-			say_title("Gildenbonus gewähren")
-			say( "Gildenname eingeben" )
+			say_title(gameforge.xxx_priv_guild._010_sayTitle)
+			say(gameforge.xxx_priv_guild._020_say)
 
 			local g_name = input()
 			local g_id = __get_guildid_byname( g_name )
 			if 0 == g_id then
-				say( 'Dieser Gildenname existiert nicht.' )
+				say(gameforge.xxx_priv_guild._090_say)
 				return
 			end
 
 			-- Select bonus type
-			say_title("Gildenbonus gewähren")
-			say('Aktueller Parameter:')
+			say_title(gameforge.xxx_priv_guild._010_sayTitle)
+			say(gameforge.xxx_priv_guild._100_say)
 			say( __get_guild_priv_string( g_id ) )
-			say('Typ wählen')
+			say(gameforge.xxx_priv_guild._110_say)
 
 			local titles = {
-				"Prozentsatz f. fallen gelassene Gegenstände", 
-				"Prozentsatz f. fallen gelassenes Gold", 
-				"Prozentsatz f. fallen gelassene Gold-Zehner",
-				"Erfahrungsverhältnis",
+				gameforge.xxx_priv_guild._120_1_select, 
+				gameforge.xxx_priv_guild._120_2_select, 
+				gameforge.xxx_priv_guild._120_3_select,
+				gameforge.xxx_priv_guild._120_4_select,
 			}
 
 			local t = select(
@@ -31,40 +31,40 @@ quest priv_guild begin
 				titles[2],
 				titles[3],
 				titles[4],
-				"Abbrechen")
+				gameforge.xxx_priv_guild._130_select)
 
 			if t == 5 then
 				return
 			end
 
 			-- Select the number of bonus
-			say_title("Gildenbonus gewähren")
-			say(string.format('%s Bonus : %s', g_name, titles[t]))
+			say_title(gameforge.xxx_priv_guild._010_sayTitle)
+			say(string.format(gameforge.xxx_priv_guild._140_say, g_name, titles[t]))
 			say('')
 			local g = {0,10,20,30,40,50}
-			say('Wie viel?')
-			local p = select(g[1]..'%',g[2]..'%',g[3]..'%',g[4]..'%',g[5]..'%',g[6]..'%', 'Abbrechen')
+			say(gameforge.xxx_priv_guild._150_say)
+			local p = select(string.format(gameforge.xxx_priv_guild._160_select, g[1]), string.format(gameforge.xxx_priv_guild._160_select, g[2]), string.format(gameforge.xxx_priv_guild._160_select, g[3]), string.format(gameforge.xxx_priv_guild._160_select, g[4]), string.format(gameforge.xxx_priv_guild._160_select, g[5]), string.format(gameforge.xxx_priv_guild._160_select, g[6]), gameforge.xxx_priv_guild._130_select)
 			if p == 7 then
 				return
 			end
 
 			-- Select bonus time
-			say_title("Gildenbonus gewähren")
-			say(string.format('%s Bonus : %s %d%%', g_name, titles[t], g[p]))
+			say_title(gameforge.xxx_priv_guild._010_sayTitle)
+			say(string.format(gameforge.xxx_priv_guild._170_say, g_name, titles[t], g[p]))
 			say('')
 
-			say('Bonuszeit wählen')
+			say(gameforge.xxx_priv_guild._180_say)
 			local v = 0
-			local h = select("6 Stunden", "12 Stunden", "24 Stunden", "Direkt eingeben", "Abbrechen")
+			local h = select(gameforge.xxx_priv_guild._030_select, gameforge.xxx_priv_guild._040_select, gameforge.xxx_priv_guild._050_select, gameforge.xxx_priv_guild._060_select, gameforge.xxx_priv_guild._070_select)
 			if 5 == h then
 				return
 			elseif 4 == h then
 
 				-- Enter bonus time directly
-				say_title("Gildenbonus gewähren")
-				say(string.format('%s Bonus : %s %d%%', g_name, titles[t], g[p]))
+				say_title(gameforge.xxx_priv_guild._010_sayTitle)
+				say(string.format(gameforge.xxx_priv_guild._170_say, g_name, titles[t], g[p]))
 				say('')
-				say('Bonuszeit eingeben')
+				say(gameforge.xxx_priv_guild._190_say)
 				v= input()
 
 				if v == "" then
@@ -82,17 +82,17 @@ quest priv_guild begin
 			end
 
 			-- Confirm setting
-			say_title("Gildenbonus gewähren")
-			say(string.format('%s Bonus : %s %d%% (%dZeit)', g_name, titles[t], g[p], v))
+			say_title(gameforge.xxx_priv_guild._010_sayTitle)
+			say(string.format(gameforge.xxx_priv_guild._200_say, g_name, titles[t], g[p], v))
 			say('')
-			say('Obige Einstellung übernehmen?')
+			say(gameforge.xxx_priv_guild._210_say)
 
-			local s = select('Ja', 'Nein')
+			local s = select(gameforge.xxx_priv_guild._220_select, gameforge.xxx_priv_guild._230_select)
 			if 1 == s then
 				__give_guild_priv(g_id, t, g[p], v*60*60)
-				say('Einstellung vorgenommen')
+				say(gameforge.xxx_priv_guild._240_say)
 			else
-				say('Abgebrochen')
+				say(gameforge.xxx_priv_guild._250_say)
 			end
 		end
 	end

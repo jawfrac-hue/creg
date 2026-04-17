@@ -94,7 +94,7 @@ quest new_christmas_sock_quest begin
 				
 				local exp = xmas_exp_table[l][i]
 				pc.give_exp2 (exp)
-				say_reward (locale.exp.." : "..exp)
+				say_reward (string.format(gameforge.locale.label_value, locale.exp, exp))
 				set_quest_state ("levelup", "run")
 			end
 		end

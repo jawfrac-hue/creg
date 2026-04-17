@@ -113,14 +113,14 @@ quest new_quest_lv22 begin
 			wait()
 				say_title(gameforge.new_quest_lv22._018_say_title)
 				say(gameforge.new_quest_lv22._040_say)
-				say_reward(string.format("%s x", new_quest_lv22_neededAmountDrop1))
+				say_reward(string.format(gameforge.locale.count_x, new_quest_lv22_neededAmountDrop1))
 				say_item_vnum(new_quest_lv22_drop1) -- icon of item
 				say_reward(gameforge.new_quest_lv22._041_say_reward)
 				say(mob_name(new_quest_lv22_mob1))
 			wait()
 				say_title(gameforge.new_quest_lv22._018_say_title)
 				say(gameforge.new_quest_lv22._042_say)
-				say_reward(string.format("%s x",  new_quest_lv22_neededAmountDrop2))
+				say_reward(string.format(gameforge.locale.count_x,  new_quest_lv22_neededAmountDrop2))
 				say_item_vnum(new_quest_lv22_drop2) -- icon of item
 				say_reward(gameforge.new_quest_lv22._041_say_reward)
 				say(mob_name(new_quest_lv22_mob2))

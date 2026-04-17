@@ -35,8 +35,8 @@ quest monkey_dungeon begin
 
 				if i >= 1070000 and i < 1100000 then
 					-- Set quest (Show to user)
-					q.set_title("Affendungeon")
-					q.set_clock("Verbleibende Zeit:", 20*60)
+					q.set_title(gameforge.locale.monkey_dungeon.quest_title)
+					q.set_clock(gameforge.locale.monkey_dungeon.quest_rest_time, 20*60)
 					q.start()
 
 
@@ -54,7 +54,7 @@ quest monkey_dungeon begin
 						pc.setqf("fail", 0)
 						pc.polymorph(5003, 3*60)
 
-						makequestbutton("Fluch des Affen")
+						makequestbutton(gameforge.locale.monkey_dungeon.curse_of_monkey_button)
 						setskin(NOWINDOW)
 					end
 				end
@@ -62,7 +62,7 @@ quest monkey_dungeon begin
 		end
 
 		when button begin
-			say("Du wurdest verflucht.")
+			say(gameforge.xxx_monkey_dungeon._010_say)
 		end
 
 		when logout with pc.get_map_index() >= 1070000 and pc.get_map_index() < 1100000 begin
@@ -92,7 +92,7 @@ quest monkey_dungeon begin
 			end
 		end
 
-		when 20350.chat."Herausforderung im Affendungeon" begin
+		when 20350.chat.gameforge.locale.monkey_dungeon.button begin
 
 			local delay = 3600
 
@@ -102,9 +102,9 @@ quest monkey_dungeon begin
 
 			if get_global_time() - pc.getqf("Zeit") < delay and pc.getqf("Zeit") != 0 then
 
-				say("Jetzt ist nicht der richtige Zeitpunkt, einzutreten.")
-				say("Du kannst nur jede Stunde einmal in den Dungeon")
-				say("gehen.")
+				say(gameforge.xxx_monkey_dungeon._020_say)
+				say(gameforge.xxx_monkey_dungeon._030_say)
+				say(gameforge.xxx_monkey_dungeon._040_say)
 			else
 				--Determine Easy Monkey Dungeon, Normal Monkey Dungeon, Hard Monkey Dungeon
 				local s = monkey_dungeon.determine_level() 
@@ -118,18 +118,18 @@ quest monkey_dungeon begin
 --				say_title(msgs[s])
 				---                                                   l
 				say("")
-				say("1. Wenn Du den Affendungeon betretest, musst Du")
-				say("den obersten Affen in 20 Minuten erschlagen und")
-				say("dann entkommen.")
+				say(gameforge.xxx_monkey_dungeon._050_say)
+				say(gameforge.xxx_monkey_dungeon._060_say)
+				say(gameforge.xxx_monkey_dungeon._070_say)
 				say("")
-				say("2. Du darfst keine Schriftrollen `Zurück´ ")
-				say("oder zu anderen Zielen verwenden.")
+				say(gameforge.xxx_monkey_dungeon._080_say)
+				say(gameforge.xxx_monkey_dungeon._090_say)
 				say("")
-				say("Viele, die sich nicht an diese Regeln halten,")
-				say("werden in Affen verwandelt, also nimm Dich in")
-				say("Acht.")
+				say(gameforge.xxx_monkey_dungeon._100_say)
+				say(gameforge.xxx_monkey_dungeon._110_say)
+				say(gameforge.xxx_monkey_dungeon._120_say)
 
-				local r = select("Betreten.", "Nicht betreten.")
+				local r = select(gameforge.xxx_monkey_dungeon._130_select, gameforge.xxx_monkey_dungeon._140_select)
 
 				if r == 1 then
 --		pc.setqf("time", get_global_time())

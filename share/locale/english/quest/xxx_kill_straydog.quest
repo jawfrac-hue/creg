@@ -1,29 +1,29 @@
 quest kill_straydog begin
 	state start begin
-		when 20008.chat."Lästige Wildhunde!!" with number(1, 10)==1 and pc.level>=25 begin
+		when 20008.chat.gameforge.xxx_kill_straydog._970_npcChat with number(1, 10)==1 and pc.level>=25 begin
 		        ----"12345678901234567890123456789012345678901234567890"|   
-                        say_title("Octavio:")
+                        say_title(gameforge.xxx_kill_straydog._010_sayTitle)
                         say("")
-			say("Sei willkommen!Du hast sicher schon von der")
-			say("Wildhund Plage gehört.Die Viecher machen uns ")
-			say("schwer zu schaffen, sogar das Dorf haben sie")
-			say("schon heimgesucht, man ist nirgends vor ihnen")
-			say("sicher, deshalb habe ich einen Wettbewerb")
-			say("ausgerufen. Jage soviele Wildhunde wie möglich")
-			say("in kürzester Zeit. Wir erwarten hohen Besuch,")
-			say("deshalb ist Eile geboten. Wenn Du schnell bist,")
-                        say("bekommst Du auch eine Belohnung.")
-			local b=select("Du willst teilnehmen", "Du hast kein Interesse?")
+			say(gameforge.xxx_kill_straydog._020_say)
+			say(gameforge.xxx_kill_straydog._030_say)
+			say(gameforge.xxx_kill_straydog._040_say)
+			say(gameforge.xxx_kill_straydog._050_say)
+			say(gameforge.xxx_kill_straydog._060_say)
+			say(gameforge.xxx_kill_straydog._070_say)
+			say(gameforge.xxx_kill_straydog._080_say)
+			say(gameforge.xxx_kill_straydog._090_say)
+                        say(gameforge.xxx_kill_straydog._100_say)
+			local b=select(gameforge.xxx_kill_straydog._110_select, gameforge.xxx_kill_straydog._120_select)
 			if 1==b then
-				say("Ja, ich werde teilnehmen.")
-				say("Ich mach mich sofort an die Arbeit.")
-				say("Ich komme zurück, sobald ich fertig bin.")
+				say(gameforge.xxx_kill_straydog._130_say)
+				say(gameforge.xxx_kill_straydog._140_say)
+				say(gameforge.xxx_kill_straydog._150_say)
 			elseif 2==b then
-				say("Ich habe schon genug zu tun.")
-				say("Ich kann nicht noch mehr tun.")
-				say("Ihr müsst schon jemand anderen finden.")
+				say(gameforge.xxx_kill_straydog._160_say)
+				say(gameforge.xxx_kill_straydog._170_say)
+				say(gameforge.xxx_kill_straydog._180_say)
 			else
-				say("UNKNOWN BUTTON ["..b.."]")
+				say(string.format(gameforge.xxx_kill_straydog._960_say, b))
 			end
 		end
 	end
@@ -31,43 +31,43 @@ quest kill_straydog begin
 		when login with number(1, 10)==1 and pc.level>=25 and pc.level<=35 begin
 			setstate(join)
 		end
-		when 20008.chat."Wie steht es mit der Vorbereitung um den Wettbewerb zur Wildhundejagd?" begin
-			say_title("Octavio:")
+		when 20008.chat.gameforge.xxx_kill_straydog._980_npcChat begin
+			say_title(gameforge.xxx_kill_straydog._010_sayTitle)
                         say("")
-			say("Ich bin noch nicht soweit.")
-			say("Das ist aber nicht einfach.")
-			say("Ich werde Dir bald ein Ergebnis bringen")
+			say(gameforge.xxx_kill_straydog._190_say)
+			say(gameforge.xxx_kill_straydog._200_say)
+			say(gameforge.xxx_kill_straydog._210_say)
 		end
 	end
 	state join begin
 		when letter begin
 			setskin(NOWINDOW)
-			makequestbutton("Einladung")
-			q.set_title("Die Einladung zum Wettbewerb der Wildhundejagd")
+			makequestbutton(gameforge.xxx_kill_straydog._990_makeQuestButton)
+			q.set_title(gameforge.xxx_kill_straydog._220_sayTitle)
 			q.start()
 		end
 		when button begin
-			say_title("Die Einladung zum Wettbewerb der Wildhundejagd")
+			say_title(gameforge.xxx_kill_straydog._220_sayTitle)
 			say("")
-			say("Für 1000 Wildhunde, je nach Zeit,")
-                        say("gibt es folgende Geldpreise")
+			say(gameforge.xxx_kill_straydog._230_say)
+                        say(gameforge.xxx_kill_straydog._240_say)
 			say("")
-			say("    1. Rang : 300000 yang (Innerhalb von 30 Minuten)")
-			say("    2. Rang : 100000 yang (Innerhalb von 40 Minuten)")
-			say("    3. Rang :	 50000 yang (Innerhalb von 50 Minuten)")
+			say(gameforge.xxx_kill_straydog._250_say)
+			say(gameforge.xxx_kill_straydog._260_say)
+			say(gameforge.xxx_kill_straydog._270_say)
 			say("")
-			say("                 - Der Gastgeber Octavio -")
+			say(gameforge.xxx_kill_straydog._280_say)
 			say("")
-			say("Möchtest du an dem Wettbewerb zur Wildhundejagd von Octavio teilnehmen?")
-			local b=select("die Einladung", "teilnehmen", "nicht teilnehmen")
+			say(gameforge.xxx_kill_straydog._290_say)
+			local b=select(gameforge.xxx_kill_straydog._300_select, gameforge.xxx_kill_straydog._310_select, gameforge.xxx_kill_straydog._320_select)
 			if 1==b then
 				if pc.getqf("best_time")==0 then
-					say("Du hast noch nicht daran teilgenommen")
+					say(gameforge.xxx_kill_straydog._330_say)
 				else
-					say("Die 1000 Wildhundejagd")
+					say(gameforge.xxx_kill_straydog._340_say)
 					say("")
-					say("Die kürzeste Jagdzeit "..(math.floor(pc.getqf("best_time")/60)).." Minute")
-					say("Die vorherige Jagdzeit  "..(math.floor(pc.getqf("prev_time")/60)).." Minute")
+					say(string.format(gameforge.xxx_kill_straydog._1000_say, math.floor(pc.getqf("best_time")/60)))
+					say(string.format(gameforge.xxx_kill_straydog._1010_say, math.floor(pc.getqf("prev_time")/60)))
 				end
 			elseif 2==b then
 				setstate(desc)
@@ -75,32 +75,32 @@ quest kill_straydog begin
 				setstate(start)
 				q.done()
 			else
-				say("UNKNOWN BUTTON ["..b.."]")
+				say(string.format(gameforge.xxx_kill_straydog._960_say, b))
 			end
 		end
 		when info begin
-			say_title("Die Einladung zum Wettbewerb zur Wildhundejagd")
+			say_title(gameforge.xxx_kill_straydog._350_sayTitle)
 			say("")
-			say("Fur 1000 Wildhunde, je nach Zeit,")
-			say("gibt es folgende Geldpreise")
+			say(gameforge.xxx_kill_straydog._360_say)
+			say(gameforge.xxx_kill_straydog._240_say)
 			say("")
-			say("    1. Rang : 300000 yang (Innerhalb von 30 Minuten)")
-			say("    2. Rang : 100000 yang (Innerhalb von 40 Minuten)")
-			say("    3. Rang :	 50000 yang (Innerhalb von 50 Minuten)")
+			say(gameforge.xxx_kill_straydog._250_say)
+			say(gameforge.xxx_kill_straydog._260_say)
+			say(gameforge.xxx_kill_straydog._270_say)
 			say("")
-			say("                 - Der Gastgeber Octavio  -")
+			say(gameforge.xxx_kill_straydog._370_say)
 			say("")
-			say("Möchtest du an dem Wettbewerb zur Wildhundejagd von Octavio teilnehmen?")
+			say(gameforge.xxx_kill_straydog._290_say)
 			say("")
-			local b=select("die Einladung", "teilnehmen", "nicht teilnehmen")
+			local b=select(gameforge.xxx_kill_straydog._300_select, gameforge.xxx_kill_straydog._310_select, gameforge.xxx_kill_straydog._320_select)
 			if 1==b then
 				if pc.getqf("best_time")==0 then
-					say("Du hast noch nicht daran teilgenommen")
+					say(gameforge.xxx_kill_straydog._330_say)
 				else
-					say_title("Die 1000 Wildhundejagd")
+					say_title(gameforge.xxx_kill_straydog._380_sayTitle)
 					say("")
-					say("Die kürzeste Jagdzeit "..(math.floor(pc.getqf("best_time")/60)).." Minute")
-					say("Die vorherige Jagdzeit "..(math.floor(pc.getqf("prev_time")/60)).." Minute")
+					say(string.format(gameforge.xxx_kill_straydog._1000_say, math.floor(pc.getqf("best_time")/60)))
+					say(string.format(gameforge.xxx_kill_straydog._1015_say, math.floor(pc.getqf("prev_time")/60)))
 				end
 			elseif 2==b then
 				setstate(desc)
@@ -108,30 +108,30 @@ quest kill_straydog begin
 				setstate(start)
 				q.done()
 			else
-				say("UNKNOWN BUTTON ["..b.."]")
+				say(string.format(gameforge.xxx_kill_straydog._960_say, b))
 			end
 		end
 	end
 	state desc begin
 		when letter begin
 			setskin(NOWINDOW)
-			makequestbutton("Anleitung")
-			q.set_title("Die Anleitung zur Wildhundejagd")
+			makequestbutton(gameforge.xxx_kill_straydog._1020_makeQuestButton)
+			q.set_title(gameforge.xxx_kill_straydog._390_sayTitle)
 			q.start()
 		end
 		when button begin
-			say_title("Die Anleitung zur Wildhundejagd")
+			say_title(gameforge.xxx_kill_straydog._390_sayTitle)
 			say("")
-			say("Das ist sehr einfach!")
-			say("Jage so schnell wie möglich 1000 Wildhunde")
-			say("Die ersten drei Plätze werden belohnt.")
-			say("Bitte, mit allen Besten!")
+			say(gameforge.xxx_kill_straydog._400_say)
+			say(gameforge.xxx_kill_straydog._410_say)
+			say(gameforge.xxx_kill_straydog._420_say)
+			say(gameforge.xxx_kill_straydog._430_say)
 			say("")
-			say("Es gibt aber nur drei mal Chance!!")
+			say(gameforge.xxx_kill_straydog._440_say)
 			say("")
-			say("[beginnen] wenn man beginnen drückt, wird protokolliert")
+			say(gameforge.xxx_kill_straydog._450_say)
 			say("")
-			local b=select("Beginnen", "Anhalten", "Aufgeben")
+			local b=select(gameforge.xxx_kill_straydog._460_select, gameforge.xxx_kill_straydog._470_select, gameforge.xxx_kill_straydog._480_select)
 			if 1==b then
 				pc.setqf("life", 2)
 				setstate(game)
@@ -140,22 +140,22 @@ quest kill_straydog begin
 				setstate(start)
 				q.done()
 			else
-				say("UNKNOWN BUTTON ["..b.."]")
+				say(string.format(gameforge.xxx_kill_straydog._960_say, b))
 			end
 		end
 		when info begin
-			say_title("Die Anleitung zur Wildhundejagd")
+			say_title(gameforge.xxx_kill_straydog._390_sayTitle)
 			say("")
-			say("Das ist sehr einfach!")
-			say("Jage so schnell wie möglich 1000 Wildhunde")
-			say("Die ersten drei Plätze werden belohnt")
-			say("Bitte, mit allen Besten!")
+			say(gameforge.xxx_kill_straydog._400_say)
+			say(gameforge.xxx_kill_straydog._410_say)
+			say(gameforge.xxx_kill_straydog._490_say)
+			say(gameforge.xxx_kill_straydog._430_say)
 			say("")
-			say("Es gibt aber nur drei mal Chance!!")
+			say(gameforge.xxx_kill_straydog._440_say)
 			say("")
-			say("[beginnen] wenn man beginnen drückt, wird protokolliert")
+			say(gameforge.xxx_kill_straydog._450_say)
 			say("")
-			local b=select("Beginnen", "Anhalten", "Aufgeben")
+			local b=select(gameforge.xxx_kill_straydog._460_select, gameforge.xxx_kill_straydog._470_select, gameforge.xxx_kill_straydog._480_select)
 			if 1==b then
 				pc.setqf("life", 2)
 				setstate(game)
@@ -164,14 +164,14 @@ quest kill_straydog begin
 				setstate(start)
 				q.done()
 			else
-				say("UNKNOWN BUTTON ["..b.."]")
+				say(string.format(gameforge.xxx_kill_straydog._960_say, b))
 			end
 		end
 	end
 	state game begin
 		when 101.party_kill begin
 			pc.setqf("kill_count", pc.getqf("kill_count")+1)
-			q.set_counter("Die Zahl der restlichen Wildhunde", 1000-pc.getqf("kill_count"))
+			q.set_counter(gameforge.xxx_kill_straydog._1030_counter, 1000-pc.getqf("kill_count"))
 		end
 		when enter begin
 			pc.setqf("start_time", get_time())
@@ -182,95 +182,95 @@ quest kill_straydog begin
 		end
 		when letter begin
 			setskin(NOWINDOW)
-			makequestbutton("Jage die 1000 Wildhunde!")
-			q.set_title("Jage die 1000 Wildhunde!")
+			makequestbutton(gameforge.xxx_kill_straydog._500_sayTitle)
+			q.set_title(gameforge.xxx_kill_straydog._500_sayTitle)
 			q.start()
 		end
 		when button begin
-			say_title("Jage die 1000 Wildhunde!")
+			say_title(gameforge.xxx_kill_straydog._500_sayTitle)
 			say("")
-			say("Nachdem die 1000 Wildhundejagd beendet ist,")
-			say("meldet man sich bei Octavio und erhält den Preis.")
+			say(gameforge.xxx_kill_straydog._510_say)
+			say(gameforge.xxx_kill_straydog._520_say)
 			say("")
-			say("gejagte Zahl "..(pc.getqf("kill_count")).."")
-			say("Verlaufszeit "..(math.floor((get_time()-pc.getqf("start_time"))/60)).."")
+			say(string.format(gameforge.xxx_kill_straydog._1040_say, pc.getqf("kill_count")))
+			say(string.format(gameforge.xxx_kill_straydog._1050_say, math.floor((get_time()-pc.getqf("start_time"))/60)))
 			say("")
-			say("(übrige Chance  "..(pc.getqf("life"))..")")
-			local b=select("Fortfahren", "Neu beginnen", "Aufgeben")
+			say(string.format(gameforge.xxx_kill_straydog._1060_say, pc.getqf("life")))
+			local b=select(gameforge.xxx_kill_straydog._530_select, gameforge.xxx_kill_straydog._540_select, gameforge.xxx_kill_straydog._480_select)
 			if 1==b then
 			elseif 2==b then
 				if pc.getqf("life")>0 then
-					say("Bei erneutem Versuch wird das alte Ergebniss gelöscht")
-					say("Möchtest du wirklich neu beginnen?")
+					say(gameforge.xxx_kill_straydog._550_say)
+					say(gameforge.xxx_kill_straydog._560_say)
 					say("")
-					local b=select("Ja", "Nein")
+					local b=select(gameforge.xxx_kill_straydog._570_select, gameforge.xxx_kill_straydog._580_select)
 					if 1==b then
 						setstate(game)
 						q.done()
 					elseif 2==b then
 					else
-						say("UNKNOWN BUTTON ["..b.."]")
+						say(string.format(gameforge.xxx_kill_straydog._960_say, b))
 					end
 				else
-					say("Leider ist es letzte Chance!")
+					say(gameforge.xxx_kill_straydog._590_say)
 				end
 			elseif 3==b then
-				say("Möchtest du wirklich die Wildhundejagd beenden?")
+				say(gameforge.xxx_kill_straydog._600_say)
 				say("")
-				local b=select("Ja", "Nein")
+				local b=select(gameforge.xxx_kill_straydog._570_select, gameforge.xxx_kill_straydog._580_select)
 				if 1==b then
 					setstate(start)
 					q.done()
 				elseif 2==b then
 				else
-					say("UNKNOWN BUTTON ["..b.."]")
+					say(string.format(gameforge.xxx_kill_straydog._960_say, b))
 				end
 			else
-				say("UNKNOWN BUTTON ["..b.."]")
+				say(string.format(gameforge.xxx_kill_straydog._960_say, b))
 			end
 		end
 		when info begin
-			say_title("Jage die 1000 Wildhunde!")
+			say_title(gameforge.xxx_kill_straydog._500_sayTitle)
 			say("")
-			say("Nachdem die 1000 Wildhundejagd beendet ist,")
-			say("meldet man sich bei Octavio und erhält seinen Preis.")
+			say(gameforge.xxx_kill_straydog._510_say)
+			say(gameforge.xxx_kill_straydog._610_say)
 			say("")
-			say("gejagte Zahl "..(pc.getqf("kill_count")).."")
-			say("Verlaufszeit "..(math.floor((get_time()-pc.getqf("start_time"))/60)).."")
+			say(string.format(gameforge.xxx_kill_straydog._1040_say, pc.getqf("kill_count")))
+			say(string.format(gameforge.xxx_kill_straydog._1050_say, math.floor((get_time()-pc.getqf("start_time"))/60)))
 			say("")
-			say("(übrige Chance "..(pc.getqf("life"))..")")
+			say(string.format(gameforge.xxx_kill_straydog._1070_say, pc.getqf("life")))
 			say("")
-			local b=select("fortfahren", "neu beginnen", "aufgeben")
+			local b=select(gameforge.xxx_kill_straydog._620_select, gameforge.xxx_kill_straydog._630_select, gameforge.xxx_kill_straydog._640_select)
 			if 1==b then
 			elseif 2==b then
 				if pc.getqf("life")>0 then
-					say("bei Neubeginn wird das bisherige Ergebnis gelöscht.")
-					say("trotzdem neu versuchen?")
+					say(gameforge.xxx_kill_straydog._650_say)
+					say(gameforge.xxx_kill_straydog._660_say)
 					say("")
-					local b=select("Ja", "Nein")
+					local b=select(gameforge.xxx_kill_straydog._570_select, gameforge.xxx_kill_straydog._580_select)
 					if 1==b then
 						setstate(game)
 						q.done()
 					elseif 2==b then
 					else
-						say("UNKNOWN BUTTON ["..b.."]")
+						say(string.format(gameforge.xxx_kill_straydog._960_say, b))
 					end
 				else
-					say("leider ist es die letzte Chance!")
+					say(gameforge.xxx_kill_straydog._670_say)
 				end
 			elseif 3==b then
-				say("Möchtst du wirklich die Wildhundejagd beenden?")
+				say(gameforge.xxx_kill_straydog._680_say)
 				say("")
-				local b=select("Ja", "Nein")
+				local b=select(gameforge.xxx_kill_straydog._570_select, gameforge.xxx_kill_straydog._580_select)
 				if 1==b then
 					setstate(start)
 					q.done()
 				elseif 2==b then
 				else
-					say("UNKNOWN BUTTON ["..b.."]")
+					say(string.format(gameforge.xxx_kill_straydog._960_say, b))
 				end
 			else
-				say("UNKNOWN BUTTON ["..b.."]")
+				say(string.format(gameforge.xxx_kill_straydog._960_say, b))
 			end
 		end
 		when 101.party_kill with pc.getqf("kill_count") >= 1000 begin
@@ -288,83 +288,83 @@ quest kill_straydog begin
 		end
 		when letter begin
 			setskin(NOWINDOW)
-			makequestbutton("Durchführung der 1000 Wildhundejagd!!")
-			q.set_title("Durchführung der 1000 Wildhundejagd!!")
+			makequestbutton(gameforge.xxx_kill_straydog._690_sayTitle)
+			q.set_title(gameforge.xxx_kill_straydog._690_sayTitle)
 			q.start()
 		end
 		when button begin
-			say_title("Durchführung der 1000 Wildhundejagd!!")
+			say_title(gameforge.xxx_kill_straydog._690_sayTitle)
 			say("")
-			say("die Wildhunde "..(pc.getqf("kill_count")).."Du hast die Wildhunde gejagt")
-			say("Melde Dich bei Octavio")
+			say(string.format(gameforge.xxx_kill_straydog._1080_say, pc.getqf("kill_count")))
+			say(gameforge.xxx_kill_straydog._700_say)
 			say("")
-			say("Verlaufszeit "..(math.floor(pc.getqf("game_time")/60)).."")
+			say(string.format(gameforge.xxx_kill_straydog._1050_say, math.floor(pc.getqf("game_time")/60)))
 			say("")
 		end
 		when info begin
-			say_title("Durchführung der 1000 Wildhundejagd!!")
+			say_title(gameforge.xxx_kill_straydog._690_sayTitle)
 			say("")
-			say("die Wildhunde "..(pc.getqf("kill_count")).."Du hast die Wildhunde gejagt")
-			say("Melde Dich bei Octavio")
+			say(string.format(gameforge.xxx_kill_straydog._1080_say, pc.getqf("kill_count")))
+			say(gameforge.xxx_kill_straydog._700_say)
 			say("")
-			say("Verlaufszeit"..(math.floor(pc.getqf("game_time")/60)).."")
+			say(string.format(gameforge.xxx_kill_straydog._1090_say, math.floor(pc.getqf("game_time")/60)))
 			say("")
 		end
 		when __TARGET__.target.click begin
 			target.delete("__TARGET__")
 			if pc.getqf("kill_count")>=1000 then
 				if 30*60>pc.getqf("game_time") then
-					say_title("Octavio:")
+					say_title(gameforge.xxx_kill_straydog._010_sayTitle)
 					say("")
-					say("Du hast die Wildhundejagd innerhalb von 30")
-					say("Minuten durchgeführt!")
-					say("Das ist wirklich sehr schnell!")
-					say("Ich gratuliere Dir")
+					say(gameforge.xxx_kill_straydog._710_say)
+					say(gameforge.xxx_kill_straydog._720_say)
+					say(gameforge.xxx_kill_straydog._730_say)
+					say(gameforge.xxx_kill_straydog._740_say)
 					setstate(reward_1st)
 				elseif 40*60>pc.getqf("game_time") then
-					say_title("Octavio:")
+					say_title(gameforge.xxx_kill_straydog._010_sayTitle)
 					say("")
-					say("Du hast die Wildhundejagd innerhalb von")
-					say("40 Minuten durchgeführt!")
-					say("Das ist wirklich sehr schnell!")
-					say("Ich gratuliere dir")
+					say(gameforge.xxx_kill_straydog._750_say)
+					say(gameforge.xxx_kill_straydog._760_say)
+					say(gameforge.xxx_kill_straydog._730_say)
+					say(gameforge.xxx_kill_straydog._770_say)
 					setstate(reward_2st)
 				elseif 50*60>pc.getqf("game_time") then
-					say_title("Octavio:")
+					say_title(gameforge.xxx_kill_straydog._010_sayTitle)
 					say("")
-					say("Du hast die Wildhundejagd innerhalb von")
-					say("50 Minuten durchgeführt!")
-					say("Du stehst in der Rangliste. Gratuliere ")
+					say(gameforge.xxx_kill_straydog._750_say)
+					say(gameforge.xxx_kill_straydog._780_say)
+					say(gameforge.xxx_kill_straydog._790_say)
 					setstate(reward_3st)
 				else
-					say_title("Octavio:")
+					say_title(gameforge.xxx_kill_straydog._010_sayTitle)
 					say("")
-					say("Es tut mir leid. Du bist nicht in der")
-					say("Rangliste.")
-					say("Vielen Dank")
+					say(gameforge.xxx_kill_straydog._800_say)
+					say(gameforge.xxx_kill_straydog._810_say)
+					say(gameforge.xxx_kill_straydog._820_say)
 					setstate(__COMPLETE__)
 					q.done()
 				end
 			else
-				say("Du musst die 1000 Wildhunde jagen")
+				say(gameforge.xxx_kill_straydog._830_say)
 			end
 		end
 	end
 	state reward_1st begin
 		when letter begin
 			setskin(NOWINDOW)
-			makequestbutton("Der erste Platz beim Wettbewerb")
-			q.set_title("Der erste Platz beim Wettbewerb")
+			makequestbutton(gameforge.xxx_kill_straydog._840_sayTitle)
+			q.set_title(gameforge.xxx_kill_straydog._840_sayTitle)
 			q.start()
 		end
 		when button begin
-			say_title("Der erste Platz beim Wettbewerb")
+			say_title(gameforge.xxx_kill_straydog._840_sayTitle)
 			say("")
-			say("der erste Platz unter der zeitlichen Begrenzung... ")
-			say("ich hatte selbst nicht daran geglaubt, aber")
-			say("ich war einfach froh, als ich den Preis")
-			say("erhalten habe. Heute sieht der Kahlkopf")
-			say("von Octavio besonders süss aus")
+			say(gameforge.xxx_kill_straydog._850_say)
+			say(gameforge.xxx_kill_straydog._860_say)
+			say(gameforge.xxx_kill_straydog._870_say)
+			say(gameforge.xxx_kill_straydog._880_say)
+			say(gameforge.xxx_kill_straydog._890_say)
 			pc.changemoney(300000)
 			setstate(__COMPLETE__)
 			q.done()
@@ -373,18 +373,18 @@ quest kill_straydog begin
 	state reward_2st begin
 		when letter begin
 			setskin(NOWINDOW)
-			makequestbutton("Der zweite Platz beim Wettbewerb")
-			q.set_title("Der zweite Platz beim Wettbewerb")
+			makequestbutton(gameforge.xxx_kill_straydog._900_sayTitle)
+			q.set_title(gameforge.xxx_kill_straydog._900_sayTitle)
 			q.start()
 		end
 		when button begin
-			say_title("Der zweite Platz beim Wettbewerb")
+			say_title(gameforge.xxx_kill_straydog._900_sayTitle)
 			say("")
-			say("Der zweite Platz unter der zeitlichen Begrenzung... ")
-			say("ich hatte selbst nicht daran geglaubt, aber")
-			say("ich war einfach froh, als ich den Preis")
-			say("erhalten habe. Heute sieht der Kahlkopf")
-			say("von Octavio besonders süss aus")
+			say(gameforge.xxx_kill_straydog._910_say)
+			say(gameforge.xxx_kill_straydog._860_say)
+			say(gameforge.xxx_kill_straydog._870_say)
+			say(gameforge.xxx_kill_straydog._880_say)
+			say(gameforge.xxx_kill_straydog._890_say)
 			pc.changemoney(100000)
 			setstate(__COMPLETE__)
 			q.done()
@@ -393,17 +393,17 @@ quest kill_straydog begin
 	state reward_3st begin
 		when letter begin
 			setskin(NOWINDOW)
-			makequestbutton("Der dritte Platz beim Wettbewerb")
-			q.set_title("Der dritte Platz beim Wettbewerb")
+			makequestbutton(gameforge.xxx_kill_straydog._920_sayTitle)
+			q.set_title(gameforge.xxx_kill_straydog._920_sayTitle)
 			q.start()
 		end
 		when button begin
-			say_title("Der dritte Platz beim Wettbewerb")
+			say_title(gameforge.xxx_kill_straydog._920_sayTitle)
 			say("")
-			say("der dritte Platz unter der zeitlichen Begrenzung... ")
-			say("ich hatte selbst nicht daran geglaubt, aber")
-			say("es war schwerer als ich gedacht habe,")
-			say("doch ich bin zufrieden.")
+			say(gameforge.xxx_kill_straydog._930_say)
+			say(gameforge.xxx_kill_straydog._860_say)
+			say(gameforge.xxx_kill_straydog._940_say)
+			say(gameforge.xxx_kill_straydog._950_say)
 			say("")
 			pc.changemoney(50000)
 			setstate(__COMPLETE__)

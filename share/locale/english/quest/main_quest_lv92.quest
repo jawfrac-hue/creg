@@ -176,7 +176,7 @@ quest main_quest_lv92 begin
                 remain_item = 0
             end
             q.set_counter_value(remain_item)
-            say_reward(string.format("%s: %d %s",item_name(ITEM1_1),remain_item,locale.count_postfix))
+            say_reward(string.format(gameforge.locale.name_count, item_name(ITEM1_1), remain_item, locale.count_postfix))
             
             -- say()
             -- say_reward(locale.main_quest_lv92.pos_info)
@@ -583,7 +583,7 @@ quest main_quest_lv92 begin
                 remain_item = 0
             end
             q.set_counter_value(remain_item)
-            say_reward(string.format("%s: %d %s",item_name(ITEM3_1),remain_item,locale.count_postfix))
+            say_reward(string.format(gameforge.locale.name_count, item_name(ITEM3_1), remain_item, locale.count_postfix))
             
             -- say()
             -- say_reward(locale.main_quest_lv92.pos_info)

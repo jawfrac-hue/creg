@@ -219,7 +219,7 @@ quest new_quest_lv29 begin
 				say_title(gameforge.new_quest_lv29._015_npcChat)
 				say(gameforge.new_quest_lv29._061_say)
 				say_reward(gameforge.new_quest_lv29._066_say)
-				say(gameforge.new_quest_lv29._066_1_say)
+				say(gameforge.new_quest_lv29._065_1_say)
 				if pc.count_item(new_quest_lv29_drop) <= new_quest_lv29_neededAmountDrop then
 					say("")
 					say_reward(string.format(gameforge.new_quest_lv29._067_say_reward, pc.count_item(new_quest_lv29_drop), new_quest_lv29_neededAmountDrop))

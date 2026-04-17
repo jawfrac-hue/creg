@@ -971,7 +971,6 @@ quest main_quest_lv90 begin
 					
 					if pc.count_item(ITEM4_1) >= ITEM4_1_NEEDED then
 						notice_multiline(gameforge.main_quest_lv90._640_1_notice,notice)
-						notice_multiline(gameforge.main_quest_lv90._640_2_notice,notice)
 						set_state (state4_3)
 					end
 				end
@@ -1004,7 +1003,6 @@ quest main_quest_lv90 begin
 					
 					if pc.count_item(ITEM4_1) >= ITEM4_1_NEEDED then
 						notice_multiline(gameforge.main_quest_lv90._640_1_notice,notice)
-						notice_multiline(gameforge.main_quest_lv90._640_2_notice,notice)
 					end
 				end
 			end

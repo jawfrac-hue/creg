@@ -9,7 +9,7 @@ when 30316.use begin
 			frequency = game.get_event_flag("shop_frequency")
 			
 			if game.get_event_flag("shop_reminder") == 1 then
-				say("hallo")
+				say(gameforge.shop_reminder._010_say)
 				local c =  select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
 				if 1 == c then
 					game.open_web_mall()

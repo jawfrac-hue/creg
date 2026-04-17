@@ -80,7 +80,7 @@ quest dragon_lair_access begin
 			local settings = dragon_lair_access.get_settings()
 			say_title(gameforge.ghost_story._010_sayTitle)
 			say(gameforge.dragon_lair_access._130_say)
-			say(settings.access_item_amount.."x: ")
+			say(string.format(gameforge.dragon_lair_access._195_say, settings.access_item_amount))
 			say_item_vnum(settings.access_item)
 			local give_item = select(gameforge.dragon_lair_access._140_select, gameforge.locale.cancel)
 			if give_item == 1 then
@@ -203,7 +203,7 @@ quest dragon_lair_access begin
 				say_title(gameforge.ghost_story._010_sayTitle)
 				say(gameforge.dragon_lair_access._100_say)
 				say(gameforge.dragon_lair_access._105_say)
-				say(settings.access_item_amount.."x: ")
+				say(string.format(gameforge.dragon_lair_access._195_say, settings.access_item_amount))
 				say_item_vnum(settings.access_item)
 				return
 			end

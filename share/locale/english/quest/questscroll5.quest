@@ -2,7 +2,7 @@ quest questscroll5 begin
     state start begin
         when 50317.use begin
             local s=0
-            local t=select("Aa", "Ab", "Ba", "Bb", "Bc", "Ca", "Cb", "Cc", "Cd", "Da", "Db")
+            local t=select(gameforge.questscroll5._280_select, gameforge.questscroll5._290_select, gameforge.questscroll5._300_select, gameforge.questscroll5._310_select, gameforge.questscroll5._320_select, gameforge.questscroll5._330_select, gameforge.questscroll5._340_select, gameforge.questscroll5._350_select, gameforge.questscroll5._360_select, gameforge.questscroll5._370_select, gameforge.questscroll5._380_select)
             if 1==t then
                 s=select(
                 questscroll5.get_menu(1),

@@ -76,7 +76,7 @@ quest event_mob_invasion begin
 				--[[ premium feature prepare
 				
 				if pc.count_item(71124) > 1 then
-					notice ("hier geht gleich was AB")
+					notice(gameforge.event_mob_invasion._010_notice)
 				end
 				--]]
 			elseif (wave == 1) then 

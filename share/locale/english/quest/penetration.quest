@@ -1,6 +1,6 @@
 quest penetration begin
 	state start begin
-		when 20355.chat."Login-Client-Stress" begin
+		when 20355.chat.gameforge.penetration._010_npcChat begin
 			pc.setqf("login_count", 0)
 			set_state(run_test)
 

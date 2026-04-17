@@ -1,118 +1,118 @@
 quest japan_invader_kill begin
 	state start begin
-		when 20005.chat." Die Bitte von Yonah " with pc.get_level()>=15 and game.get_event_flag("815event")>0  begin
+		when 20005.chat.gameforge.xxx_japan_invader_kill._670_npcChat with pc.get_level()>=15 and game.get_event_flag("815event")>0  begin
                         ----"12345678901234567890123456789012345678901234567890"|
-			say_title("Yonah:")
+			say_title(gameforge.xxx_japan_invader_kill._010_sayTitle)
 			say("")
-			say("Wie soll ich weiter machen,was kann ich nur tun?")
-			say("Wenn ich ihn fange, dann habe ich keine Sorgen")
-			say("mehr. Er ist aber so schnell,dass man ihn sehr")
-			say("schwierig nur fangen kann. Hm. Was soll ich")
-			say("machen?")
+			say(gameforge.xxx_japan_invader_kill._020_say)
+			say(gameforge.xxx_japan_invader_kill._030_say)
+			say(gameforge.xxx_japan_invader_kill._040_say)
+			say(gameforge.xxx_japan_invader_kill._050_say)
+			say(gameforge.xxx_japan_invader_kill._060_say)
 			say("")
 			wait()
 			say_pc_name()
-			say("Was hast du denn für Sorgen?")
+			say(gameforge.xxx_japan_invader_kill._070_say)
 			wait()
-			say_title("Yonah:")
+			say_title(gameforge.xxx_japan_invader_kill._010_sayTitle)
 			say("")
-			say("Zur Zeit taucht ein Wilder überall im Reich auf")
-			say("und verbreitet Gerüchte über die Wüste Yong-Bi")
-			say("Da er sehr schnell ist, kann man ihn nicht einfach")
-			say("fangen und die Gerüchte zum Verstummen bringen.")
-			say("Unsicherheit wird uns schwächen.")
+			say(gameforge.xxx_japan_invader_kill._080_say)
+			say(gameforge.xxx_japan_invader_kill._090_say)
+			say(gameforge.xxx_japan_invader_kill._100_say)
+			say(gameforge.xxx_japan_invader_kill._110_say)
+			say(gameforge.xxx_japan_invader_kill._120_say)
 			wait()
 			say_pc_name()
-			say("Welche Gerüchte denn??")
+			say(gameforge.xxx_japan_invader_kill._130_say)
 			wait()
-			say_title("Yonah:")
+			say_title(gameforge.xxx_japan_invader_kill._010_sayTitle)
 			say("")
-			say("Das dreigeteilte Land bekriegt sich unaufhörlich.")
-			say("Um dieses Krieg zu überstehen brauchen wir alle")
-			say("Gebiete und Resourcen die uns rechtmäßig gehören")
-			say("Die Wüste Yong-Bi und ihre Rohstoffe gehört uns!")
-			say("Aber der verdammte Wilde behauptet das er die")
-			say("Gegend selber gefunden hat und sie ihm gehört")
-			say("Dies verunsichert unsere tapferen Kämpfer.")
+			say(gameforge.xxx_japan_invader_kill._140_say)
+			say(gameforge.xxx_japan_invader_kill._150_say)
+			say(gameforge.xxx_japan_invader_kill._160_say)
+			say(gameforge.xxx_japan_invader_kill._170_say)
+			say(gameforge.xxx_japan_invader_kill._180_say)
+			say(gameforge.xxx_japan_invader_kill._190_say)
+			say(gameforge.xxx_japan_invader_kill._200_say)
 			wait()
-			say_title("Yonah:")
+			say_title(gameforge.xxx_japan_invader_kill._010_sayTitle)
 			say("")
-			say("Vielleicht bist Du der Richtige um uns zu helfen?")
-			say("Der eine Wüstenbandit verbreitet diese Gerüchte")
-			say("im ganzen Reich und sät Zweifel an unserem")
-			say("Anspruch Töte ihn und bringe ihn zum Verstummen!")
-			say("Wenn Du mir den Beweis mitbringst, dass du ihn ")
-			say("getötet hast werde ich Dich reich belohnen!!!!!")
+			say(gameforge.xxx_japan_invader_kill._210_say)
+			say(gameforge.xxx_japan_invader_kill._220_say)
+			say(gameforge.xxx_japan_invader_kill._230_say)
+			say(gameforge.xxx_japan_invader_kill._240_say)
+			say(gameforge.xxx_japan_invader_kill._250_say)
+			say(gameforge.xxx_japan_invader_kill._260_say)
 			say("")
-			local b=select("Ich werde ihn fangen", "Rennen ist nicht meine Stärke")
+			local b=select(gameforge.xxx_japan_invader_kill._270_select, gameforge.xxx_japan_invader_kill._280_select)
 				----"12345678901234567890123456789012345678901234567890"|
 			if 1==b then
-				say_title("Yonah:")
+				say_title(gameforge.xxx_japan_invader_kill._010_sayTitle)
 				say("")
-				say("Ohh Danke Danke!! Es heißt Danaka er ist")
-				say("ein Wüstenbandit. Du findest ihn in der")
-				say("Wüste Yong-Bi. Bring mir sein Ohr als ")
-				say("Beweis für seinen Tod!")
+				say(gameforge.xxx_japan_invader_kill._290_say)
+				say(gameforge.xxx_japan_invader_kill._300_say)
+				say(gameforge.xxx_japan_invader_kill._310_say)
+				say(gameforge.xxx_japan_invader_kill._320_say)
 				say("")
 				set_state(accept)
 			elseif 2==b then
-				say_title("Yonah:")
+				say_title(gameforge.xxx_japan_invader_kill._010_sayTitle)
 				say("")
-				say("Hm..Mir ist aber egal, wem die Wüste")
-				say("Yong-Bi gehört")
+				say(gameforge.xxx_japan_invader_kill._330_say)
+				say(gameforge.xxx_japan_invader_kill._340_say)
 				say("")
 			end
 		end
 	end
 	state accept begin
 		when letter begin
-			send_letter("Töte den wilden Wüstenbandit!!")
+			send_letter(gameforge.xxx_japan_invader_kill._350_sendLetter)
 		end
 		when button or info begin
 			----"12345678901234567890123456789012345678901234567890"|
-			say_title("Fange den wilden Wüstenbandit!!")
+			say_title(gameforge.xxx_japan_invader_kill._360_sayTitle)
 			say("")
-			say("Der Wüstenbandit verbreitet allerlei Gerüchte im")
-			say("Reich. Töte ihn!!!!!!!")
+			say(gameforge.xxx_japan_invader_kill._370_say)
+			say(gameforge.xxx_japan_invader_kill._380_say)
 			say("")
-			say_reward("Töte Wüstenbandit und bring sein Ohr zu Yonah")
+			say_reward(gameforge.xxx_japan_invader_kill._680_sayReward)
 			say("")
 		end
-		when 20005.chat."Ein Wüstenbandit fangen" with pc.count_item(30202)==0 begin
-			say_title("Yonah:")
+		when 20005.chat.gameforge.xxx_japan_invader_kill._690_npcChat with pc.count_item(30202)==0 begin
+			say_title(gameforge.xxx_japan_invader_kill._010_sayTitle)
 			say("")
-			say("Wüstenbandit rennt sehr schnell. Mit meiner")
-			say("schweren Rüstung ist es unmoglich für mich,")
-			say("ihn zu fangen. Ah, worum es geht?")
+			say(gameforge.xxx_japan_invader_kill._390_say)
+			say(gameforge.xxx_japan_invader_kill._400_say)
+			say(gameforge.xxx_japan_invader_kill._410_say)
 			say("")
-			local s=select("weitermachen", "aufhören")
+			local s=select(gameforge.xxx_japan_invader_kill._420_select, gameforge.xxx_japan_invader_kill._430_select)
 			if 1==s then
 			elseif 2==s then
-				say_title("Yonah:")
+				say_title(gameforge.xxx_japan_invader_kill._010_sayTitle)
 				say("")
-				say("Möchtest du wirklich aufhoren.....")
-				say("Hm, Du schaffst es nicht...")
-				say("Auf jedem Fall, danke ich für Deine Mühen.")
+				say(gameforge.xxx_japan_invader_kill._440_say)
+				say(gameforge.xxx_japan_invader_kill._450_say)
+				say(gameforge.xxx_japan_invader_kill._460_say)
 				say("")
-				local s=select("die Aufgabe beenden", "weiter machen")
+				local s=select(gameforge.xxx_japan_invader_kill._470_select, gameforge.xxx_japan_invader_kill._480_select)
 				if 1==s then
 					----"12345678901234567890123456789012345678901234567890"|
 					say_pc_name()
-					say("Mit meinem Level konnte ich den Wüstenbandit")
-					say("nicht fangen. Ich gebe auf")
+					say(gameforge.xxx_japan_invader_kill._490_say)
+					say(gameforge.xxx_japan_invader_kill._500_say)
 					say("")
-					say_title("Yonah:")
+					say_title(gameforge.xxx_japan_invader_kill._010_sayTitle)
 					say("")
-					say("Ich danke Dir für Deine Mühe...")
+					say(gameforge.xxx_japan_invader_kill._510_say)
 					q.done()
 					set_state(failure)
 				elseif 2==s then
 					say_pc_name()
 					say("")
-					say("Hm, Ich habe jetzt noch keine Belohnung erwartet")
-					say("Es wird mir schon noch gelingen Wüstenbandit")
-					say("zu töten. Ich werd es halt weiter versuchen")
-					say("Bitte danke mir jetzt noch nicht")
+					say(gameforge.xxx_japan_invader_kill._520_say)
+					say(gameforge.xxx_japan_invader_kill._530_say)
+					say(gameforge.xxx_japan_invader_kill._540_say)
+					say(gameforge.xxx_japan_invader_kill._550_say)
 					say("")
 				end
 			end
@@ -126,29 +126,29 @@ quest japan_invader_kill begin
 				if pc.count_item("30202")>0 then
 					local v = find_npc_by_vnum(20005)
 					if v != 0 then
-						target.vid("__TARGET__", v, "Das Ohr gefunden")
+						target.vid("__TARGET__", v, gameforge.xxx_japan_invader_kill._700_targetVid)
 					end
 				end
 			end
 		
 	end	
 		
-		when __TARGET__.target.click or	20005.chat."Das Ohr von Wüstenbandit übergeben" with pc.count_item(30202)>=1 begin
+		when __TARGET__.target.click or	20005.chat.gameforge.xxx_japan_invader_kill._710_npcChat with pc.count_item(30202)>=1 begin
 			target.delete("__TARGET__")
 			----"12345678901234567890123456789012345678901234567890"|
-			say_title("Yonah:")
+			say_title(gameforge.xxx_japan_invader_kill._010_sayTitle)
 			say("")
-			say("Oh, du hast wirlich den Wüstenbandit getötet!")
-			say("Helden aus aller Herren Länder verzweifelten")
-			say("an dieser Aufgabe und Du hast es geschafft?")
-			say("Ja es muss so sein denn Du hast den Beweis.")
-			say("Gehört das Ohr auch wirklich Wüstenbandit?")
-			say("Lass mich mal schauen? Hm Hm. Doch es es")
-			say("besteht kein Zweifel. Es ist sehr klein aber")
-			say("es ist Danakas Ohr.")
-			say("Ausser meiner Dankbarkeit möchte ich Dir")
-			say("dies geben. Es wird Dir von großem Nutzen")
-			say("sein.")
+			say(gameforge.xxx_japan_invader_kill._560_say)
+			say(gameforge.xxx_japan_invader_kill._570_say)
+			say(gameforge.xxx_japan_invader_kill._580_say)
+			say(gameforge.xxx_japan_invader_kill._590_say)
+			say(gameforge.xxx_japan_invader_kill._600_say)
+			say(gameforge.xxx_japan_invader_kill._610_say)
+			say(gameforge.xxx_japan_invader_kill._620_say)
+			say(gameforge.xxx_japan_invader_kill._630_say)
+			say(gameforge.xxx_japan_invader_kill._640_say)
+			say(gameforge.xxx_japan_invader_kill._650_say)
+			say(gameforge.xxx_japan_invader_kill._660_say)
 			say("")
 
 
@@ -156,13 +156,13 @@ quest japan_invader_kill begin
 
 			local r=number(1, 3)
 			if 1==r then
-				say_reward("Du hast von Yonah den Erfahrungring bekommen.")
+				say_reward(gameforge.xxx_japan_invader_kill._720_sayReward)
 				pc.give_item2(72003)
 			elseif 2==r then
-				say_reward("Du hast von Yonah die Glücksgoldmünze bekommen.")
+				say_reward(gameforge.xxx_japan_invader_kill._730_sayReward)
 				pc.give_item2(72024)
 			elseif 3==r then
-				say_reward("Du hast von Yonah die Diebeshandschuhe bekommen.")
+				say_reward(gameforge.xxx_japan_invader_kill._740_sayReward)
 				pc.give_item2(72006)
 			end
 
